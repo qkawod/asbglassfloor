@@ -254,7 +254,7 @@ export default function MultiSportsProjects() {
                         {/* FIBA */}
                         <div className="relative w-64 h-32 md:w-96 md:h-48">
                             <Image
-                                src="/FIBA.png.webp"
+                                src="/Logo/FIBA.png.webp"
                                 alt="FIBA"
                                 fill
                                 className="object-contain"
@@ -264,7 +264,7 @@ export default function MultiSportsProjects() {
                         {/* FIVB */}
                         <div className="relative w-64 h-32 md:w-96 md:h-48">
                             <Image
-                                src="/FIVB.png.webp"
+                                src="/Logo/FIVB.png.webp"
                                 alt="FIVB"
                                 fill
                                 className="object-contain"
@@ -274,7 +274,7 @@ export default function MultiSportsProjects() {
                         {/* IHF */}
                         <div className="relative w-64 h-32 md:w-96 md:h-48">
                             <Image
-                                src="/IHF.png.webp"
+                                src="/Logo/IHF.png.webp"
                                 alt="IHF"
                                 fill
                                 className="object-contain"
