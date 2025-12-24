@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-deepBlack: #050505;
+  --color-deepGrey: #121212;
+  --color-neonCyan: #00AEEF;
+  --color-electricCyan: #00F0FF;
+  --color-hotPink: #FF3366;
+  --color-neonBlue: #0047FF;
+  --color-neonYellow: #FFFF00;
+  --color-led-line: #FFFF00;
+  /* Default: #00AEEF (Cyan) */
+  --color-glass: rgba(255, 255, 255, 0.1);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-extrabold tracking-tighter;
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-scan {
+  animation: scan 2s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.text-rainbow-animate {
+  background: linear-gradient(to right, #ff3366, #ff9933, #ffff00, #33ff66, #00aeff, #9933ff, #ff3366);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: rainbow 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.text-white-shimmer {
+  background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 40%, #888888 50%, #FFFFFF 60%, #FFFFFF 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 3s linear infinite;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
