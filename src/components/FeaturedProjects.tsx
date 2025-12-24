@@ -41,20 +41,20 @@ export default function FeaturedProjects() {
         {
             title: "ARENA Dresden",
             subtitle: "ASB MultiSports",
-            image: "/Dresden_01.jpg", // Placeholder for Court 16
+            image: "/Dresden/Dresden_01.jpg", // Placeholder for Court 16
             link: "/references/BallsportARENA-Dresden",
             isExplore: true,
         },
         {
             title: "OYM",
             subtitle: "ASB MultiSports",
-            image: "/OYM_swiss.jpg",
+            image: "/OYM/OYM_swiss.jpg",
             link: "/references/OYM-College",
         },
         {
             title: "Oxford University",
             subtitle: "ASB MultiSports",
-            image: "/asb-glassfloor-acer-nethercott-sports-hall---oxford-university-universities-archello.1596121230.1534.jpg",
+            image: "/University of oxford/asb-glassfloor-acer.jpg",
             link: "/references/Oxford-University",
         },
     ];
