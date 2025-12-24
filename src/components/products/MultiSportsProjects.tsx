@@ -17,7 +17,7 @@ const projects = [
         title: "The University of Oxford",
         subtitle: "ASB MultiSports",
         description: "옥스포드 대학교는 에이서 네더코트(Acer Nethercott) 스포츠 홀에 ASB MultiSports를 도입했습니다. 커스텀 컬러가 적용된 GlassFloor와 선명한 화이트 라인 마킹은 공간 전체에 모던하고 미래지향적인 분위기를 연출합니다.",
-        image: "/asb-glassfloor-acer-nethercott-sports-hall---oxford-university-universities-archello.1596121230.1534.jpg",
+        image: "/University of oxford/asb-glassfloor-acer.jpg",
         alignment: "left",
         color: "text-neonBlue",
         glow: "shadow-[0_0_15px_#0047FF]",
@@ -29,11 +29,11 @@ const projects = [
         title: "OYM - On Your Marks",
         subtitle: "Certified for Professional Sports",
         description: "스위스 캄(Cham)에 위치한 엘리트 스포츠 전문 센터 OYM(On Your Marks)은 ASB MultiSports를 선택했습니다. 이 시스템은 프로 선수들이 최고 수준에서 훈련하고 경기를 펼칠 수 있는 완벽한 환경을 제공합니다.",
-        image: "/OYM_swiss.jpg",
+        image: "/OYM/OYM_swiss.jpg",
         images: [
-            "/OYM_01.jpg",
-            "/OYM__.jpeg",
-            "/OYM____.jpeg"
+            "/OYM/OYM_01.jpg",
+            "/OYM/OYM__.jpeg",
+            "/OYM/OYM____.jpeg"
         ],
         alignment: "right",
         color: "text-hotPink",
@@ -46,11 +46,11 @@ const projects = [
         title: "BallsportARENA in Dresden",
         subtitle: "PROFESSIONAL HANDBALL VENUE",
         description: "독일 DRESDEN BallsportARENA는 진정한 다기능 공간의 표준을 제시합니다. 2,000m² 규모의 이 가변형 공간은 엘리트 스포츠와 장애인 스포츠는 물론, 복싱이나 콘서트와 같은 대형 이벤트까지 수용하며 공간 활용의 극대화를 입증하고 있습니다.",
-        image: "/BallSport ARENA Dresden_04.jpg",
+        image: "/Dresden/BallSport ARENA Dresden_04.jpg",
         images: [
-            "/BallSport ARENA Dresden_04.jpg",
-            "/20690303_1039972409439437_3075886819015665266_o-c797e3e6.jpg",
-            "/2017-08-05_Freunschaftsspiel_Fu╠êchse-HCELB_0560-410d162b.jpg"
+            "/Dresden/BallSport ARENA Dresden_04.jpg",
+            "/Dresden/20690303_1039972409439437_3075886819015665266_o-c797e3e6.jpg",
+            "/Dresden/BallSport ARENA Dresden_05.jpg"
         ],
         alignment: "left",
         color: "text-neonYellow",
