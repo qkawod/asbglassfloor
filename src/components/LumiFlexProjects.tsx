@@ -248,7 +248,7 @@ export default function LumiFlexProjects() {
                         {/* FIBA */}
                         <div className="relative w-64 h-32 md:w-96 md:h-48">
                             <Image
-                                src="/FIBA.png.webp"
+                                src="/FIBA.webp?v=1"
                                 alt="FIBA"
                                 fill
                                 className="object-contain"
@@ -258,7 +258,7 @@ export default function LumiFlexProjects() {
                         {/* FIVB */}
                         <div className="relative w-64 h-32 md:w-96 md:h-48">
                             <Image
-                                src="/FIVB.png.webp"
+                                src="/FIVB.webp?v=1"
                                 alt="FIVB"
                                 fill
                                 className="object-contain"
@@ -268,7 +268,7 @@ export default function LumiFlexProjects() {
                         {/* IHF */}
                         <div className="relative w-64 h-32 md:w-96 md:h-48">
                             <Image
-                                src="/IHF.png.webp"
+                                src="/IHF.webp?v=1"
                                 alt="IHF"
                                 fill
                                 className="object-contain"

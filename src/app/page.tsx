@@ -21,7 +21,7 @@ export default function Home() {
       <MultiSportsDemo />
       <FeaturedProjects />
       <LumiFlexInfo />
-      <LumiFlexProjects />
+      {/* <LumiFlexProjects /> */}
       <Partners />
     </main>
   );

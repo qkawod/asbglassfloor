@@ -100,31 +100,28 @@ export default function CoreFeatures() {
                     <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 opacity-90">
                         {/* FIBA */}
                         <div className="relative w-96 h-48">
-                            <Image
-                                src="/FIBA.png.webp"
+                            <img
+                                src="/FIBA.webp"
                                 alt="FIBA"
-                                fill
-                                className="object-contain"
+                                className="object-contain w-full h-full"
                             />
                         </div>
 
                         {/* FIVB */}
                         <div className="relative w-96 h-48">
-                            <Image
-                                src="/FIVB.png.webp"
+                            <img
+                                src="/FIVB.webp"
                                 alt="FIVB"
-                                fill
-                                className="object-contain"
+                                className="object-contain w-full h-full"
                             />
                         </div>
 
                         {/* IHF */}
                         <div className="relative w-96 h-48">
-                            <Image
-                                src="/IHF.png.webp"
+                            <img
+                                src="/IHF.webp"
                                 alt="IHF"
-                                fill
-                                className="object-contain"
+                                className="object-contain w-full h-full"
                             />
                         </div>
                     </div>
