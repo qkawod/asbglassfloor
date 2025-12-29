@@ -76,12 +76,12 @@ export default function ASBTech() {
 
                 <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {[
-                        { src: "/NBA-AS24-LED-Court-Collage.png", title: "NBA All-Star 2024" },
-                        { src: "/Kenturky BBM_1.jpeg", title: "University of Kentucky" },
-                        { src: "/BMW Park_3.jpg", title: "BMW Park" },
-                        { src: "/asb-glassfloor-acer-nethercott-sports-hall---oxford-university-universities-archello.1596121230.1534.jpg", title: "Oxford University" },
+                        { src: "/NBA/NBA-AS24-LED-Court-Collage.png", title: "NBA All-Star 2024" },
+                        { src: "/Kentucky_BBM/Kenturky BBM_1.jpeg", title: "University of Kentucky" },
+                        { src: "/BMW/BMW Park_3.jpg", title: "BMW Park" },
+                        { src: "/University of oxford/Oxford_3.jpg", title: "Oxford University" },
                         { src: "/FIBA_U19_Womens_World_Cup.jpg", title: "FIBA U19 World Cup" },
-                        { src: "/OYM_swiss.jpg", title: "OYM Switzerland" },
+                        { src: "/OYM/OYM_swiss.jpg", title: "OYM Switzerland" },
                         { src: "/asb_referenzen_nike_vegas_04.jpg", title: "Nike Court" },
                         { src: "/Supercup_3.jpeg", title: "Supercup" },
                     ].map((item, index) => (

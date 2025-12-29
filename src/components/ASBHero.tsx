@@ -67,7 +67,7 @@ export default function ASBHero() {
                         loop
                         muted={isMuted}
                         playsInline
-                        src={encodeURI("/How Brands Shine on the ASB GlassFloor   Highlights from Beats N Buckets.mp4")}
+                        src={encodeURI("/IGNITE THE COURT The Future of Sports Venues with ASB GlassFloor.mp4")}
                     />
                 </div>
             </div>
