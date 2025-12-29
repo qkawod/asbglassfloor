@@ -234,49 +234,7 @@ export default function LumiFlexProjects() {
                 </div>
             </section>
 
-            {/* Certification Section (Intermission 2) */}
-            <section className="py-64 bg-white text-slate-900">
-                <div className="container mx-auto px-6 text-center">
-                    <h3 className="text-3xl md:text-5xl font-medium mb-8 max-w-4xl mx-auto text-slate-900">
-                        Certified for Professional Sports
-                    </h3>
-                    <p className="text-slate-600 max-w-4xl mx-auto mb-16 text-lg leading-relaxed">
-                        ASB LumiFlex meets the highest standards of international sports federations. It ensures safety, performance, and durability for top-tier competitions.
-                    </p>
 
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 opacity-90">
-                        {/* FIBA */}
-                        <div className="relative w-64 h-32 md:w-96 md:h-48">
-                            <Image
-                                src="/FIBA.webp?v=1"
-                                alt="FIBA"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-
-                        {/* FIVB */}
-                        <div className="relative w-64 h-32 md:w-96 md:h-48">
-                            <Image
-                                src="/FIVB.webp?v=1"
-                                alt="FIVB"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-
-                        {/* IHF */}
-                        <div className="relative w-64 h-32 md:w-96 md:h-48">
-                            <Image
-                                src="/IHF.webp?v=1"
-                                alt="IHF"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Remaining Projects Section (DAZN +) */}
             <section className="pt-20 pb-32 bg-[#F5F7FA] text-slate-900 overflow-hidden">
