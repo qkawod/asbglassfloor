@@ -214,7 +214,24 @@ export default function MultiSportsProjects() {
             </section>
 
             {/* CTA/Intermission Section */}
-            <section className="py-64 bg-white text-slate-900">
+            <section ref={(el) => {
+                if (el) {
+                    const ctx = gsap.context(() => {
+                        gsap.from(el.children[0].children, {
+                            scrollTrigger: {
+                                trigger: el,
+                                start: "top 80%",
+                            },
+                            y: 50,
+                            opacity: 0,
+                            duration: 1.2,
+                            stagger: 0.2,
+                            ease: "power3.out"
+                        });
+                    }, el);
+                    return () => ctx.revert();
+                }
+            }} className="py-64 bg-white text-slate-900">
                 <div className="container mx-auto px-6 text-center max-w-4xl">
                     <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-8 text-slate-900">
                         타협하지 않는 다목적 플로어 시스템
