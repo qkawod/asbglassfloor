@@ -26,7 +26,7 @@ const projects: Project[] = [
         title: "Glass Surface Engineering",
         subtitle: "TECHNOLOGY",
         description: "독자적인 에칭 공법에 특수 세라믹 도트를 더해, 유리의 한계를 넘어선 고기능성 표면을 설계했습니다. 이 첨단 공정은 국제 스포츠 기준에 부합하는 이상적인 마찰계수를 유지시켜 주며, 완벽한 그립감으로 선수의 안전과 최상의 경기력을 동시에 보장합니다.",
-        image: ["/surface.png", "/surface_01.png"], // Slideshow images
+        image: ["/Engineering/surface.png", "/Engineering/surface_01.png"], // Slideshow images
         alignment: "left",
         color: "text-neonBlue",
         glow: "shadow-[0_0_15px_#0047FF]",
