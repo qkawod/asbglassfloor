@@ -232,33 +232,35 @@ export default function ContactPage() {
                             {/* Germany */}
                             <div>
                                 <h3 className="text-lg font-bold text-white mb-4">ASB KOREA</h3>
-                                경기도 성남시 분당구 황새울로200번길 36, 동부루트빌딩 1010, 1011
-                            </p>
-                            <a href="mailto:globe@globecorp.co.kr" className="text-blue-400 hover:text-white transition-colors block mb-2">
-                                globe@globecorp.co.kr
-                            </a>
-                            <div className="space-y-1">
-                                <a href="tel:0317171180" className="block text-white hover:text-blue-400 transition-colors">
-                                    T. 031-717-1180
+                                <p className="text-gray-400 leading-relaxed mb-4">
+                                    경기도 성남시 분당구 황새울로200번길 36 동부루트빌딩 1010, 1011
+                                </p>
+                                <a href="mailto:globe@globecorp.co.kr" className="text-blue-400 hover:text-white transition-colors block mb-2">
+                                    globe@globecorp.co.kr
                                 </a>
-                                <div className="text-gray-400">
-                                    F. 031-717-1181
+                                <div className="space-y-1">
+                                    <a href="tel:0317171180" className="block text-white hover:text-blue-400 transition-colors">
+                                        T. 031-717-1180
+                                    </a>
+                                    <div className="text-gray-400">
+                                        F. 031-717-1181
+                                    </div>
                                 </div>
                             </div>
+
+
                         </div>
 
-
-                    </div>
-
-                    {/* Map / Image Placeholder */}
-                    <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-gray-900 border border-white/10">
-                        {/* Placeholder for map or office image */}
-                        <div className="absolute inset-0 flex items-center justify-center text-gray-600">
-                            <span className="uppercase tracking-widest text-sm">Interactive Map Loading...</span>
+                        {/* Map / Image Placeholder */}
+                        <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-gray-900 border border-white/10">
+                            {/* Placeholder for map or office image */}
+                            <div className="absolute inset-0 flex items-center justify-center text-gray-600">
+                                <span className="uppercase tracking-widest text-sm">Interactive Map Loading...</span>
+                            </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
                         </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
         </main>
