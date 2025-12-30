@@ -90,7 +90,7 @@ export default function LumiFlexAdvantages() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative py-24 bg-deepBlack text-white overflow-hidden">
+        <section ref={sectionRef} className="relative py-12 md:py-24 bg-deepBlack text-white overflow-hidden">
             {/* Background Video */}
             <div className="absolute inset-0 z-0">
                 <video
@@ -100,7 +100,7 @@ export default function LumiFlexAdvantages() {
                     playsInline
                     className="w-full h-full object-cover opacity-60"
                 >
-                    <source src="/NBA UNVEILS STATE-OF-THE-ART LED COURT FOR ALL-STAR 2024 EVENTS TAKING PLACE AT LUCAS OIL STADIUM.mp4" type="video/mp4" />
+                    <source src="/NBA/NBA UNVEILS STATE-OF-THE-ART LED COURT FOR ALL-STAR 2024 EVENTS TAKING PLACE AT LUCAS OIL STADIUM.mp4" type="video/mp4" />
                 </video>
                 {/* Gradient Overlay for better text readability */}
                 <div className="absolute inset-0 bg-black/60" />

@@ -92,7 +92,7 @@ export default function ASBTech() {
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/60 transition-colors duration-500 flex items-end justify-start p-6">
+                            <div className="absolute inset-0 transition-colors duration-500 flex items-end justify-start p-6">
                                 <h3 className="text-white text-xl md:text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                                     {item.title}
                                 </h3>

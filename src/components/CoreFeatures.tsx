@@ -58,7 +58,7 @@ export default function CoreFeatures() {
                 <div className="flex-1 min-h-[4rem]" />
 
                 {/* Features Grid */}
-                <div ref={featuresRef} className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div ref={featuresRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 px-6 md:px-0">
                     {/* Feature 1 */}
                     <div className="space-y-4">
                         <h3 className="text-2xl font-bold">독보적인 다기능성</h3>

@@ -44,7 +44,7 @@ export default function Navbar() {
                 {/* Logo Section - Flow layout to prevent overlap */}
                 <Link href="/" className="flex items-center gap-3 group">
                     {/* Emblem Fallback (if image fails or for clearer look) */}
-                    <div className="relative h-12 w-96 md:h-[3.6rem] md:w-[29rem]">
+                    <div className="relative h-8 w-48 md:h-[3.6rem] md:w-[29rem]">
                         <img
                             src="/Logo/logo-white.png"
                             alt="ASB GlassFloor"
@@ -124,7 +124,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Navigation Overlay */}
-            <div className={`fixed inset-0 bg-black/95 z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-500 lg:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            <div className={`fixed inset-0 bg-black/95 z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-500 lg:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
                 }`}>
                 {navLinks.map((link) => (
                     <Link

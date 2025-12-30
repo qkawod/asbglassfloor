@@ -85,7 +85,7 @@ export default function ProductHero({
                         loop
                         muted
                         playsInline
-                        className="absolute inset-0 w-full h-full object-cover opacity-100"
+                        className="absolute inset-0 w-full h-full object-cover opacity-100 min-h-[100vh] md:min-h-0"
                     >
                         <source src={videoSrc} type="video/mp4" />
                     </video>

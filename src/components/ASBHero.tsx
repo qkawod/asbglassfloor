@@ -58,8 +58,8 @@ export default function ASBHero() {
         >
             {/* Abstract Dark Glass Background */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-deepGrey z-10" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[56.25vw] min-h-screen min-w-[177.77vh] opacity-80">
+                {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-deepGrey z-10" /> */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vh] min-h-[100vh] md:h-[56.25vw] md:min-h-screen md:min-w-[177.77vh]">
                     <video
                         ref={videoRef}
                         className="w-full h-full object-cover"

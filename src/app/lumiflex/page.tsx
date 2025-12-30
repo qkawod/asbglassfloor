@@ -14,7 +14,7 @@ export default function LumiFlexPage() {
         <main className="bg-white min-h-screen text-black">
             <ProductHero
                 title="ASB LumiFlex"
-                videoSrc="/How Brands Shine on the ASB GlassFloor   Highlights from Beats N Buckets.mp4"
+                videoSrc="/IGNITE THE COURT The Future of Sports Venues with ASB GlassFloor.mp4"
             />
             <LumiFlexAdvantages />
             <LumiFlexProjects />

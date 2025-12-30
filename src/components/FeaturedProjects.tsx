@@ -61,7 +61,7 @@ export default function FeaturedProjects() {
 
     return (
         <section ref={sectionRef} className="pt-20 pb-24 bg-white text-black">
-            <div className="w-full max-w-[1920px] mx-auto px-8 md:px-20">
+            <div className="w-full max-w-[1920px] mx-auto px-6 md:px-20">
                 <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                     {projects.map((project, index) => (
                         <div key={index} className="flex flex-col group cursor-pointer">

@@ -3,15 +3,16 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const timelineData = [
-    { year: '1965', title: '설립', description: '독일 ASB 설립' },
-    { year: '1976', title: '혁신', description: 'ASB 스쿼시 시스템 개발' },
-    { year: '2007', title: '최초의 GlassCourt', description: 'AIDAdiva 크루즈 선에 설치.' },
-    { year: '2012', title: 'ASB GlassFloor', description: 'LED플로어 시스템' },
-    { year: 'Today', title: '글로벌 리더', description: '전 세계 디지털 스포츠 표면의 표준을 정립.' },
+    { year: '1965', title: '독일 ASB 설립', description: '', image: '/Dresden/asb_referenzen_dresden_02.jpg' },
+    { year: '1976', title: 'ASB 스쿼시 시스템 개발', description: '', image: '/BMW/BMW Park_1.jpeg' },
+    { year: '2007', title: '최초의 GlassCourt', description: '', image: '/University of oxford/Oxford_1.jpg' },
+    { year: '2012', title: 'ASB GlassFloor', description: '', image: '/OYM/OYM_swiss.jpg' },
+    { year: 'Today', title: 'Unrivaled Technology', description: '현존하는 가장 진보된 스포츠 플로어링 시스템', image: '/NBA/NBA-AS24-LED-Court-Collage.png' },
 ];
 
 export default function ASBTimeline() {
@@ -76,23 +77,33 @@ export default function ASBTimeline() {
                         <div
                             key={index}
                             ref={(el) => { itemsRef.current[index] = el; }}
-                            className={`relative flex flex-col md:flex-row gap-8 md:gap-0 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                            className={`relative flex flex-col md:flex-row gap-8 md:gap-0 group ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
                                 }`}
                         >
                             {/* Content Side */}
                             <div className={`md:w-1/2 pl-12 md:pl-0 text-left md:text-right ${index % 2 === 0 ? 'md:pl-32' : 'md:pr-32'}`}>
                                 <div className={`${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                                     <span className="text-5xl font-bold text-[#FFE57F] block mb-2 drop-shadow-[0_0_8px_rgba(255,229,127,0.5)]">{item.year}</span>
-                                    <h3 className="text-2xl font-bold text-black mb-2">{item.title}</h3>
-                                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                                    {item.title && <h3 className="text-2xl font-bold text-black mb-2">{item.title}</h3>}
+                                    {item.description && <p className="text-gray-600 font-bold leading-relaxed">{item.description}</p>}
                                 </div>
                             </div>
 
                             {/* Center Dot */}
                             <div className="absolute left-6 md:left-1/2 w-4 h-4 bg-white border-4 border-[#FFE57F] rounded-full -translate-x-1/2 mt-3 z-10 box-shadow-[0_0_10px_rgba(255,229,127,0.5)]" />
 
-                            {/* Empty Side for Balance */}
-                            <div className="hidden md:block md:w-1/2" />
+                            <div className="hidden md:flex md:w-1/2 items-center justify-center p-8 relative z-0 group-hover:z-50">
+                                <div className="relative w-32 h-20 group-hover:scale-[5] transition-transform duration-500 ease-out rounded-lg overflow-hidden shadow-md group-hover:shadow-2xl opacity-60 group-hover:opacity-100 grayscale group-hover:grayscale-0 origin-center">
+                                    {item.image && (
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
