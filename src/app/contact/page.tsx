@@ -231,19 +231,21 @@ export default function ContactPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                             {/* Germany */}
                             <div>
-                                <h3 className="text-lg font-bold text-white mb-4">Germany (HQ)</h3>
+                                <h3 className="text-lg font-bold text-white mb-4">ASB KOREA</h3>
                                 <p className="text-gray-400 leading-relaxed mb-4">
-                                    ASB GlassFloor GmbH<br />
-                                    Steinweg 6<br />
-                                    83371 Stein an der Traun<br />
-                                    Germany
+                                    경기도 성남시 분당구 황새울로200번길 36
                                 </p>
-                                <a href="mailto:info@asbglassfloor.com" className="text-blue-400 hover:text-white transition-colors block mb-2">
-                                    info@asbglassfloor.com
+                                <a href="mailto:globe@globecorp.co.kr" className="text-blue-400 hover:text-white transition-colors block mb-2">
+                                    globe@globecorp.co.kr
                                 </a>
-                                <a href="tel:+498621988440" className="text-white hover:text-blue-400 transition-colors">
-                                    +49 8621 988440
-                                </a>
+                                <div className="space-y-1">
+                                    <a href="tel:0317171180" className="block text-white hover:text-blue-400 transition-colors">
+                                        T. 031-717-1180
+                                    </a>
+                                    <div className="text-gray-400">
+                                        F. 031-717-1181
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Sales International */}
