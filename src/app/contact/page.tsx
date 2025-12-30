@@ -3,17 +3,19 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ContactMultiSports from "@/components/ContactMultiSports";
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
         salutation: "",
-        firstName: "",
-        lastName: "",
+        name: "",
         email: "",
         company: "",
+        jobTitle: "",
         phone: "",
         country: "Germany",
         inquiryType: "Sales",
+        productInterest: "ASB GlassFloor",
         message: ""
     });
 
@@ -42,13 +44,14 @@ export default function ContactPage() {
                 alert("Thank you! Your request has been submitted.");
                 setFormData({
                     salutation: "",
-                    firstName: "",
-                    lastName: "",
+                    name: "",
                     email: "",
                     company: "",
+                    jobTitle: "",
                     phone: "",
                     country: "Germany",
                     inquiryType: "Sales",
+                    productInterest: "ASB GlassFloor",
                     message: ""
                 });
             } else {
@@ -65,204 +68,192 @@ export default function ContactPage() {
     };
 
     return (
-        <main className="bg-[#050505] min-h-screen text-white pt-32 pb-24">
-            <div className="container mx-auto px-6 md:px-12 lg:px-20">
+        <main className="min-h-screen bg-black text-white flex flex-col pt-0 lg:flex-row lg:h-screen overflow-hidden">
 
-                {/* Header Section */}
-                <div className="mb-20">
-                    <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 mb-6">
-                        Get Started
-                    </h1>
-                    <p className="text-xl md:text-2xl text-gray-400 max-w-2xl font-light">
-                        From Sales to Partnership. Contact us to learn more about the future of sports flooring.
-                    </p>
+            {/* Mobile Visual Header (Only visible on Mobile) */}
+            <div className="lg:hidden w-full h-64 relative overflow-hidden flex-shrink-0">
+                <div className="absolute inset-0 bg-gray-900">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover opacity-80"
+                    >
+                        <source src={encodeURI("/IGNITE THE COURT The Future of Sports Venues with ASB GlassFloor.mp4")} type="video/mp4" />
+                    </video>
                 </div>
+            </div>
 
-                {/* Grid Layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            {/* LEFT SIDE: Input Form (Scrollable) */}
+            <div className="w-full lg:w-[45%] flex flex-col h-full overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:none] relative z-10">
+                <div className="px-6 md:px-12 py-12 lg:pt-40 lg:pb-24 max-w-2xl mx-auto w-full">
 
-                    {/* Form Section */}
-                    <div className="bg-[#111] p-8 md:p-12 rounded-xl border border-white/5 shadow-2xl">
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Header */}
+                    <div className="mb-12">
+                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+                            Start Your Project
+                        </h1>
+                    </div>
 
-                            {/* Salutation */}
-                            <div className="grid grid-cols-2 gap-6">
-                                <div className="col-span-2 md:col-span-1">
-                                    <label className="block text-xs uppercase tracking-wider text-gray-400 mb-2">Salutation</label>
-                                    <select
-                                        name="salutation"
-                                        value={formData.salutation}
-                                        onChange={handleChange}
-                                        className="w-full bg-white text-black px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    >
-                                        <option value="">Select...</option>
-                                        <option value="Mr.">Mr.</option>
-                                        <option value="Ms.">Ms.</option>
-                                        <option value="Mrs.">Mrs.</option>
-                                    </select>
-                                </div>
+                    <form onSubmit={handleSubmit} className="space-y-8">
+
+                        {/* Name */}
+                        <div className="group">
+                            <label htmlFor="name" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Name *</label>
+                            <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                required
+                                value={formData.name}
+                                onChange={handleChange}
+                                className="w-full bg-[#1A1A1A]/40 border-b border-gray-700 text-white px-2 py-3 focus:outline-none focus:border-white focus:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 rounded-t-sm"
+                            />
+                        </div>
+
+                        {/* Company & Job Title */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="group">
+                                <label htmlFor="company" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Company Name *</label>
+                                <input
+                                    id="company"
+                                    type="text"
+                                    name="company"
+                                    required
+                                    value={formData.company}
+                                    onChange={handleChange}
+                                    className="w-full bg-[#1A1A1A]/40 border-b border-gray-700 text-white px-2 py-3 focus:outline-none focus:border-white focus:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 rounded-t-sm"
+                                />
                             </div>
-
-                            {/* Name Fields */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label className="block text-xs uppercase tracking-wider text-gray-400 mb-2">First Name *</label>
-                                    <input
-                                        type="text"
-                                        name="firstName"
-                                        required
-                                        value={formData.firstName}
-                                        onChange={handleChange}
-                                        className="w-full bg-white text-black px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-xs uppercase tracking-wider text-gray-400 mb-2">Last Name *</label>
-                                    <input
-                                        type="text"
-                                        name="lastName"
-                                        required
-                                        value={formData.lastName}
-                                        onChange={handleChange}
-                                        className="w-full bg-white text-black px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    />
-                                </div>
+                            <div className="group">
+                                <label htmlFor="jobTitle" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Job Title</label>
+                                <input
+                                    id="jobTitle"
+                                    type="text"
+                                    name="jobTitle"
+                                    value={formData.jobTitle}
+                                    onChange={handleChange}
+                                    className="w-full bg-[#1A1A1A]/40 border-b border-gray-700 text-white px-2 py-3 focus:outline-none focus:border-white focus:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 rounded-t-sm"
+                                />
                             </div>
+                        </div>
 
-                            {/* Email & Company */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label className="block text-xs uppercase tracking-wider text-gray-400 mb-2">Email *</label>
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        required
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        className="w-full bg-white text-black px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-xs uppercase tracking-wider text-gray-400 mb-2">Company Name *</label>
-                                    <input
-                                        type="text"
-                                        name="company"
-                                        required
-                                        value={formData.company}
-                                        onChange={handleChange}
-                                        className="w-full bg-white text-black px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    />
-                                </div>
+
+                        {/* Email & Phone */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="group">
+                                <label htmlFor="email" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Email *</label>
+                                <input
+                                    id="email"
+                                    type="email"
+                                    name="email"
+                                    required
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    className="w-full bg-[#1A1A1A]/40 border-b border-gray-700 text-white px-2 py-3 focus:outline-none focus:border-white focus:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 rounded-t-sm"
+                                />
                             </div>
-
-                            {/* Phone & Country */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label className="block text-xs uppercase tracking-wider text-gray-400 mb-2">Phone</label>
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        className="w-full bg-white text-black px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-xs uppercase tracking-wider text-gray-400 mb-2">Country *</label>
-                                    <select
-                                        name="country"
-                                        required
-                                        value={formData.country}
-                                        onChange={handleChange}
-                                        className="w-full bg-white text-black px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    >
-                                        <option value="Germany">Germany</option>
-                                        <option value="USA">USA</option>
-                                        <option value="South Korea">South Korea</option>
-                                        <option value="France">France</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </div>
+                            <div className="group">
+                                <label htmlFor="phone" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Telephone *</label>
+                                <input
+                                    id="phone"
+                                    type="tel"
+                                    name="phone"
+                                    required
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                    className="w-full bg-[#1A1A1A]/40 border-b border-gray-700 text-white px-2 py-3 focus:outline-none focus:border-white focus:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 rounded-t-sm"
+                                />
                             </div>
+                        </div>
 
-                            {/* Inquiry Type */}
-                            <div>
-                                <label className="block text-xs uppercase tracking-wider text-gray-400 mb-2">Type of Inquiry</label>
+
+                        {/* Dropdowns */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="group">
+                                <label htmlFor="inquiryType" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Inquiry Type *</label>
                                 <select
+                                    id="inquiryType"
                                     name="inquiryType"
                                     value={formData.inquiryType}
                                     onChange={handleChange}
-                                    className="w-full bg-white text-black px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full bg-[#1A1A1A]/40 border-b border-gray-700 text-white px-2 py-3 focus:outline-none focus:border-white focus:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 rounded-t-sm appearance-none"
                                 >
                                     <option value="Sales">Sales</option>
+                                    <option value="Technical">Technical</option>
                                     <option value="Partnership">Partnership</option>
-                                    <option value="Media">Media</option>
                                     <option value="Other">Other</option>
                                 </select>
                             </div>
-
-                            {/* Message */}
-                            <div>
-                                <label className="block text-xs uppercase tracking-wider text-gray-400 mb-2">Your Message *</label>
-                                <textarea
-                                    name="message"
-                                    required
-                                    rows={5}
-                                    value={formData.message}
+                            <div className="group">
+                                <label htmlFor="productInterest" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Product Interest *</label>
+                                <select
+                                    id="productInterest"
+                                    name="productInterest"
+                                    value={formData.productInterest}
                                     onChange={handleChange}
-                                    className="w-full bg-white text-black px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                ></textarea>
+                                    className="w-full bg-[#1A1A1A]/40 border-b border-gray-700 text-white px-2 py-3 focus:outline-none focus:border-white focus:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 rounded-t-sm appearance-none"
+                                >
+                                    <option value="ASB GlassFloor">ASB GlassFloor</option>
+                                    <option value="ASB LumiFlex">ASB LumiFlex</option>
+                                    <option value="ASB Architectural">ASB Architectural</option>
+                                    <option value="Other">Other</option>
+                                </select>
                             </div>
-
-                            {/* Submit Button */}
-                            <button
-                                type="submit"
-                                className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-sm transition-colors duration-300 uppercase tracking-widest"
-                            >
-                                {status === "loading" ? "Sending..." : "Submit Request"}
-                            </button>
-                        </form>
-                    </div>
-
-                    {/* Address & Info Section */}
-                    <div className="space-y-16">
-
-                        {/* Address Columns */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                            {/* Germany */}
-                            <div>
-                                <h3 className="text-lg font-bold text-white mb-4">ASB KOREA</h3>
-                                <p className="text-gray-400 leading-relaxed mb-4">
-                                    경기도 성남시 분당구 황새울로200번길 36 동부루트빌딩 1010, 1011
-                                </p>
-                                <a href="mailto:globe@globecorp.co.kr" className="text-blue-400 hover:text-white transition-colors block mb-2">
-                                    globe@globecorp.co.kr
-                                </a>
-                                <div className="space-y-1">
-                                    <a href="tel:0317171180" className="block text-white hover:text-blue-400 transition-colors">
-                                        T. 031-717-1180
-                                    </a>
-                                    <div className="text-gray-400">
-                                        F. 031-717-1181
-                                    </div>
-                                </div>
-                            </div>
-
-
                         </div>
 
-                        {/* Map / Image Placeholder */}
-                        <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-gray-900 border border-white/10">
-                            {/* Placeholder for map or office image */}
-                            <div className="absolute inset-0 flex items-center justify-center text-gray-600">
-                                <span className="uppercase tracking-widest text-sm">Interactive Map Loading...</span>
-                            </div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                        {/* Message */}
+                        <div className="group">
+                            <label htmlFor="message" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Your Message *</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                required
+                                rows={4}
+                                placeholder="프로젝트 규모, 일정 등..."
+                                value={formData.message}
+                                onChange={handleChange}
+                                className="w-full bg-[#1A1A1A]/40 border-b border-gray-700 text-white px-2 py-3 focus:outline-none focus:border-white focus:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 rounded-t-sm"
+                            ></textarea>
                         </div>
 
-                    </div>
+                        {/* Privacy Checkbox */}
+                        <div className="flex items-center gap-3">
+                            <input type="checkbox" id="privacy" required className="accent-white w-4 h-4" />
+                            <label htmlFor="privacy" className="text-sm text-gray-400">
+                                [필수] 개인정보 수집 및 이용에 동의합니다.
+                            </label>
+                        </div>
+
+                        {/* Submit Button */}
+                        <button
+                            type="submit"
+                            className="w-full bg-white hover:bg-gray-200 text-black font-bold py-5 rounded-sm transition-all duration-300 uppercase tracking-widest hover:shadow-[0_0_20px_rgba(255,255,255,0.5)]"
+                        >
+                            {status === "loading" ? "Sending..." : "Submit Request"}
+                        </button>
+
+                        {/* Footer Info */}
+                        <div className="pt-8 pb-12 border-t border-white/10 text-gray-500 text-sm">
+                            <h4 className="font-bold text-white mb-2">ASB KOREA</h4>
+                            <p>경기도 성남시 분당구 황새울로200번길 36 동부루트빌딩 1010, 1011</p>
+                            <div className="flex gap-4 mt-2">
+                                <span>T. 031-717-1180</span>
+                                <span>F. 031-717-1181</span>
+                                <span>E. globe@globecorp.co.kr</span>
+                            </div>
+                        </div>
+
+                    </form>
                 </div>
             </div>
+
+            {/* RIGHT SIDE: Visual Showcase (Fixed/Hidden on Mobile) */}
+            <div className="hidden lg:block w-[55%] h-full relative overflow-hidden bg-black">
+                <ContactMultiSports />
+            </div>
+
         </main>
     );
 }

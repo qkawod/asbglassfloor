@@ -1,0 +1,82 @@
+"use client";
+
+import { useState } from "react";
+import { Layers, Ban, CircleDot } from "lucide-react";
+
+type Sport =
+    | "no-line"
+    | "basketball"
+    | "badminton"
+    | "futsal"
+    | "handball"
+    | "volleyball"
+    | "all-sports";
+
+export default function ContactMultiSports() {
+    const [activeSport, setActiveSport] = useState<Sport>("basketball");
+
+    const EmojiIcon = (emoji: string) => () => <span className="text-xl leading-none grayscale opacity-80">{emoji}</span>;
+
+    const sports: { id: Sport; label: string; icon: any; desc: string }[] = [
+        { id: "no-line", label: "No line", icon: Ban, desc: "Clean surface" },
+        { id: "basketball", label: "Basketball", icon: EmojiIcon("🏀"), desc: "FIBA Layout" },
+        { id: "badminton", label: "Badminton", icon: EmojiIcon("🏸"), desc: "BWF Court" },
+        { id: "futsal", label: "Futsal", icon: EmojiIcon("⚽"), desc: "Official Dimensions" },
+        { id: "handball", label: "Handball", icon: CircleDot, desc: "IHF Court" },
+        { id: "volleyball", label: "Volleyball", icon: EmojiIcon("🏐"), desc: "FIVB Layout" },
+        { id: "all-sports", label: "All sports", icon: Layers, desc: "Showcase all" },
+    ];
+
+    return (
+        <div className="w-full h-full flex flex-col bg-black relative pr-32">
+            {/* Main Interactive Layer */}
+            <div className="relative w-full h-full overflow-hidden bg-black group">
+                {/* Floor Texture */}
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20" />
+
+                {/* Reflections/Glow */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none z-10" />
+
+                {/* Sport Image Layer */}
+                <div className="absolute inset-0 flex items-start justify-center pt-40 pr-10">
+                    <img
+                        src={`/sports-demo/${activeSport}.png`}
+                        alt={activeSport}
+                        className="w-full h-full object-contain object-top transition-opacity duration-500"
+                    />
+                </div>
+
+                <div className="absolute bottom-40 right-8 text-xs text-white/30 font-mono z-20">
+                    ASB GlassFloor System v4.0
+                </div>
+
+                {/* Bottom Overlay Controls */}
+                <div className="absolute bottom-0 left-0 w-full z-30 bg-gradient-to-t from-black via-black/80 to-transparent pt-32 pb-48 px-8">
+                    <div className="mb-4">
+                        <h2 className="text-xl font-bold text-white mb-1">MultiSports Configuration</h2>
+                        <p className="text-gray-400 text-sm">
+                            Select a sport to see the lines adapt instantly.
+                        </p>
+                    </div>
+
+                    {/* Scrollable Horizontal List for Controls */}
+                    <div className="flex gap-3 overflow-x-auto pb-2 custom-scrollbar">
+                        {sports.map((sport) => (
+                            <button
+                                key={sport.id}
+                                onClick={() => setActiveSport(sport.id)}
+                                className={`flex flex-col items-center justify-center gap-2 p-3 rounded-lg border min-w-[100px] transition-all duration-300 backdrop-blur-sm ${activeSport === sport.id
+                                    ? "bg-white/10 border-white text-white shadow-[0_0_15px_rgba(255,255,255,0.4)]"
+                                    : "bg-black/40 border-white/10 text-gray-500 hover:bg-black/60 hover:text-gray-300"
+                                    }`}
+                            >
+                                <sport.icon size={20} />
+                                <div className="text-xs font-medium">{sport.label}</div>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
