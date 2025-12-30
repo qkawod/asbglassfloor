@@ -248,16 +248,7 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            {/* Sales International */}
-                            <div>
-                                <h3 className="text-lg font-bold text-white mb-4">Sales International</h3>
-                                <p className="text-gray-400 leading-relaxed mb-4">
-                                    Reach out to our global sales team for inquiries outside of Germany.
-                                </p>
-                                <a href="mailto:sales@asbglassfloor.com" className="text-blue-400 hover:text-white transition-colors block">
-                                    sales@asbglassfloor.com
-                                </a>
-                            </div>
+
                         </div>
 
                         {/* Map / Image Placeholder */}
