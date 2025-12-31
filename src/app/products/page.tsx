@@ -16,7 +16,6 @@ export default function ProductsPage() {
             <ProductHero />
             <MultiSportsAdvantages />
             <MultiSportsProjects />
-            <MultiSportsInfo />
         </main>
     );
 }

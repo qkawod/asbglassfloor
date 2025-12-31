@@ -46,7 +46,7 @@ export default function ContactMultiSports() {
                     />
                 </div>
 
-                <div className="absolute bottom-40 right-8 text-xs text-white/30 font-mono z-20">
+                <div className="absolute top-[62%] right-12 text-xs text-white/30 font-mono z-50">
                     ASB GlassFloor System v4.0
                 </div>
 
