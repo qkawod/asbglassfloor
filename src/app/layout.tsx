@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     ],
   },
   other: {
-    'naver-site-verification': 'c2450537233866d63d662f5567b4abc61204d807', // Placeholder code
+    'naver-site-verification': '2a86449b9e69a610e63c771a81d2211ed126c18d',
   },
 };
 
