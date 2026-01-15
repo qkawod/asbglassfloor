@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ASB GlassFloor ㅣ ASB 글라스플로어",
-  description: "독일ASB 국내 독점 공급사ㅣ최첨단 스마트 체육관 시스템 ㅣ ASB 국내 공식 홈페이지",
+  description: "독일ASB 국내 독점 공급사ㅣ최첨단 스마트 체육관 시스템 ㅣ ASB 국내 공식 사이트",
   keywords: "asbglassfloor, asb글라스플로어, asb글래스플로어, asb, asbkorea, asb글라스, 에이에스비, 에이에스비글라스플로어, 루미플렉스, 멀티스포츠플로어, led플로어, led바닥재, 유리바닥재, 글라스플로어, 글라스led플로어, 다목적체육관, 글래스바닥재, 스마트체육관, led체육관, 스포츠플로어",
   openGraph: {
     title: "ASB GlassFloor | 세계 최초의 LED 유리 바닥",
