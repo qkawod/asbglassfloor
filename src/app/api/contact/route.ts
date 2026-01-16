@@ -28,9 +28,10 @@ export async function POST(request: Request) {
 
         // Email content
         const mailOptions = {
-            from: `"${firstName} ${lastName}" <${process.env.SMTP_USER}>`, // Sender address (often needs to be the authenticated user)
+            from: `"${firstName} ${lastName}" <${process.env.SMTP_USER}>`, // Sender address
             replyTo: email, // Reply to the user who filled the form
             to: process.env.CONTACT_RECEIVER_EMAIL || "globe@globecorp.co.kr", // Receiver address
+            cc: process.env.SMTP_USER, // debug: send a copy to the sender to verify delivery
             subject: `New Inquiry from Website: ${inquiryType} - ${company}`,
             text: `
                 Name: ${salutation} ${firstName} ${lastName}
