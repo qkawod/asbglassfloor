@@ -83,8 +83,17 @@ export default function Hero() {
         )}
       </button>
 
-      {/* Content - Empty for now */}
-      <div className="relative z-20 px-4">
+      {/* Content */}
+      <div className="relative z-40 px-6 py-8 max-w-4xl mx-auto mt-20 md:mt-0 bg-black/30 backdrop-blur-sm rounded-xl border border-white/10">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+          글라스플로어 전문 기업 GLOBE
+        </h1>
+        <p className="text-lg md:text-xl text-gray-100 drop-shadow-md leading-relaxed">
+          GLOBE는 독일 ASB GlassFloor의 공식 파트너로, 농구장·멀티스포츠·스마트체육센터에 적용되는
+          글라스플로어 시스템을 국내에 공급하고 있습니다.<br className="hidden md:block" />
+          ASB GlassFloor는 국제농구연맹(FIBA), NBA 등 세계 주요 스포츠 기관의 인증을 획득한
+          차세대 스포츠플로어 솔루션입니다.
+        </p>
       </div>
 
       {/* Scroll Indicator */}
