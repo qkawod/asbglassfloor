@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -11,12 +10,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  title: "ASB GlassFloor 공식 파트너 | 글라스플로어 전문 기업 GLOBE",
-  description: "GLOBE는 독일 ASB GlassFloor 공식 파트너로 농구장, 스마트체육센터, 멀티스포츠 글라스플로어 시스템을 제공합니다. 국제농구연맹(FIBA), NBA 등 글로벌 인증을 받은 스포츠플로어 솔루션을 한국에 공급합니다.",
+  title: "ASB GlassFloor ㅣ ASB 글라스플로어",
+  description: "독일ASB 국내 독점 공급사ㅣ최첨단 스마트 체육관 시스템 ㅣ ASB 국내 공식 사이트",
   keywords: "asbglassfloor, asb글라스플로어, asb글래스플로어, asb, asbkorea, asb글라스, 에이에스비, 에이에스비글라스플로어, 루미플렉스, 멀티스포츠플로어, led플로어, led바닥재, 유리바닥재, 글라스플로어, 글라스led플로어, 다목적체육관, 글래스바닥재, 스마트체육관, led체육관, 스포츠플로어",
   openGraph: {
-    title: "ASB GlassFloor 공식 파트너 | 글라스플로어 전문 기업 GLOBE",
-    description: "GLOBE는 독일 ASB GlassFloor 공식 파트너로 농구장, 스마트체육센터, 멀티스포츠 글라스플로어 시스템을 제공합니다. 국제농구연맹(FIBA), NBA 등 글로벌 인증을 받은 스포츠플로어 솔루션을 한국에 공급합니다.",
+    title: "ASB GlassFloor ㅣ ASB 글라스플로어",
+    description: "독일ASB 국내 독점 공급사ㅣ최첨단 스마트 체육관 시스템 ㅣ ASB 국내 공식 사이트",
     url: "https://www.globecorp.co.kr",
     siteName: "ASB GlassFloor Korea",
     locale: "ko_KR",
@@ -45,7 +44,6 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased bg-deepBlack text-white break-keep whitespace-pre-line`}>
         <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
