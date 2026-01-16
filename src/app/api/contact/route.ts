@@ -15,10 +15,11 @@ export async function POST(request: Request) {
             );
         }
 
+        const port = Number(process.env.SMTP_PORT) || 587;
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
-            port: Number(process.env.SMTP_PORT) || 587,
-            secure: false, // true for 465, false for other ports
+            port: port,
+            secure: port === 465, // true for 465, false for other ports
             auth: {
                 user: process.env.SMTP_USER,
                 pass: process.env.SMTP_PASS,
@@ -64,8 +65,9 @@ export async function POST(request: Request) {
         return NextResponse.json({ success: true, message: "Email sent successfully!" });
     } catch (error) {
         console.error("Error sending email:", error);
+        const errorMessage = error instanceof Error ? error.message : JSON.stringify(error);
         return NextResponse.json(
-            { error: "Failed to send email." },
+            { error: `전송 실패 원인: ${errorMessage}` },
             { status: 500 }
         );
     }

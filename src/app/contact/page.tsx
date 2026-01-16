@@ -55,8 +55,9 @@ export default function ContactPage() {
                     message: ""
                 });
             } else {
+                const data = await response.json();
                 setStatus("error");
-                alert("Something went wrong. Please try again or contact us directly.");
+                alert(data.error || "Something went wrong. Please try again or contact us directly.");
             }
         } catch (error) {
             console.error("Submission error:", error);
