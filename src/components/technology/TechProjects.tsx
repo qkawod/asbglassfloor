@@ -37,7 +37,7 @@ const projects: Project[] = [
         title: "Substructure Engineering",
         subtitle: "TECHNOLOGY",
         description: "ASB GlassFloor의 하부 구조 시스템(Substructure)은 스포츠 경기력과 공간 활용성을 동시에 극대화하도록 설계되었습니다. 평상시에는 최상급의 탄성과 충격 흡수율을 제공하여 선수의 관절을 보호하고 최고의 플레이를 지원합니다. 하지만 단순한 스포츠 바닥재에 그치지 않고, 필요 시 구조적 보강을 통해 대규모 관중석이나 중장비가 배치되는 환경까지 완벽하게 대응합니다.",
-        image: "/asb_service_03.jpg",
+        image: "/하부.jpeg",
         alignment: "left",
         color: "text-neonCyan",
         glow: "shadow-[0_0_15px_#00AEEF]",

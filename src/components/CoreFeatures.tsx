@@ -58,31 +58,44 @@ export default function CoreFeatures() {
                 <div className="flex-1 min-h-[4rem]" />
 
                 {/* Features Grid */}
-                <div ref={featuresRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 px-6 md:px-0">
-                    {/* Feature 1 */}
+                <div ref={featuresRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 px-6 md:px-0">
+                    {/* Feature 1: DURABILITY */}
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-bold">독보적인 다기능성</h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            단일 표면에서 다양한 스포츠 활동 간에 매끄럽게 전환하여 시간과 자원을 절약합니다.
-                            농구에서 배구에 이르기까지 ASB GlassFloor는 손쉽게 적응하여 공간 활용을 극대화하고 다용도성을 향상시킵니다.
+                        <h3 className="text-xl font-bold uppercase tracking-wider">DURABILITY (내구성)</h3>
+                        <p className="text-gray-600 leading-relaxed text-sm break-keep">
+                            특수 강화 유리와 알루미늄 구조로 설계되어 극한의 하중과 충격에도 뛰어난 내구성을 발휘합니다.
+                            <br className="my-2 block" />
+                            최대 70년에 달하는 긴 수명을 자랑하며, 장기간 사용에도 유지보수 부담이 거의 없습니다.
                         </p>
                     </div>
 
-                    {/* Feature 2 */}
+                    {/* Feature 2: VERSATILITY */}
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-bold">신뢰할 수 있는 안전성</h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            미끄럼 방지 세라믹 도트로 설계되어 선수들에게 확실한 마찰력을 제공하며 미끄러짐과 넘어짐의 위험을 줄입니다.
-                            최고 스포츠 기구의 승인을 받아 가장 높은 안전 기준을 충족합니다.
+                        <h3 className="text-xl font-bold uppercase tracking-wider">VERSATILITY (다목적성)</h3>
+                        <p className="text-gray-600 leading-relaxed text-sm break-keep">
+                            하나의 공간에서 다양한 스포츠와 이벤트를 모두 구현할 수 있습니다.
+                            <br className="my-2 block" />
+                            LED 라인을 통해 경기 종목을 즉시 전환할 수 있으며, 비디오 기능을 활용한 무한한 연출이 가능합니다.
                         </p>
                     </div>
 
-                    {/* Feature 3 */}
+                    {/* Feature 3: SUSTAINABILITY */}
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-bold">향상된 내구성</h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            지속적인 강도를 위해 설계되어 시간이 지나도 외관을 유지하면서 격렬한 스포츠 활동의 혹독함을 견딥니다.
-                            시설에 지속적인 가치를 제공하는 유지 보수가 필요 없는 솔루션을 즐겨보세요.
+                        <h3 className="text-xl font-bold uppercase tracking-wider">SUSTAINABILITY (지속 가능성)</h3>
+                        <p className="text-gray-600 leading-relaxed text-sm break-keep">
+                            친환경 소재 사용과 긴 수명을 통해 환경에 미치는 영향을 최소화합니다.
+                            <br className="my-2 block" />
+                            ASB GlassFloor는 미래 세대를 위한 책임 있는 지속 가능한 선택입니다.
+                        </p>
+                    </div>
+
+                    {/* Feature 4: PERFORMANCE */}
+                    <div className="space-y-4">
+                        <h3 className="text-xl font-bold uppercase tracking-wider">PERFORMANCE (퍼포먼스)</h3>
+                        <p className="text-gray-600 leading-relaxed text-sm break-keep">
+                            선수에게 최적의 탄성과 마찰력을 제공해 부상 위험을 줄이고 경기력을 극대화합니다.
+                            <br className="my-2 block" />
+                            국제 스포츠 연맹의 엄격한 인증 기준을 충족한, 프로 레벨의 퍼포먼스를 제공합니다.
                         </p>
                     </div>
                 </div>

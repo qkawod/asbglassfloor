@@ -70,7 +70,7 @@ export default function ASBTech() {
                         Engineered Luminance
                     </h2>
                     <p ref={textRef} className="text-xl text-gray-600 max-w-2xl mx-auto font-light">
-                        The perfect fusion of physical sport and digital technology.
+                        스포츠와 디지털 기술의 완벽한 융합
                     </p>
                 </div>
 
@@ -90,9 +90,9 @@ export default function ASBTech() {
                                 src={item.src}
                                 alt={item.title}
                                 fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                className="object-cover transition-all duration-700 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 transition-colors duration-500 flex items-end justify-start p-6">
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-500 flex items-end justify-start p-6">
                                 <h3 className="text-white text-xl md:text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                                     {item.title}
                                 </h3>

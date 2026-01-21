@@ -54,7 +54,7 @@ export default function ASBVision() {
                     </span>
                 </h2>
                 <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide">
-                    We redefine sports floors as infinite digital surfaces.
+                    스포츠 플로어의 개념을 넘어, 무한한 디지털 공간으로 재정의합니다.
                 </p>
             </div>
 

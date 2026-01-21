@@ -37,7 +37,7 @@ export default function ASBStats() {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-                <h2 className="text-3xl md:text-5xl font-medium mb-16 text-black">Innovation without Borders</h2>
+                <h2 className="text-3xl md:text-5xl font-medium mb-16 text-black">한계를 뛰어넘는 혁신</h2>
 
                 <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32">
                     <div className="text-center">

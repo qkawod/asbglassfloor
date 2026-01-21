@@ -67,33 +67,31 @@ export default function ProductHero({
     return (
         <section ref={heroRef} className="relative h-screen w-full flex items-end justify-start bg-deepBlack overflow-hidden">
             {/* Background Layer */}
-            <div className="absolute inset-0 z-0">
-                {/* Background Media */}
-                <div className="absolute inset-0 bg-black" />
-
-                {imageSrc ? (
-                    <Image
-                        src={imageSrc}
-                        alt={title}
-                        fill
-                        className="object-cover opacity-100"
-                        priority
-                    />
-                ) : (
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="absolute inset-0 w-full h-full object-cover opacity-100 min-h-[100vh] md:min-h-0"
-                    >
-                        <source src={videoSrc} type="video/mp4" />
-                    </video>
-                )}
-
-                <div className="absolute inset-0 bg-gradient-to-t from-deepBlack via-transparent to-transparent" />
-
-
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                {/* Abstract Dark Glass Background matching ReferencesPageRev */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#111] z-10" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[56.25vw] min-h-screen min-w-[177.77vh] opacity-80">
+                    {imageSrc ? (
+                        <Image
+                            src={imageSrc}
+                            alt={title}
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    ) : (
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-full object-cover"
+                            src={videoSrc}
+                        />
+                    )}
+                </div>
+                {/* Bottom Gradient Fade */}
+                <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#111] to-transparent z-10 pointer-events-none" />
             </div>
 
             {/* Content - Minimal & Impactful */}

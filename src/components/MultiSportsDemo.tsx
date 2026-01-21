@@ -28,7 +28,7 @@ export default function MultiSportsDemo() {
     ];
 
     return (
-        <section className="relative w-full bg-white flex flex-col items-center pt-80 pb-40">
+        <section className="relative w-full bg-transparent flex flex-col items-center pt-80 pb-40">
             <div className="w-full max-w-[1920px] mx-auto px-8 md:px-20 flex flex-col md:flex-row gap-12 items-stretch h-[750px]">
 
                 {/* Left: Interactive Court */}
@@ -56,8 +56,8 @@ export default function MultiSportsDemo() {
                 {/* Right: Control Panel */}
                 <div className="w-full md:w-1/3 flex flex-col gap-6">
                     <div className="mb-4">
-                        <h2 className="text-3xl font-medium text-black mb-2">MultiSports</h2>
-                        <p className="text-gray-600 mb-8 leading-relaxed">
+                        <h2 className="text-3xl font-medium text-white mb-2">MultiSports</h2>
+                        <p className="text-gray-400 mb-8 leading-relaxed">
                             Transform your arena with the world's most advanced glass flooring system. Seamlessly switch between sports configurations at the touch of a button.
                         </p>
                     </div>
@@ -68,8 +68,8 @@ export default function MultiSportsDemo() {
                                 key={sport.id}
                                 onClick={() => setActiveSport(sport.id)}
                                 className={`w-full flex items-center gap-4 p-3 rounded-lg border transition-all duration-300 ${activeSport === sport.id
-                                    ? "bg-black/10 border-black text-black shadow-md"
-                                    : "bg-transparent border-black/10 text-gray-500 hover:bg-black/5 hover:text-gray-700"
+                                    ? "bg-white/10 border-white text-white shadow-md"
+                                    : "bg-transparent border-white/10 text-gray-400 hover:bg-white/5 hover:text-white"
                                     }`}
                             >
                                 <sport.icon size={24} />
