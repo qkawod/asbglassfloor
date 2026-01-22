@@ -36,7 +36,7 @@ export default function ProductShowcase() {
     };
 
     return (
-        <section className="relative h-screen w-full flex overflow-hidden bg-white">
+        <section className="relative h-[60vh] w-full flex overflow-hidden bg-white mt-80">
             {/* Left Side - MultiSports */}
             <div
                 ref={leftRef}
@@ -44,7 +44,7 @@ export default function ProductShowcase() {
                 onClick={() => router.push("/products")}
             >
                 {/* Background Image/Video Placeholder */}
-                <div className="absolute inset-0 bg-[url('/Dresden/multisports-bg.jpg')] bg-cover bg-center bg-no-repeat transition-all duration-500" />
+                <div className="absolute inset-0 bg-[url('/Dresden/multisports-bg.jpg')] bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-out transform-gpu group-hover:scale-125" />
 
                 {/* Center-heavy gradient overlay - Hover Trigger Here */}
                 <div
@@ -53,14 +53,11 @@ export default function ProductShowcase() {
                     onMouseLeave={handleMouseLeave}
                 />
 
-                <div className="absolute bottom-0 left-0 p-8 md:p-16 z-20 w-full pointer-events-none flex justify-center md:justify-start">
-                    <div className="pointer-events-auto max-w-md">
-                        <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 transition-transform duration-500 group-hover:-translate-y-2 tracking-tighter uppercase leading-none">
+                <div className="absolute bottom-0 left-0 p-8 md:p-16 pb-4 md:pb-6 z-20 w-full pointer-events-none flex justify-center md:justify-start">
+                    <div className="pointer-events-auto max-w-2xl">
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,1)] origin-left tracking-tighter uppercase leading-none">
                             ASB <br /><span className="text-white">MultiSports</span>
                         </h2>
-                        <p className={`text-white/90 text-lg md:text-xl font-medium leading-tight mb-8 min-h-[5.5rem] transition-all duration-500 ${activeSide === 'left' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                            The future of sports flooring. Customize LED lines freely via touchscreen to instantly begin any activity.
-                        </p>
                         <button className="flex items-center gap-3 text-white border border-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-bold">
                             Explore MultiSports <ArrowRight size={18} />
                         </button>
@@ -75,7 +72,7 @@ export default function ProductShowcase() {
                 onClick={() => router.push("/lumiflex")}
             >
                 {/* Background Image/Video Placeholder */}
-                <div className="absolute inset-0 bg-[url('/lumiflex-bg.jpg')] bg-cover bg-center bg-no-repeat transition-all duration-500" />
+                <div className="absolute inset-0 bg-[url('/lumiflex-bg.jpg')] bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-out transform-gpu group-hover:scale-125" />
 
                 {/* Center-heavy gradient overlay - Hover Trigger Here */}
                 <div
@@ -84,14 +81,11 @@ export default function ProductShowcase() {
                     onMouseLeave={handleMouseLeave}
                 />
 
-                <div className="absolute bottom-0 left-0 p-8 md:p-16 z-20 w-full pointer-events-none flex justify-center md:justify-start">
-                    <div className="pointer-events-auto max-w-md">
-                        <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 transition-transform duration-500 group-hover:-translate-y-2 tracking-tighter uppercase leading-none">
+                <div className="absolute bottom-0 left-0 p-8 md:p-16 pb-4 md:pb-6 z-20 w-full pointer-events-none flex justify-center md:justify-start">
+                    <div className="pointer-events-auto max-w-2xl">
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,1)] origin-left tracking-tighter uppercase leading-none">
                             ASB <br /><span className="text-white">LumiFlex</span>
                         </h2>
-                        <p className={`text-white/90 text-lg md:text-xl font-medium leading-tight mb-8 min-h-[5.5rem] transition-all duration-500 ${activeSide === 'right' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                            The ultimate full video floor. ASB LumiFlex transforms any space into a multi-functional visual spectacle.
-                        </p>
                         <button className="flex items-center gap-3 text-white border border-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-bold">
                             Explore LumiFlex <ArrowRight size={18} />
                         </button>

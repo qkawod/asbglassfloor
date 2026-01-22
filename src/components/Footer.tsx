@@ -41,9 +41,9 @@ export default function Footer() {
                     <span className="hidden md:block w-px h-3 bg-white/20"></span>
                     <span>Fax : 031-717-1181</span>
                     <span className="hidden md:block w-px h-3 bg-white/20"></span>
-                    <span>Email : globe@globecorp.co.kr</span>
+                    <span>globe@globecorp.co.kr</span>
                     <span className="hidden md:block w-px h-3 bg-white/20"></span>
-                    <span>Add : 경기도 성남시 분당구 판교역로 152, 1103</span>
+                    <span>경기도 성남시 분당구 판교역로 152, 1103</span>
                 </div>
 
                 {/* 4. Social Icons */}

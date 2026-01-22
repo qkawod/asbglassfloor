@@ -235,20 +235,7 @@ export default function ContactPage() {
                             {status === "loading" ? "Sending..." : "Submit Request"}
                         </button>
 
-                        {/* Footer Info */}
-                        <div className="pt-8 pb-12 border-t border-white/10 text-gray-500 text-xs leading-relaxed">
-                            <h4 className="font-bold text-white text-sm mb-4">글로브(Globe Co.,Ltd)</h4>
-                            <div className="space-y-1.5">
-                                <p>본사 : 경기도 성남시 분당구 판교역로 152, 1103</p>
-                                <p>Development Center : 인천광역시 중구 영종순환로 279-52</p>
-                                <p className="flex flex-wrap gap-x-4 gap-y-1 pt-1">
-                                    <span>T. 031-717-1180</span>
-                                    <span>F. 031-717-1181</span>
-                                    <span>E-mail : globe@globecorp.co.kr</span>
-                                </p>
-                                <p className="pt-2 opacity-50">COPYRIGHT © 2021 Globe Co.,Ltd. All rights reserved.</p>
-                            </div>
-                        </div>
+
 
                     </form>
                 </div>

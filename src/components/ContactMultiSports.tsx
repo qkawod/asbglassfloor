@@ -38,11 +38,11 @@ export default function ContactMultiSports() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none z-10" />
 
                 {/* Sport Image Layer */}
-                <div className="absolute inset-0 flex items-start justify-center pt-40 pr-10">
+                <div className="absolute inset-x-0 top-0 flex items-center justify-center pt-10 px-10" style={{ height: '50%' }}>
                     <img
                         src={`/sports-demo/${activeSport}.png`}
                         alt={activeSport}
-                        className="w-full h-full object-contain object-top transition-opacity duration-500"
+                        className="h-full w-auto max-w-full object-contain transition-opacity duration-500"
                     />
                 </div>
 
@@ -51,7 +51,7 @@ export default function ContactMultiSports() {
                 </div>
 
                 {/* Bottom Overlay Controls */}
-                <div className="absolute bottom-0 left-0 w-full z-30 bg-gradient-to-t from-black via-black/80 to-transparent pt-32 pb-48 px-8">
+                <div className="absolute bottom-0 left-0 w-full z-30 bg-gradient-to-t from-black via-black/80 to-transparent pt-32 pb-48 px-10">
                     <div className="mb-4">
                         <h2 className="text-xl font-bold text-white mb-1">MultiSports Configuration</h2>
                         <p className="text-gray-400 text-sm">
@@ -60,18 +60,23 @@ export default function ContactMultiSports() {
                     </div>
 
                     {/* Scrollable Horizontal List for Controls */}
-                    <div className="flex gap-3 overflow-x-auto pb-2 custom-scrollbar">
+                    <div className="grid grid-cols-7 gap-2 py-4">
                         {sports.map((sport) => (
                             <button
                                 key={sport.id}
                                 onClick={() => setActiveSport(sport.id)}
-                                className={`flex flex-col items-center justify-center gap-2 p-3 rounded-lg border min-w-[100px] transition-all duration-300 backdrop-blur-sm ${activeSport === sport.id
-                                    ? "bg-white/10 border-white text-white shadow-[0_0_15px_rgba(255,255,255,0.4)]"
-                                    : "bg-black/40 border-white/10 text-gray-500 hover:bg-black/60 hover:text-gray-300"
+                                className={`flex flex-col items-center justify-center gap-2 p-3 rounded-xl border transition-all duration-500 group relative overflow-hidden backdrop-blur-xl ${activeSport === sport.id
+                                    ? "bg-gradient-to-br from-white/20 to-white/5 border-white/60 text-white shadow-[inset_0_0_15px_rgba(255,255,255,0.2)] -translate-y-1"
+                                    : "bg-white/[0.03] border-white/10 text-gray-400 hover:bg-white/[0.08] hover:border-white/30 hover:text-white hover:-translate-y-1"
                                     }`}
                             >
-                                <sport.icon size={20} />
-                                <div className="text-xs font-medium">{sport.label}</div>
+                                {/* Liquid Shine Effect */}
+                                <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full transition-transform duration-1000 ease-in-out ${activeSport === sport.id ? "opacity-0" : "group-hover:translate-x-full"}`}></div>
+
+                                <div className="relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
+                                    <sport.icon size={20} />
+                                </div>
+                                <div className="text-xs font-medium relative z-10">{sport.label}</div>
                             </button>
                         ))}
                     </div>

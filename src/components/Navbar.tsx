@@ -34,7 +34,12 @@ export default function Navbar() {
         { name: "테크놀로지", href: "/technology" },
         { name: "레퍼런스", href: "/references" },
         { name: "컨택트", href: "/contact" },
-        { name: "Try our system", href: "/try-our-system" }
+        {
+            name: "체험Zone",
+            href: "/try-our-system",
+            shadow: "0 0 10px #FFCCCC, 0 0 20px #FF0000, 0 0 40px #FF0000, 0 0 60px #8B0000",
+            id: "red"
+        }
     ];
 
     const socialLinks = [
@@ -88,9 +93,9 @@ export default function Navbar() {
 
                 {/* 2. Center: Desktop Navigation */}
                 <div className="hidden lg:flex flex-1 justify-center items-center gap-8 xl:gap-12 pl-20">
-                    {navLinks.map((link) => (
+                    {navLinks.map((link: any) => (
                         <div
-                            key={link.name}
+                            key={link.id || link.name}
                             className="relative group"
                         >
                             {link.name === "제품군" ? (
@@ -126,33 +131,17 @@ export default function Navbar() {
                                         </div>
                                     </div>
                                 </>
-                            ) : link.name === "Try our system" ? (
-                                <Link
-                                    href={link.href}
-                                    className="text-base md:text-base font-bold text-white transition-all duration-300 tracking-widest uppercase hover:text-white"
-                                    style={{
-                                        textShadow: "none"
-                                    }}
-                                    onMouseEnter={(e) => {
-                                        e.currentTarget.style.textShadow = "0 0 10px #FFFFE0, 0 0 20px #FFFF00, 0 0 40px #FFD700, 0 0 60px #FFD700";
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        e.currentTarget.style.textShadow = "none";
-                                    }}
-                                >
-                                    {link.name}
-                                </Link>
                             ) : (
                                 <Link
                                     href={link.href}
                                     className="text-base md:text-base font-bold text-white transition-all duration-300 tracking-widest uppercase hover:text-white"
                                     style={{
-                                        textShadow: "none"
+                                        textShadow: link.shadow || "none"
                                     }}
-                                    onMouseEnter={(e) => {
+                                    onMouseEnter={link.shadow ? undefined : (e) => {
                                         e.currentTarget.style.textShadow = "0 0 10px #FFFFE0, 0 0 20px #FFFF00, 0 0 40px #FFD700, 0 0 60px #FFD700";
                                     }}
-                                    onMouseLeave={(e) => {
+                                    onMouseLeave={link.shadow ? undefined : (e) => {
                                         e.currentTarget.style.textShadow = "none";
                                     }}
                                 >

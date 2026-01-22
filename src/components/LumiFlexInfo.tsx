@@ -1,12 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Volume2, VolumeX } from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function LumiFlexInfo() {
     const [isMuted, setIsMuted] = useState(true);
     const videoRef = useRef<HTMLVideoElement>(null);
+    const sectionRef = useRef<HTMLElement>(null);
+    const textRef = useRef<HTMLDivElement>(null);
+    const imageWrapperRef = useRef<HTMLDivElement>(null);
 
     const toggleMute = () => {
         if (videoRef.current) {
@@ -15,12 +22,55 @@ export default function LumiFlexInfo() {
             setIsMuted(videoRef.current.muted);
         }
     };
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            if (!sectionRef.current || !imageWrapperRef.current || !textRef.current) return;
+
+            // Image/Video Parallax & Fade (Same as ProjectCard)
+            gsap.fromTo(imageWrapperRef.current,
+                { y: 30, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 2.5,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+
+            // Text Slide In (Same as ProjectCard)
+            gsap.fromTo(textRef.current,
+                { x: -30, opacity: 0 }, // Coming from left
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 2.0,
+                    ease: "power2.out",
+                    delay: 0.4,
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <section className="relative w-full bg-white flex flex-col items-center pt-80 pb-40">
+        <section ref={sectionRef} className="relative w-full bg-white flex flex-col items-center pt-80 pb-40">
             <div className="w-full max-w-[1920px] mx-auto px-8 md:px-20 flex flex-col md:flex-row gap-12 items-stretch h-[750px]">
 
                 {/* Left: Text Content */}
-                <div className="w-full md:w-1/3 flex flex-col gap-6 justify-start">
+                <div ref={textRef} className="w-full md:w-1/3 flex flex-col gap-6 justify-start">
                     <div className="mb-4">
                         <h2 className="text-3xl font-medium text-black mb-6">ASB LumiFlex</h2>
                         <div className="space-y-6 text-gray-600 leading-relaxed text-lg text-justify break-keep">
@@ -41,7 +91,7 @@ export default function LumiFlexInfo() {
                 </div>
 
                 {/* Right: Image Container (Placeholder) */}
-                <div className="relative w-full md:w-2/3 h-full bg-[#111] rounded-xl border border-white/10 shadow-2xl overflow-hidden group">
+                <div ref={imageWrapperRef} className="relative w-full md:w-2/3 h-full bg-[#111] rounded-xl border border-white/10 shadow-2xl overflow-hidden group">
                     {/* Floor Texture */}
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20" />
 
