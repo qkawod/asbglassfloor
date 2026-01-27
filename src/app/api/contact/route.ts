@@ -16,14 +16,31 @@ export async function POST(request: Request) {
         }
 
         const port = Number(process.env.SMTP_PORT) || 587;
+
+        // Clean up password (remove spaces and quotes if present)
+        const smtpPass = process.env.SMTP_PASS?.replace(/\s+/g, '').replace(/"/g, '') || '';
+
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
             port: port,
             secure: port === 465, // true for 465, false for other ports
             auth: {
                 user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASS,
+                pass: smtpPass,
             },
+        });
+
+        // Verify connection configuration
+        await new Promise((resolve, reject) => {
+            transporter.verify(function (error, success) {
+                if (error) {
+                    console.error("Transporter verification failed:", error);
+                    reject(error);
+                } else {
+                    console.log("Server is ready to take our messages");
+                    resolve(success);
+                }
+            });
         });
 
         // Email content

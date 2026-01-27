@@ -25,10 +25,14 @@ export default function ContactPage() {
     };
 
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [errorMessage, setErrorMessage] = useState("");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        console.log("Form submission started");
+
         setStatus("loading");
+        setErrorMessage("");
 
         try {
             const response = await fetch("/api/contact", {
@@ -39,9 +43,10 @@ export default function ContactPage() {
                 body: JSON.stringify(formData),
             });
 
+            const data = await response.json();
+
             if (response.ok) {
                 setStatus("success");
-                alert("Thank you! Your request has been submitted.");
                 setFormData({
                     salutation: "",
                     name: "",
@@ -55,16 +60,13 @@ export default function ContactPage() {
                     message: ""
                 });
             } else {
-                const data = await response.json();
                 setStatus("error");
-                alert(data.error || "Something went wrong. Please try again or contact us directly.");
+                setErrorMessage(data.error || "Something went wrong. Please try again.");
             }
         } catch (error) {
             console.error("Submission error:", error);
             setStatus("error");
-            alert("Network error. Please try again later.");
-        } finally {
-            setStatus("idle");
+            setErrorMessage("Network error. Please try again later.");
         }
     };
 
@@ -228,12 +230,31 @@ export default function ContactPage() {
                         </div>
 
                         {/* Submit Button */}
-                        <button
-                            type="submit"
-                            className="w-full bg-white hover:bg-gray-200 text-black font-bold py-5 rounded-sm transition-all duration-300 uppercase tracking-widest hover:shadow-[0_0_20px_rgba(255,255,255,0.5)]"
-                        >
-                            {status === "loading" ? "Sending..." : "Submit Request"}
-                        </button>
+                        <div className="flex flex-col gap-4">
+                            <button
+                                type="submit"
+                                disabled={status === "loading"}
+                                className={`w-full font-bold py-5 rounded-sm transition-all duration-300 uppercase tracking-widest hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] ${status === "loading"
+                                        ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+                                        : "bg-white hover:bg-gray-200 text-black"
+                                    }`}
+                            >
+                                {status === "loading" ? "Sending..." : "Submit Request"}
+                            </button>
+
+                            {/* Status Messages */}
+                            {status === "success" && (
+                                <div className="p-4 bg-green-900/50 border border-green-500 text-green-200 rounded-sm text-center">
+                                    Thank you! Your request has been submitted successfully.
+                                </div>
+                            )}
+
+                            {status === "error" && (
+                                <div className="p-4 bg-red-900/50 border border-red-500 text-red-200 rounded-sm text-center">
+                                    {errorMessage}
+                                </div>
+                            )}
+                        </div>
 
 
 
