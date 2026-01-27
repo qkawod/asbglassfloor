@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { salutation, firstName, lastName, email, company, phone, country, inquiryType, message } = body;
+        const { name, email, company, jobTitle, phone, inquiryType, productInterest, message } = body;
 
         // Check if nodemailer options are set
         if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
@@ -28,30 +28,32 @@ export async function POST(request: Request) {
 
         // Email content
         const mailOptions = {
-            from: `"${firstName} ${lastName}" <${process.env.SMTP_USER}>`, // Sender address
+            from: `"${name}" <${process.env.SMTP_USER}>`, // Sender address
             replyTo: email, // Reply to the user who filled the form
             to: process.env.CONTACT_RECEIVER_EMAIL || "globe@globecorp.co.kr", // Receiver address
             cc: process.env.SMTP_USER, // debug: send a copy to the sender to verify delivery
-            subject: `New Inquiry from Website: ${inquiryType} - ${company}`,
+            subject: `New Inquiry: ${inquiryType} - ${company}`,
             text: `
-                Name: ${salutation} ${firstName} ${lastName}
+                Name: ${name}
                 Company: ${company}
+                Job Title: ${jobTitle}
                 Email: ${email}
                 Phone: ${phone}
-                Country: ${country}
                 Type: ${inquiryType}
+                Product Interest: ${productInterest}
 
                 Message:
                 ${message}
             `,
             html: `
                 <h3>New Inquiry Received</h3>
-                <p><strong>Name:</strong> ${salutation} ${firstName} ${lastName}</p>
+                <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Company:</strong> ${company}</p>
+                <p><strong>Job Title:</strong> ${jobTitle}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Phone:</strong> ${phone}</p>
-                <p><strong>Country:</strong> ${country}</p>
                 <p><strong>Type:</strong> ${inquiryType}</p>
+                <p><strong>Product Interest:</strong> ${productInterest}</p>
                 <br/>
                 <p><strong>Message:</strong></p>
                 <div style="background-color: #f4f4f4; padding: 15px; border-radius: 5px;">
