@@ -18,13 +18,13 @@ export default function MultiSportsDemo() {
     const EmojiIcon = (emoji: string) => () => <span className="text-2xl leading-none grayscale">{emoji}</span>;
 
     const sports: { id: Sport; label: string; icon: any; desc: string }[] = [
-        { id: "no-line", label: "라인 없음", icon: Ban, desc: "비스포츠 행사를 위한 깔끔한 표면" },
-        { id: "basketball", label: "농구", icon: EmojiIcon("🏀"), desc: "FIBA 공식 코트 규격" },
-        { id: "badminton", label: "배드민턴", icon: EmojiIcon("🏸"), desc: "BWF 공식 코트 규격" },
-        { id: "futsal", label: "풋살", icon: EmojiIcon("⚽"), desc: "공식 풋살 코트 규격" },
-        { id: "handball", label: "핸드볼", icon: CircleDot, desc: "IHF 공식 코트 규격" },
-        { id: "volleyball", label: "배구", icon: EmojiIcon("🏐"), desc: "FIVB 공식 코트 규격" },
-        { id: "all-sports", label: "전체 종목", icon: Layers, desc: "모든 라인 활성화" },
+        { id: "no-line", label: "No line", icon: Ban, desc: "Clean surface for non-sport events" },
+        { id: "basketball", label: "Basketball", icon: EmojiIcon("🏀"), desc: "Professional FIBA Layout" },
+        { id: "badminton", label: "Badminton", icon: EmojiIcon("🏸"), desc: "BWF Standard Court" },
+        { id: "futsal", label: "Futsal", icon: EmojiIcon("⚽"), desc: "Official Futsal Dimensions" },
+        { id: "handball", label: "Handball", icon: CircleDot, desc: "IHF Standard Court" },
+        { id: "volleyball", label: "Volleyball", icon: EmojiIcon("🏐"), desc: "FIVB Standard Layout" },
+        { id: "all-sports", label: "All sports", icon: Layers, desc: "Showcase of all possibilities" },
     ];
 
     return (
