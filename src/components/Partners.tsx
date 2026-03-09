@@ -65,11 +65,8 @@ export default function Partners() {
             <div className="w-full max-w-[1920px] mx-auto px-8 md:px-20">
                 <div className="text-center mb-16 partners-header">
                     <h2 className="text-4xl md:text-5xl font-medium mb-6 text-black">
-                        Partners and Customers
+                        파트너스
                     </h2>
-                    <p className="text-gray-600 text-lg">
-                        A proven track record of excellence — trusted collaborations with leaders.
-                    </p>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 w-full max-w-7xl mx-auto partners-grid">
