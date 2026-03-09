@@ -230,7 +230,8 @@ export default function LumiFlexProjects() {
             }} className="relative py-64 bg-black text-white overflow-hidden group">
                 {/* Background Image */}
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 transition-transform duration-1000 group-hover:scale-105 bg-[url('/BMW/BMW_Park_9.jpg')]"
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 transition-transform duration-1000 group-hover:scale-105"
+                    style={{ backgroundImage: `url('/BMW/BMW_Park_9.jpg')` }}
                 />
 
                 {/* Gradient Overlay for Text Readability */}
