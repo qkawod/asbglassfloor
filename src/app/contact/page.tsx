@@ -14,8 +14,8 @@ export default function ContactPage() {
         jobTitle: "",
         phone: "",
         country: "Germany",
-        inquiryType: "Sales",
-        productInterest: "ASB GlassFloor",
+        inquiryType: "구매",
+        productInterest: "ASB 스마트코트",
         message: ""
     });
 
@@ -183,10 +183,10 @@ export default function ContactPage() {
                                     onChange={handleChange}
                                     className="w-full bg-[#1A1A1A]/40 border-b border-gray-700 text-white px-2 py-3 focus:outline-none focus:border-white focus:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 rounded-t-sm appearance-none"
                                 >
-                                    <option value="Sales">Sales</option>
-                                    <option value="Technical">Technical</option>
-                                    <option value="Partnership">Partnership</option>
-                                    <option value="Other">Other</option>
+                                    <option value="구매">구매</option>
+                                    <option value="기술">기술</option>
+                                    <option value="파트너쉽">파트너쉽</option>
+                                    <option value="기타">기타</option>
                                 </select>
                             </div>
                             <div className="group">
@@ -198,10 +198,10 @@ export default function ContactPage() {
                                     onChange={handleChange}
                                     className="w-full bg-[#1A1A1A]/40 border-b border-gray-700 text-white px-2 py-3 focus:outline-none focus:border-white focus:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 rounded-t-sm appearance-none"
                                 >
-                                    <option value="ASB GlassFloor">ASB GlassFloor</option>
+                                    <option value="ASB 스마트코트">ASB 스마트코트</option>
                                     <option value="ASB 풀LED 스마트코트">ASB 풀LED 스마트코트</option>
-                                    <option value="ASB Architectural">ASB Architectural</option>
-                                    <option value="Other">Other</option>
+                                    <option value="ASB 스페셜프로젝트">ASB 스페셜프로젝트</option>
+                                    <option value="기타">기타</option>
                                 </select>
                             </div>
                         </div>
