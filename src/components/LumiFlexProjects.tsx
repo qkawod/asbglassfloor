@@ -19,10 +19,8 @@ const projects = [
         images: [
             "/NBA/NBA All-STAR_1.webp",
             "/NBA/NBA All-STAR_2.webp",
-            "/NBA/NBA All-STAR_3.webp",
             "/NBA/NBA All-STAR_4.jpg",
-            "/NBA/NBA All-STAR_5.jpg",
-            "/NBA/NBA All-STAR_6.jpg.webp"
+            "/NBA/NBA All-STAR_5.jpg"
         ],
         alignment: "left",
         color: "text-hotPink",
