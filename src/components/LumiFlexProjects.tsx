@@ -227,17 +227,25 @@ export default function LumiFlexProjects() {
                     }, el);
                     return () => ctx.revert();
                 }
-            }} className="py-64 bg-white text-slate-900">
-                <div className="container mx-auto px-6 text-center max-w-4xl">
-                    <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-8 text-slate-900">
-                        The Full LED Video Floor
+            }} className="relative py-64 bg-black text-white overflow-hidden group">
+                {/* Background Image */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 transition-transform duration-1000 group-hover:scale-105 bg-[url('/BMW/BMW_Park_9.jpg')]"
+                />
+
+                {/* Gradient Overlay for Text Readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/80" />
+
+                <div className="relative container mx-auto px-6 text-center max-w-4xl z-10">
+                    <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-8 text-white drop-shadow-md">
+                        풀LED 스마트코트
                     </h2>
-                    <p className="text-slate-600 text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
+                    <p className="text-gray-200 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-3xl mx-auto drop-shadow">
                         ASB 풀LED 스마트코트는 플로어 전체를 멀티펑션 스크린으로 탈바꿈시킵니다. 이는 스포츠, 이벤트, 광고 영역에 새로운 지평을 열었으며, 시각적 효과를 극대화하여 관객의 몰입도를 최고 수준으로 끌어올립니다.
                     </p>
                     <Link
                         href="/contact"
-                        className="inline-flex items-center justify-center px-10 py-4 bg-slate-900 text-white text-xs font-bold uppercase tracking-widest rounded-full hover:bg-slate-800 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                        className="inline-flex items-center justify-center px-10 py-4 bg-white text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-gray-200 transition-colors duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
                     >
                         Contact Us
                     </Link>
