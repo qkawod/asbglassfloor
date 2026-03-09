@@ -227,11 +227,11 @@ export default function LumiFlexProjects() {
                     }, el);
                     return () => ctx.revert();
                 }
-            }} className="relative py-64 bg-black text-white overflow-hidden group">
-                {/* Background Image */}
+            }} className="relative w-full py-48 md:py-64 bg-black text-white overflow-hidden group">
+                {/* Background Image - Made to stretch as wide as possible */}
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 transition-transform duration-1000 group-hover:scale-105"
-                    style={{ backgroundImage: `url('/BMW/BMW_Park_9.jpg')` }}
+                    className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-60 transition-transform duration-1000 group-hover:scale-105"
+                    style={{ backgroundImage: `url('/BMW/BMW_Park_2.jpeg')` }}
                 />
 
                 {/* Gradient Overlay for Text Readability */}
@@ -250,26 +250,26 @@ export default function LumiFlexProjects() {
                     >
                         Contact Us
                     </Link>
-                </div>
-            </section>
+                </div >
+            </section >
 
             {/* Remaining Projects Section (BMW Park) */}
-            <section className="py-20 bg-[#F5F7FA] text-slate-900 overflow-hidden">
+            < section className="py-20 bg-[#F5F7FA] text-slate-900 overflow-hidden" >
                 <div className="w-full max-w-[1800px] mx-auto px-6 md:px-20">
                     <ProjectCard project={projects[1]} index={1} />
                 </div>
-            </section>
+            </section >
 
 
 
             {/* Remaining Projects Section (DAZN +) */}
-            <section className="pt-20 pb-32 bg-[#F5F7FA] text-slate-900 overflow-hidden">
+            < section className="pt-20 pb-32 bg-[#F5F7FA] text-slate-900 overflow-hidden" >
                 <div className="w-full max-w-[1800px] mx-auto px-6 md:px-20 space-y-32">
                     {projects.slice(2).map((project, i) => (
                         <ProjectCard key={project.id} project={project} index={i + 2} />
                     ))}
                 </div>
-            </section>
-        </div>
+            </section >
+        </div >
     );
 }
