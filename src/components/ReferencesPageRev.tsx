@@ -77,7 +77,7 @@ const projects = [
     }
 ];
 
-const categories = ["ALL", "스마트코트", "풀LED 스마트코트"];
+const categories = ["ALL", "ASB 스마트코트", "풀LED 스마트코트"];
 
 export default function ReferencesPageRev() {
     const [activeFilter, setActiveFilter] = useState("ALL");
@@ -110,7 +110,7 @@ export default function ReferencesPageRev() {
     const filteredProjects = activeFilter === "ALL"
         ? projects
         : projects.filter(project => {
-            if (activeFilter === "스마트코트") return project.type === "M";
+            if (activeFilter === "ASB 스마트코트") return project.type === "M";
             if (activeFilter === "풀LED 스마트코트") return project.type === "L";
             return true;
         });

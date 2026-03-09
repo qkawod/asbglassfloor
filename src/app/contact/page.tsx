@@ -95,7 +95,7 @@ export default function ContactPage() {
                     {/* Header */}
                     <div className="mb-12">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-                            Start Your Project
+                            프로젝트 문의
                         </h1>
                     </div>
 
@@ -103,7 +103,7 @@ export default function ContactPage() {
 
                         {/* Name */}
                         <div className="group">
-                            <label htmlFor="name" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Name *</label>
+                            <label htmlFor="name" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">이름 *</label>
                             <input
                                 id="name"
                                 type="text"
@@ -118,7 +118,7 @@ export default function ContactPage() {
                         {/* Company & Job Title */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="group">
-                                <label htmlFor="company" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Company Name *</label>
+                                <label htmlFor="company" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">회사 / 기관명 *</label>
                                 <input
                                     id="company"
                                     type="text"
@@ -130,7 +130,7 @@ export default function ContactPage() {
                                 />
                             </div>
                             <div className="group">
-                                <label htmlFor="jobTitle" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Job Title</label>
+                                <label htmlFor="jobTitle" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">직책</label>
                                 <input
                                     id="jobTitle"
                                     type="text"
@@ -146,7 +146,7 @@ export default function ContactPage() {
                         {/* Email & Phone */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="group">
-                                <label htmlFor="email" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Email *</label>
+                                <label htmlFor="email" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">이메일 *</label>
                                 <input
                                     id="email"
                                     type="email"
@@ -158,7 +158,7 @@ export default function ContactPage() {
                                 />
                             </div>
                             <div className="group">
-                                <label htmlFor="phone" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Telephone *</label>
+                                <label htmlFor="phone" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">전화번호 *</label>
                                 <input
                                     id="phone"
                                     type="tel"
@@ -175,7 +175,7 @@ export default function ContactPage() {
                         {/* Dropdowns */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="group">
-                                <label htmlFor="inquiryType" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Inquiry Type *</label>
+                                <label htmlFor="inquiryType" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">문의 종류 *</label>
                                 <select
                                     id="inquiryType"
                                     name="inquiryType"
@@ -190,7 +190,7 @@ export default function ContactPage() {
                                 </select>
                             </div>
                             <div className="group">
-                                <label htmlFor="productInterest" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Product Interest *</label>
+                                <label htmlFor="productInterest" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">시스템 *</label>
                                 <select
                                     id="productInterest"
                                     name="productInterest"
@@ -208,7 +208,7 @@ export default function ContactPage() {
 
                         {/* Message */}
                         <div className="group">
-                            <label htmlFor="message" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">Your Message *</label>
+                            <label htmlFor="message" className="block text-xs uppercase tracking-wider text-gray-400 mb-2 group-focus-within:text-white transition-colors">내용 *</label>
                             <textarea
                                 id="message"
                                 name="message"
@@ -239,7 +239,7 @@ export default function ContactPage() {
                                     : "bg-white hover:bg-gray-200 text-black"
                                     }`}
                             >
-                                {status === "loading" ? "Sending..." : "Submit Request"}
+                                {status === "loading" ? "제출 중..." : "제출"}
                             </button>
 
                             {/* Status Messages */}

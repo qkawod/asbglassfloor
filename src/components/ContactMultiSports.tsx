@@ -38,7 +38,7 @@ export default function ContactMultiSports() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none z-10" />
 
                 {/* Sport Image Layer */}
-                <div className="absolute inset-x-0 top-0 flex items-center justify-center pt-10 px-10" style={{ height: '50%' }}>
+                <div className="absolute inset-x-0 top-0 flex items-center justify-center pt-24 px-10" style={{ height: '55%' }}>
                     <img
                         src={`/sports-demo/${activeSport}.png`}
                         alt={activeSport}
@@ -53,9 +53,9 @@ export default function ContactMultiSports() {
                 {/* Bottom Overlay Controls */}
                 <div className="absolute bottom-0 left-0 w-full z-30 bg-gradient-to-t from-black via-black/80 to-transparent pt-32 pb-48 px-10">
                     <div className="mb-4">
-                        <h2 className="text-xl font-bold text-white mb-1">스마트코트 Configuration</h2>
+                        <h2 className="text-xl font-bold text-white mb-1">ASB 스마트코트 시뮬레이션</h2>
                         <p className="text-gray-400 text-sm">
-                            Select a sport to see the lines adapt instantly.
+                            종목 선택에 따라 코트 라인이 즉시 전환됩니다.
                         </p>
                     </div>
 

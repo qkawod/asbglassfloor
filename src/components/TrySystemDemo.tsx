@@ -62,7 +62,7 @@ export default function TrySystemDemo() {
                 <div className="w-full md:w-1/3 flex flex-col gap-6">
                     <div className="mb-4">
                         <h2 className="text-3xl text-white mb-2 flex items-baseline gap-3">
-                            <span className="font-bold tracking-wide">스마트코트</span>
+                            <span className="font-bold tracking-wide">ASB 스마트코트</span>
                             <span className="font-medium">체험ZONE</span>
                         </h2>
                         <p className="text-slate-400 mb-8 leading-relaxed break-keep">

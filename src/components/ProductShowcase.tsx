@@ -59,7 +59,7 @@ export default function ProductShowcase() {
                             ASB <br /><span className="text-white">스마트코트</span>
                         </h2>
                         <button className="flex items-center gap-3 text-white border border-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-bold">
-                            Explore 스마트코트 <ArrowRight size={18} />
+                            Explore ASB 스마트코트 <ArrowRight size={18} />
                         </button>
                     </div>
                 </div>
