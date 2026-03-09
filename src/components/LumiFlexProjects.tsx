@@ -13,8 +13,8 @@ const projects = [
         id: "nba",
         slug: "NBA-AS24-LED-Court-Collage",
         title: "NBA All-Star 2024",
-        subtitle: "ASB LumiFlex",
-        description: "세계 최고 수준의 ASB LumiFlex 시스템은 1,000만 명 이상의 순 시청자(Unique Viewers)를 사로잡았습니다. 이는 최근 4년 내 'NBA All-Star Saturday Night' 최다 시청 기록으로, 시스템의 압도적인 몰입감을 입증한 사례입니다.",
+        subtitle: "ASB 풀LED 스마트코트",
+        description: "세계 최고 수준의 ASB 풀LED 스마트코트 시스템은 1,000만 명 이상의 순 시청자(Unique Viewers)를 사로잡았습니다. 이는 최근 4년 내 'NBA All-Star Saturday Night' 최다 시청 기록으로, 시스템의 압도적인 몰입감을 입증한 사례입니다.",
         image: "/NBA/NBA-AS24-LED-Court-Collage.png",
         images: [
             "/NBA/NBA All-STAR_1.webp",
@@ -33,8 +33,8 @@ const projects = [
         id: "bmw",
         slug: "FC-Bayern-Munich",
         title: "BMW Park",
-        subtitle: "ASB LumiFlex",
-        description: "FC 바이에른 농구팀은 뮌헨 BMW 파크에서 ASB LumiFlex LED 코트 위에서 역사적인 BBL(분데스리가) 개막전을 치렀습니다. 세계 최고 수준의 구단이 선택한 ASB GlassFloor는 코트의 새로운 기준이 됩니다.",
+        subtitle: "ASB 풀LED 스마트코트",
+        description: "FC 바이에른 농구팀은 뮌헨 BMW 파크에서 ASB 풀LED 스마트코트 위에서 역사적인 BBL(분데스리가) 개막전을 치렀습니다. 세계 최고 수준의 구단이 선택한 ASB GlassFloor는 코트의 새로운 기준이 됩니다.",
         image: "/BMW/BMW Park_5.jpg",
         alignment: "right",
         color: "text-neonYellow",
@@ -45,8 +45,8 @@ const projects = [
         id: "dazn",
         slug: null, // No specific page yet, fallback to references or handle strictly
         title: "DAZN Infinity League",
-        subtitle: "ASB LumiFlex",
-        description: "DAZN 인피니티 리그를 통해 ASB LumiFlex의 인터랙티브한 잠재력을 보여주었습니다. 코트 위에 직접 구현되는 게임 요소를 활용한 기능과 실시간 시각 정보 제공을 통해, ASB LumiFlex는 스포츠 엔터테인먼트의 새로운 지평을 열어가고 있습니다.",
+        subtitle: "ASB 풀LED 스마트코트",
+        description: "DAZN 인피니티 리그를 통해 ASB 풀LED 스마트코트의 인터랙티브한 잠재력을 보여주었습니다. 코트 위에 직접 구현되는 게임 요소를 활용한 기능과 실시간 시각 정보 제공을 통해, ASB 풀LED 스마트코트는 스포츠 엔터테인먼트의 새로운 지평을 열어가고 있습니다.",
         image: "/DAZN Infinity League_2.webp",
         alignment: "left",
         color: "text-neonCyan",
@@ -233,7 +233,7 @@ export default function LumiFlexProjects() {
                         The Full LED Video Floor
                     </h2>
                     <p className="text-slate-600 text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
-                        ASB LumiFlex는 플로어 전체를 멀티펑션 스크린으로 탈바꿈시킵니다. 이는 스포츠, 이벤트, 광고 영역에 새로운 지평을 열었으며, 시각적 효과를 극대화하여 관객의 몰입도를 최고 수준으로 끌어올립니다.
+                        ASB 풀LED 스마트코트는 플로어 전체를 멀티펑션 스크린으로 탈바꿈시킵니다. 이는 스포츠, 이벤트, 광고 영역에 새로운 지평을 열었으며, 시각적 효과를 극대화하여 관객의 몰입도를 최고 수준으로 끌어올립니다.
                     </p>
                     <Link
                         href="/contact"

@@ -40,20 +40,20 @@ export default function FeaturedProjects() {
     const projects = [
         {
             title: "ARENA Dresden",
-            subtitle: "ASB MultiSports",
+            subtitle: "ASB 스마트코트",
             image: "/Dresden/Dresden_01.jpg", // Placeholder for Court 16
             link: "/references/BallsportARENA-Dresden",
             isExplore: true,
         },
         {
             title: "OYM",
-            subtitle: "ASB MultiSports",
+            subtitle: "ASB 스마트코트",
             image: "/OYM/OYM_swiss.jpg",
             link: "/references/OYM-College",
         },
         {
             title: "Oxford University",
-            subtitle: "ASB MultiSports",
+            subtitle: "ASB 스마트코트",
             image: "/University of oxford/asb-glassfloor-acer.jpg",
             link: "/references/Oxford-University",
         },
@@ -82,7 +82,7 @@ export default function FeaturedProjects() {
                                 </h3>
 
                                 <div className="relative h-6 overflow-hidden">
-                                    {/* Default State: ASB MultiSports */}
+                                    {/* Default State: ASB 스마트코트 */}
                                     <div className="absolute top-0 left-0 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0">
                                         <span className="text-xs font-bold tracking-widest text-gray-500">
                                             {project.subtitle}

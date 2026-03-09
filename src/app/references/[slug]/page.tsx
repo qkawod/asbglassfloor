@@ -11,7 +11,7 @@ import GalleryCarousel from "@/components/ui/GalleryCarousel";
 const projectData: Record<string, any> = {
     "NBA-AS24-LED-Court-Collage": {
         title: "NBA All-Star 2024",
-        category: "LumiFlex",
+        category: "풀LED 스마트코트",
         location: "Indianapolis, USA",
         year: "2024",
         image: "/asb-glassfloor-nba-as24-led-court-celebrity-2-scaled.webp",
@@ -41,14 +41,14 @@ const projectData: Record<string, any> = {
     },
     "FIBA-U19-Womens-World-Cup": {
         title: "FIBA U19 Women’s World Cup",
-        category: "LumiFlex",
+        category: "풀LED 스마트코트",
         location: "Madrid, Spain",
         year: "2023",
         image: "/FIBA U19 Women’s World Cup/SCS3391-scaled.jpg.webp",
         video: null, // No specific hero video found, fallback to image
         contentVideo: "/FIBA U19 Women’s World Cup/FIBA unveils innovative world-premiere ASB GlassFloor court.mkv",
         about: `
-            마드리드 FIBA U19 여자 농구 월드컵은 스포츠 기술과 경기 연출의 획기적인 전환점이었습니다. 100년 넘게 이어진 목재 코트의 한계를 넘어, 8강전부터 적용된 ASB LumiFlex는 차세대 스포츠 코트의 기준을 새롭게 정립했습니다. 오랜 기간 축적된 R&D와 까다로운 국제 인증을 통해 완성된 이 혁신적인 솔루션은, 실제 경기에서 선수들에게 최고의 퍼포먼스를 제공하며 기술적 우수성을 완벽하게 입증했습니다.
+            마드리드 FIBA U19 여자 농구 월드컵은 스포츠 기술과 경기 연출의 획기적인 전환점이었습니다. 100년 넘게 이어진 목재 코트의 한계를 넘어, 8강전부터 적용된 ASB 풀LED 스마트코트는 차세대 스포츠 코트의 기준을 새롭게 정립했습니다. 오랜 기간 축적된 R&D와 까다로운 국제 인증을 통해 완성된 이 혁신적인 솔루션은, 실제 경기에서 선수들에게 최고의 퍼포먼스를 제공하며 기술적 우수성을 완벽하게 입증했습니다.
         `,
         aboutProject: [
             "ASB GlassFloor 공식 런칭 현장에서 안드레아스 자글리스(Andreas Zagklis) FIBA 사무총장은 이 스포츠 바닥재 혁신의 순간을 다음과 같이 기념했습니다.",
@@ -121,7 +121,7 @@ const projectData: Record<string, any> = {
     },
     "The-Graph": {
         title: "The Graph",
-        category: "LumiFlex",
+        category: "풀LED 스마트코트",
         location: "Future City",
         year: "2024",
         image: "/BMW Park_5.jpg",
@@ -155,12 +155,12 @@ const projectData: Record<string, any> = {
         image: "/BMW/BMW Park_2.jpeg",
         video: null,
         contentVideo: "/BMW/Buckets.mp4",
-        about: "뮌헨 BMW 파크에서 열린 FC 바이에른과 바이센펠스의 경기에서 6,500명의 관중은 수준 높은 농구 경기와 함께 ASB LumiFlex 풀 LED 비디오 플로어가 제공하는 엔터테인먼트를 경험했습니다. 2024년 가을 영구 설치된 이 ASB GlassFloor는 현재 경기장에 상시 운영되고 있습니다.",
+        about: "뮌헨 BMW 파크에서 열린 FC 바이에른과 바이센펠스의 경기에서 6,500명의 관중은 수준 높은 농구 경기와 함께 ASB 풀LED 스마트코트 풀 LED 비디오 플로어가 제공하는 엔터테인먼트를 경험했습니다. 2024년 가을 영구 설치된 이 ASB GlassFloor는 현재 경기장에 상시 운영되고 있습니다.",
         aboutProject: [
-            "혁신은 열망과 협력, 그리고 미래를 내다보는 통찰력에서 시작됩니다. ASB GlassFloor가 ASB LumiFlex를 개발해온 과정도 이와 같습니다.",
+            "혁신은 열망과 협력, 그리고 미래를 내다보는 통찰력에서 시작됩니다. ASB GlassFloor가 ASB 풀LED 스마트코트를 개발해온 과정도 이와 같습니다.",
             "우리는 실내 스포츠 바닥재의 패러다임을 바꾸면서도 최상의 안전성과 활용성을 보장하겠다는 명확한 비전으로 출발했습니다. 기술의 발전과 스포츠 정신에서 영감을 받아, 기존 스포츠 바닥재가 가진 가능성의 한계를 넘어서고자 노력했습니다.",
-            "FC 바이에른 농구단 및 BMW 뮌헨과의 파트너십은 각자의 강점을 결합하여 혁신을 이끌어낸 이상적인 협력 사례입니다. 우리는 함께 목표를 공유하고 여러 과제를 해결해 나가며, ASB LumiFlex가 완성될 때까지 끊임없이 제품의 완성도를 높였습니다.",
-            "ASB LumiFlex는 단순한 제품을 넘어 스포츠의 미래를 향한 우리의 노력을 상징합니다. 이는 전통적인 스포츠의 가치와 최상의 성능, 그리고 첨단 기술이 조화를 이룬 결과물입니다."
+            "FC 바이에른 농구단 및 BMW 뮌헨과의 파트너십은 각자의 강점을 결합하여 혁신을 이끌어낸 이상적인 협력 사례입니다. 우리는 함께 목표를 공유하고 여러 과제를 해결해 나가며, ASB 풀LED 스마트코트가 완성될 때까지 끊임없이 제품의 완성도를 높였습니다.",
+            "ASB 풀LED 스마트코트는 단순한 제품을 넘어 스포츠의 미래를 향한 우리의 노력을 상징합니다. 이는 전통적인 스포츠의 가치와 최상의 성능, 그리고 첨단 기술이 조화를 이룬 결과물입니다."
         ],
         gallery: [
             "/BMW/BMW Park_1.jpeg",
@@ -175,7 +175,7 @@ const projectData: Record<string, any> = {
 
     "University-of-Kentucky": {
         title: "University of Kentucky",
-        category: "LumiFlex",
+        category: "풀LED 스마트코트",
         location: "Lexington, USA",
         year: "2023",
         image: "/Kentucky_BBM/Kenturky BBM_1.jpeg",
@@ -224,14 +224,14 @@ const projectData: Record<string, any> = {
     },
     "OAKA-Arena": {
         title: "OAKA Arena",
-        category: "LumiFlex",
+        category: "풀LED 스마트코트",
         location: "Athens, Greece",
         year: "2024",
         image: "/OAKA/asb-glassfloor-bcl-final-four-2024-03.jpg.webp",
         video: null,
         contentVideo: "/OAKA/Panathinaikos BC Aktor.mp4",
-        about: "Panathinaikos BC Aktor가 그리스 아테네 OAKA Arena에 혁신적인 ASB GlassFloor를 도입하며 농구 경기의 새로운 장을 열었습니다 . 유로리그 역사상 처음으로 ASB LumiFlex에서 공식 경기를 치른 이번 시도는 단순한 이벤트를 넘어 영구적인 시설 구축으로 이어졌습니다. 첨단 기술과 스포츠의 정수가 결합된 이 공간은 선수들에게 최상의 퍼포먼스를 보장하며, 관객들에게는 시각적 한계를 뛰어넘는 압도적인 몰입감을 선사합니다.",
-        aboutProject: ["Panathinaikos BC Aktor가 그리스 아테네 OAKA Arena에 혁신적인 ASB GlassFloor를 도입하며 농구 경기의 새로운 장을 열었습니다 . 유로리그 역사상 처음으로 ASB LumiFlex에서 공식 경기를 치른 이번 시도는 단순한 이벤트를 넘어 영구적인 시설 구축으로 이어졌습니다. 첨단 기술과 스포츠의 정수가 결합된 이 공간은 선수들에게 최상의 퍼포먼스를 보장하며, 관객들에게는 시각적 한계를 뛰어넘는 압도적인 몰입감을 선사합니다."],
+        about: "Panathinaikos BC Aktor가 그리스 아테네 OAKA Arena에 혁신적인 ASB GlassFloor를 도입하며 농구 경기의 새로운 장을 열었습니다 . 유로리그 역사상 처음으로 ASB 풀LED 스마트코트에서 공식 경기를 치른 이번 시도는 단순한 이벤트를 넘어 영구적인 시설 구축으로 이어졌습니다. 첨단 기술과 스포츠의 정수가 결합된 이 공간은 선수들에게 최상의 퍼포먼스를 보장하며, 관객들에게 정점의 시각적 한계를 뛰어넘는 압도적인 몰입감을 선사합니다.",
+        aboutProject: ["Panathinaikos BC Aktor가 그리스 아테네 OAKA Arena에 혁신적인 ASB GlassFloor를 도입하며 농구 경기의 새로운 장을 열었습니다 . 유로리그 역사상 처음으로 ASB 풀LED 스마트코트에서 공식 경기를 치른 이번 시도는 단순한 이벤트를 넘어 영구적인 시설 구축으로 이어졌습니다. 첨단 기술과 스포츠의 정수가 결합된 이 공간은 선수들에게 최상의 퍼포먼스를 보장하며, 관객들에게는 시각적 한계를 뛰어넘는 압도적인 몰입감을 선사합니다."],
         gallery: [
             "/OAKA/OAKA_1.jpeg",
             "/OAKA/asb-glassfloor-euroleagues-most-advanced-court-arrives.webp",

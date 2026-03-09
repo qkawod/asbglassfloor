@@ -86,8 +86,14 @@ export async function POST(request: Request) {
     } catch (error) {
         console.error("Error sending email:", error);
         const errorMessage = error instanceof Error ? error.message : JSON.stringify(error);
+
+        // Debug info: Check what credentials the server is actually using
+        const usedUser = process.env.SMTP_USER || "undefined";
+        const passLen = process.env.SMTP_PASS?.length || 0;
+        const passStart = process.env.SMTP_PASS ? process.env.SMTP_PASS.substring(0, 2) : "none";
+
         return NextResponse.json(
-            { error: `전송 실패 원인: ${errorMessage}` },
+            { error: `전송 실패 원인: ${errorMessage} (DEBUG: User=${usedUser}, PassLen=${passLen}, PassStart=${passStart})` },
             { status: 500 }
         );
     }

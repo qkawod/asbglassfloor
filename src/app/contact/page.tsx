@@ -199,7 +199,7 @@ export default function ContactPage() {
                                     className="w-full bg-[#1A1A1A]/40 border-b border-gray-700 text-white px-2 py-3 focus:outline-none focus:border-white focus:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 rounded-t-sm appearance-none"
                                 >
                                     <option value="ASB GlassFloor">ASB GlassFloor</option>
-                                    <option value="ASB LumiFlex">ASB LumiFlex</option>
+                                    <option value="ASB 풀LED 스마트코트">ASB 풀LED 스마트코트</option>
                                     <option value="ASB Architectural">ASB Architectural</option>
                                     <option value="Other">Other</option>
                                 </select>
@@ -235,8 +235,8 @@ export default function ContactPage() {
                                 type="submit"
                                 disabled={status === "loading"}
                                 className={`w-full font-bold py-5 rounded-sm transition-all duration-300 uppercase tracking-widest hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] ${status === "loading"
-                                        ? "bg-gray-600 text-gray-400 cursor-not-allowed"
-                                        : "bg-white hover:bg-gray-200 text-black"
+                                    ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+                                    : "bg-white hover:bg-gray-200 text-black"
                                     }`}
                             >
                                 {status === "loading" ? "Sending..." : "Submit Request"}

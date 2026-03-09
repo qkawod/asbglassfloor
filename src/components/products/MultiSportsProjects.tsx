@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,8 +15,8 @@ const projects = [
         id: "oxford",
         slug: "Oxford-University",
         title: "The University of Oxford",
-        subtitle: "ASB MultiSports",
-        description: "세계적인 교육기관 옥스퍼드 대학교는 에이서 네더콧(Acer Nethercott) 스포츠 홀에 ASB MultiSports를 도입했습니다. 블랙색상의 커스텀 컬러가 적용된 GlassFloor와 선명한 화이트 라인 마킹이 어우러져, 공간 전체에 모던하고 미래지향적인 분위기를 연출합니다.",
+        subtitle: "ASB 스마트코트",
+        description: "세계적인 교육기관 옥스퍼드 대학교는 에이서 네더콧(Acer Nethercott) 스포츠 홀에 ASB 스마트코트를 도입했습니다. 블랙색상의 커스텀 컬러가 적용된 GlassFloor와 선명한 화이트 라인 마킹이 어우러져, 공간 전체에 모던하고 미래지향적인 분위기를 연출합니다.",
         image: "/University of oxford/asb-glassfloor-acer.jpg",
         alignment: "left",
         color: "text-neonBlue",
@@ -28,7 +28,7 @@ const projects = [
         slug: "OYM-College",
         title: "OYM - On Your Marks",
         subtitle: "Certified for Professional Sports",
-        description: "스위스 캄(Cham)에 위치한 엘리트 스포츠 전문 센터 OYM(On Your Marks)은 ASB MultiSports를 선택했습니다. 이 시스템은 프로 선수들이 최고 수준에서 훈련하고 경기를 펼칠 수 있는 완벽한 환경을 제공합니다.",
+        description: "스위스 캄(Cham)에 위치한 엘리트 스포츠 전문 센터 OYM(On Your Marks)은 ASB 스마트코트를 선택했습니다. 이 시스템은 프로 선수들이 최고 수준에서 훈련하고 경기를 펼칠 수 있는 완벽한 환경을 제공합니다.",
         image: "/OYM/OYM_swiss.jpg",
         images: [
             "/OYM/OYM_01.jpg",
@@ -59,7 +59,21 @@ const projects = [
     }
 ];
 
-function ProjectCard({ project, index }: { project: any, index: number }) {
+interface Project {
+    id: string;
+    slug: string | null;
+    title: string;
+    subtitle: string;
+    description: string;
+    image: string;
+    images?: string[];
+    alignment: string;
+    color: string;
+    glow: string;
+    bg: string;
+}
+
+function ProjectCard({ project, index }: { project: Project, index: number }) {
     const cardRef = useRef<HTMLDivElement>(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const imageList = project.images || [project.image];
@@ -237,7 +251,7 @@ export default function MultiSportsProjects() {
                         타협하지 않는 다목적 플로어 시스템
                     </h2>
                     <p className="text-slate-600 text-lg leading-relaxed mb-10 max-w-3xl mx-auto break-keep">
-                        ASB MultiSports는 단순한 실내 바닥재가 아닙니다. 모든 영역에서 퍼포먼스를 극대화하도록 설계된, 어떠한 타협도 없는 완성형 시스템입니다.
+                        ASB 스마트코트는 단순한 실내 바닥재가 아닙니다. 모든 영역에서 퍼포먼스를 극대화하도록 설계된, 어떠한 타협도 없는 완성형 시스템입니다.
                         <br className="hidden md:block" /><br className="hidden md:block" />
                         특수 처리된 유리 표면과 알루미늄 하부 구조(Substructure)의 독창적인 결합은 실내 스포츠 환경에서 전례 없는 품질과 최적의 플레이 조건을 제공합니다.
                     </p>

@@ -67,7 +67,7 @@ export default function MultiSportsDemo() {
                 <div className="w-full md:w-1/3 flex flex-col gap-6">
                     <div className="mb-2">
                         <h2 className="text-3xl text-slate-900 mb-2 flex items-baseline gap-3">
-                            <span className="font-bold tracking-wide">MultiSports</span>
+                            <span className="font-bold tracking-wide">스마트코트</span>
                             <span className="font-medium">체험ZONE</span>
                         </h2>
                         <p className="text-slate-500 mb-4 leading-relaxed break-keep">

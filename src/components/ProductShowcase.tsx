@@ -56,10 +56,10 @@ export default function ProductShowcase() {
                 <div className="absolute bottom-0 left-0 p-8 md:p-16 pb-4 md:pb-6 z-20 w-full pointer-events-none flex justify-center md:justify-start">
                     <div className="pointer-events-auto max-w-2xl">
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,1)] origin-left tracking-tighter uppercase leading-none">
-                            ASB <br /><span className="text-white">MultiSports</span>
+                            ASB <br /><span className="text-white">스마트코트</span>
                         </h2>
                         <button className="flex items-center gap-3 text-white border border-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-bold">
-                            Explore MultiSports <ArrowRight size={18} />
+                            Explore 스마트코트 <ArrowRight size={18} />
                         </button>
                     </div>
                 </div>
@@ -84,10 +84,10 @@ export default function ProductShowcase() {
                 <div className="absolute bottom-0 left-0 p-8 md:p-16 pb-4 md:pb-6 z-20 w-full pointer-events-none flex justify-center md:justify-start">
                     <div className="pointer-events-auto max-w-2xl">
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,1)] origin-left tracking-tighter uppercase leading-none">
-                            ASB <br /><span className="text-white">LumiFlex</span>
+                            ASB <br /><span className="text-white">풀LED 스마트코트</span>
                         </h2>
                         <button className="flex items-center gap-3 text-white border border-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-bold">
-                            Explore LumiFlex <ArrowRight size={18} />
+                            Explore 풀LED 스마트코트 <ArrowRight size={18} />
                         </button>
                     </div>
                 </div>

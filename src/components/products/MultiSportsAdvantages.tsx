@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const advantagesData = [
     {
         title: "CERTIFIED (공인 인증)",
-        description: "ASB MultiSports는 국제 및 프로 스포츠 공식 인증을 획득한 솔루션으로, 기존 코트의 복잡한 라인으로 인한 시각적 혼란을 효과적으로 해소합니다."
+        description: "ASB 스마트코트는 국제 및 프로 스포츠 공식 인증을 획득한 솔루션으로, 기존 코트의 복잡한 라인으로 인한 시각적 혼란을 효과적으로 해소합니다."
     },
     {
         title: "MULTIPURPOSE (다목적 활용성)",
@@ -67,7 +67,7 @@ export default function MultiSportsAdvantages() {
             }
 
             // Animate List Items
-            itemsRef.current.forEach((item, index) => {
+            itemsRef.current.forEach((item) => {
                 if (!item) return;
 
                 // Animate the children (Title and Description) sequentially

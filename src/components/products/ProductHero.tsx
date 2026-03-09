@@ -13,7 +13,7 @@ interface ProductHeroProps {
 }
 
 export default function ProductHero({
-    title = "ASB MultiSports",
+    title = "ASB 스마트코트",
     videoSrc = "/Handball in the Dark  on ASB GlassFloor.mp4",
     imageSrc
 }: ProductHeroProps) {

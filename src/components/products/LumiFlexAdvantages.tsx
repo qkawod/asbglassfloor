@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const advantagesData = [
     {
         title: "CERTIFIED ENGINEERING (검증된 엔지니어링)",
-        description: "ASB LumiFlex는 프로 스포츠 경기에 최적화된 국제 공인 인증을 획득했습니다. FIBA(국제농구연맹), IHF(국제핸드볼연맹), FIVB(국제배구연맹)의 엄격한 기준을 충족하며, 면탄성 스포츠 바닥재 표준인 EN 14904를 준수합니다. 뛰어난 탄성과 미끄럼 저항성으로 선수의 관절을 보호하는 안전한 경기 환경을 제공합니다."
+        description: "ASB 풀LED 스마트코트는 프로 스포츠 경기에 최적화된 국제 공인 인증을 획득했습니다. FIBA(국제농구연맹), IHF(국제핸드볼연맹), FIVB(국제배구연맹)의 엄격한 기준을 충족하며, 면탄성 스포츠 바닥재 표준인 EN 14904를 준수합니다. 뛰어난 탄성과 미끄럼 저항성으로 선수의 관절을 보호하는 안전한 경기 환경을 제공합니다."
     },
     {
         title: "SAFER BY DESIGN (설계부터 남다른 안전성)",
@@ -17,7 +17,7 @@ const advantagesData = [
     },
     {
         title: "UNLIMITED POSSIBILITIES (무한한 확장성)",
-        description: "선수와 관중 모두에게 몰입감 넘치는 경험을 선사합니다. ASB LumiFlex는 단순한 바닥재를 넘어, 팀 로고와 스폰서 광고부터 몰입형 비디오 및 화려한 모션 그래픽까지 역동적인 콘텐츠를 자유롭게 표출하는 디지털 캔버스입니다."
+        description: "선수와 관중 모두에게 몰입감 넘치는 경험을 선사합니다. ASB 풀LED 스마트코트는 단순한 바닥재를 넘어, 팀 로고와 스폰서 광고부터 몰입형 비디오 및 화려한 모션 그래픽까지 역동적인 콘텐츠를 자유롭게 표출하는 디지털 캔버스입니다."
     },
     {
         title: "INTERACTIVE INNOVATION (인터랙티브 혁신)",
@@ -25,7 +25,7 @@ const advantagesData = [
     },
     {
         title: "DURABLE AND EASY TO MAINTAIN (압도적 내구성과 유지관리)",
-        description: "최대 70년의 수명과 100,000시간 이상의 LED 수명을 자랑하는 ASB LumiFlex는 지속 가능한 솔루션입니다. 유리와 알루미늄 등 내구성이 강한 친환경 소재로 제작되어, 오랜 세월이 흘러도 마모 없이 초기 품질을 유지하며 별도의 표면 샌딩(Resurfacing) 작업이 필요 없습니다."
+        description: "최대 70년의 수명과 100,000시간 이상의 LED 수명을 자랑하는 ASB 풀LED 스마트코트는 지속 가능한 솔루션입니다. 유리와 알루미늄 등 내구성이 강한 친환경 소재로 제작되어, 오랜 세월이 흘러도 마모 없이 초기 품질을 유지하며 별도의 표면 샌딩(Resurfacing) 작업이 필요 없습니다."
     }
 ];
 

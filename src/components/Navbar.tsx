@@ -118,7 +118,7 @@ export default function Navbar() {
                                                 onMouseEnter={(e) => e.currentTarget.style.textShadow = "0 0 10px #FFFFE0, 0 0 20px #FFFF00, 0 0 40px #FFD700, 0 0 60px #FFD700"}
                                                 onMouseLeave={(e) => e.currentTarget.style.textShadow = "none"}
                                             >
-                                                ASB MultiSports
+                                                ASB 스마트코트
                                             </Link>
                                             <Link
                                                 href="/lumiflex"
@@ -126,7 +126,7 @@ export default function Navbar() {
                                                 onMouseEnter={(e) => e.currentTarget.style.textShadow = "0 0 10px #FFFFE0, 0 0 20px #FFFF00, 0 0 40px #FFD700, 0 0 60px #FFD700"}
                                                 onMouseLeave={(e) => e.currentTarget.style.textShadow = "none"}
                                             >
-                                                ASB LumiFlex
+                                                ASB 풀LED 스마트코트
                                             </Link>
                                         </div>
                                     </div>

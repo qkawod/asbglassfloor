@@ -95,8 +95,8 @@ export default function CoreInnovation() {
                                 key={sport}
                                 onClick={() => setActiveSport(sport)}
                                 className={`px-4 py-2 rounded-full text-xs font-bold uppercase transition-all duration-300 ${activeSport === sport
-                                        ? "bg-white text-black shadow-lg scale-105"
-                                        : "text-gray-400 hover:text-white hover:bg-white/10"
+                                    ? "bg-white text-black shadow-lg scale-105"
+                                    : "text-gray-400 hover:text-white hover:bg-white/10"
                                     }`}
                             >
                                 {sport}
@@ -122,7 +122,7 @@ export default function CoreInnovation() {
                     </h2>
 
                     <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                        The ASB MultiSports floor uses programmable LED marking lines hidden beneath the glass surface.
+                        The ASB 스마트코트 uses programmable LED marking lines hidden beneath the glass surface.
                         Switch from basketball to volleyball or badminton at the touch of a button.
                         No more confusing line chaos—just the lines you need, when you need them.
                     </p>

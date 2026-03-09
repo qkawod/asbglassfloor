@@ -78,7 +78,7 @@ const projects = [
     }
 ];
 
-const categories = ["ALL", "MultiSports", "LumiFlex"];
+const categories = ["ALL", "스마트코트", "풀LED 스마트코트"];
 
 export default function ReferencesPage() {
     const [activeFilter, setActiveFilter] = useState("ALL");
@@ -111,8 +111,8 @@ export default function ReferencesPage() {
     const filteredProjects = activeFilter === "ALL"
         ? projects
         : projects.filter(project => {
-            if (activeFilter === "MultiSports") return project.type === "M";
-            if (activeFilter === "LumiFlex") return project.type === "L";
+            if (activeFilter === "스마트코트") return project.type === "M";
+            if (activeFilter === "풀LED 스마트코트") return project.type === "L";
             return true;
         });
 
@@ -266,7 +266,7 @@ export default function ReferencesPage() {
                                             <span
                                                 className={`text-[0.75rem] font-bold tracking-[0.05em] ${project.type === "L" ? "text-rainbow-animate" : "text-white-shimmer"}`}
                                             >
-                                                {project.type === "L" ? "LumiFlex" : "MultiSports"}
+                                                {project.type === "L" ? "풀LED 스마트코트" : "스마트코트"}
                                             </span>
                                         </div>
 

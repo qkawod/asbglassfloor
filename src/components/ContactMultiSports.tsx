@@ -53,7 +53,7 @@ export default function ContactMultiSports() {
                 {/* Bottom Overlay Controls */}
                 <div className="absolute bottom-0 left-0 w-full z-30 bg-gradient-to-t from-black via-black/80 to-transparent pt-32 pb-48 px-10">
                     <div className="mb-4">
-                        <h2 className="text-xl font-bold text-white mb-1">MultiSports Configuration</h2>
+                        <h2 className="text-xl font-bold text-white mb-1">스마트코트 Configuration</h2>
                         <p className="text-gray-400 text-sm">
                             Select a sport to see the lines adapt instantly.
                         </p>

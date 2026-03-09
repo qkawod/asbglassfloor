@@ -77,7 +77,7 @@ const projects = [
     }
 ];
 
-const categories = ["ALL", "MultiSports", "LumiFlex"];
+const categories = ["ALL", "스마트코트", "풀LED 스마트코트"];
 
 export default function ReferencesPageRev() {
     const [activeFilter, setActiveFilter] = useState("ALL");
@@ -110,8 +110,8 @@ export default function ReferencesPageRev() {
     const filteredProjects = activeFilter === "ALL"
         ? projects
         : projects.filter(project => {
-            if (activeFilter === "MultiSports") return project.type === "M";
-            if (activeFilter === "LumiFlex") return project.type === "L";
+            if (activeFilter === "스마트코트") return project.type === "M";
+            if (activeFilter === "풀LED 스마트코트") return project.type === "L";
             return true;
         });
 
@@ -243,7 +243,7 @@ export default function ReferencesPageRev() {
                                     <div className="relative w-full h-6 mt-1 overflow-hidden">
                                         {/* Default: Category */}
                                         <p className="absolute top-0 left-0 text-xs font-bold text-gray-400 tracking-widest transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-2">
-                                            ASB {project.type === "L" ? "LumiFlex" : "MultiSports"}
+                                            ASB {project.type === "L" ? "풀LED 스마트코트" : "스마트코트"}
                                         </p>
 
                                         {/* Hover: Explore Project + Yellow Line */}

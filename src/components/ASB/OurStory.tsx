@@ -20,7 +20,7 @@ const milestones = [
     {
         year: "2012",
         title: "First LED Court",
-        description: "Introduction of the ASB MultiSports, the first glass floor with LED marking lines that can be switched on and off."
+        description: "Introduction of the ASB 스마트코트, the first glass floor with LED marking lines that can be switched on and off."
     },
     {
         year: "Today",

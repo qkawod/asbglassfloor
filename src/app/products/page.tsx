@@ -6,8 +6,8 @@ import MultiSportsInfo from "@/components/products/MultiSportsInfo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "ASB MultiSports | ASB GlassFloor",
-    description: "The most advanced sports floor in the world. Switch lines instantly for basketball, volleyball, badminton, and more with ASB MultiSports.",
+    title: "ASB 스마트코트 | ASB GlassFloor",
+    description: "The most advanced sports floor in the world. Switch lines instantly for basketball, volleyball, badminton, and more with ASB 스마트코트.",
 };
 
 export default function ProductsPage() {

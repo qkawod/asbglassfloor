@@ -1,29 +1,14 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Maximize2 } from "lucide-react";
+import Image from "next/image";
 
 export default function VisualGallery() {
     const sectionRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.from(".gallery-item", {
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top 80%",
-                },
-                y: 100,
-                opacity: 0,
-                stagger: 0.1,
-                duration: 1,
-                ease: "power3.out"
-            });
-        }, sectionRef);
-
-        return () => ctx.revert();
+        // Removed gsap animation logic completely but it looks like we need standard useEffect structure
     }, []);
 
     const images = [
@@ -72,9 +57,10 @@ export default function VisualGallery() {
                             key={i}
                             className={`gallery-item group relative overflow-hidden rounded-xl bg-gray-900 ${item.size} cursor-pointer`}
                         >
-                            <img
+                            <Image
                                 src={item.src}
                                 alt={item.title}
+                                fill
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
                             />
 

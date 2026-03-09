@@ -72,10 +72,10 @@ export default function LumiFlexInfo() {
                 {/* Left: Text Content */}
                 <div ref={textRef} className="w-full md:w-1/3 flex flex-col gap-6 justify-start">
                     <div className="mb-4">
-                        <h2 className="text-3xl font-medium text-black mb-6">ASB LumiFlex</h2>
+                        <h2 className="text-3xl font-medium text-black mb-6">ASB 풀LED 스마트코트</h2>
                         <div className="space-y-6 text-gray-600 leading-relaxed text-lg text-justify break-keep">
                             <p>
-                                ASB LumiFlex는 평범했던 공간을 압도적인 시각적 경험이 펼쳐지는 다목적 무대로 변화시킵니다. 경기장, 각종 이벤트 홀, 그리고 프리미엄 스포츠 시설을 위한 가장 이상적인 솔루션입니다.
+                                ASB 풀LED 스마트코트는 평범했던 공간을 압도적인 시각적 경험이 펼쳐지는 다목적 무대로 변화시킵니다. 경기장, 각종 이벤트 홀, 그리고 프리미엄 스포츠 시설을 위한 가장 이상적인 솔루션입니다.
                             </p>
                             <p>
                                 특수 강화 유리 아래 내장된 고해상도 LED 기술은 공간의 한계를 지워버립니다. 화려한 그래픽 연출부터 실시간 경기 데이터 송출, 광고, 그리고 관객을 매료시키는 몰입형 환경까지. 당신이 상상하는 모든 가능성을 바닥 위에 생생하게 구현해 보십시오.
