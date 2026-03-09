@@ -238,10 +238,10 @@ export default function LumiFlexProjects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/80" />
 
                 <div className="relative container mx-auto px-6 text-center max-w-4xl z-10">
-                    <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-8 text-white drop-shadow-md">
+                    <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 text-white drop-shadow-lg">
                         풀LED 스마트코트
                     </h2>
-                    <p className="text-gray-200 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-3xl mx-auto drop-shadow">
+                    <p className="text-white text-lg md:text-2xl font-medium leading-relaxed mb-12 max-w-3xl mx-auto drop-shadow-md">
                         ASB 풀LED 스마트코트는 플로어 전체를 멀티펑션 스크린으로 탈바꿈시킵니다. 이는 스포츠, 이벤트, 광고 영역에 새로운 지평을 열었으며, 시각적 효과를 극대화하여 관객의 몰입도를 최고 수준으로 끌어올립니다.
                     </p>
                     <Link
