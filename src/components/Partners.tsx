@@ -64,7 +64,7 @@ export default function Partners() {
         <section ref={containerRef} className="min-h-screen flex flex-col justify-center py-24 w-full bg-[#F3F8FC] text-black">
             <div className="w-full max-w-[1920px] mx-auto px-8 md:px-20">
                 <div className="text-center mb-16 partners-header">
-                    <h2 className="text-4xl md:text-5xl font-medium mb-6 text-black">
+                    <h2 className="text-5xl md:text-6xl font-bold mb-6 text-black">
                         파트너스
                     </h2>
                 </div>
