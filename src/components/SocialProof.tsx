@@ -45,7 +45,7 @@ export default function SocialProof() {
                     {/* Text Content */}
                     <div className="max-w-2xl text-left">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                            Certified for Professional Sports
+                            국제 프로 스포츠 인증
                         </h2>
                         <p className="text-gray-400 text-lg leading-relaxed">
                             ASB GlassFloor 제품은 국제농구연맹(FIBA), 국제핸드볼연맹(IHF), 국제배구연맹(FIVB) 등 최고 수준의 경기 대회에서 인증받았으며, 충격 흡수, 공의 반발력, 미끄럼 저항, 마찰력 등 모든 성능 기준을 완벽하게 충족합니다.
