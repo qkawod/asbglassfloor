@@ -67,10 +67,10 @@ export default function ASBTech() {
             <div className="w-full px-4 md:px-10">
                 <div className="text-center mb-20">
                     <h2 ref={titleRef} className="text-3xl md:text-6xl font-medium mb-8 text-black tracking-tight" style={{ opacity: 1, transform: 'none' }}>
-                        스포츠와 디지털 기술의 완벽한 융복합 시스템
+                        빛을 설계하다
                     </h2>
                     <p ref={textRef} className="text-xl text-gray-600 max-w-2xl mx-auto font-light">
-                        스포츠와 디지털 기술의 완벽한 융합
+                        스포츠와 디지털 기술의 완벽한 융복합 시스템
                     </p>
                 </div>
 
