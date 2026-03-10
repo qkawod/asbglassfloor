@@ -30,10 +30,10 @@ export default function TrySystemDemo() {
 
     return (
         <section className="relative w-full bg-black flex flex-col items-center py-20">
-            <div className="w-full max-w-[1920px] mx-auto px-8 md:px-20 flex flex-col md:flex-row gap-12 items-stretch h-[750px]">
+            <div className="w-full max-w-[1920px] mx-auto px-8 md:px-20 flex flex-col md:flex-row gap-12 items-stretch min-h-[750px] h-auto">
 
                 {/* Left: Interactive Court */}
-                <div className="relative w-full md:w-2/3 h-full bg-[#111] rounded-xl border border-white/10 shadow-2xl overflow-hidden group">
+                <div className="relative w-full md:w-2/3 min-h-[500px] h-full bg-[#111] rounded-xl border border-white/10 shadow-2xl overflow-hidden group">
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20" />
                     <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none z-10" />
 
@@ -70,7 +70,7 @@ export default function TrySystemDemo() {
                         </p>
                     </div>
 
-                    <div className="space-y-3 h-full overflow-y-auto p-2 custom-scrollbar pr-4">
+                    <div className="flex flex-col gap-3 w-full">
                         {sports.map((sport) => (
                             <button
                                 key={sport.id}
