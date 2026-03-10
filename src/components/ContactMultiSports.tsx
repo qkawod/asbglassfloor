@@ -22,7 +22,7 @@ export default function ContactMultiSports() {
         { id: "basketball", label: "Basketball", icon: EmojiIcon("🏀"), desc: "FIBA Layout" },
         { id: "badminton", label: "Badminton", icon: EmojiIcon("🏸"), desc: "BWF Court" },
         { id: "futsal", label: "Futsal", icon: EmojiIcon("⚽"), desc: "Official Dimensions" },
-        { id: "handball", label: "Handball", icon: () => <div className="w-6 h-6 flex items-center justify-center -ml-0.5"><img src="/handball.png" alt="Handball" className="w-full h-full object-contain scale-[1.5] grayscale opacity-80 mix-blend-screen" /></div>, desc: "IHF Court" },
+        { id: "handball", label: "Handball", icon: () => <img src="/handball.png" alt="Handball" className="w-5 h-5 flex-shrink-0 object-contain grayscale opacity-80 mix-blend-screen" />, desc: "IHF Court" },
         { id: "volleyball", label: "Volleyball", icon: EmojiIcon("🏐"), desc: "FIVB Layout" },
         { id: "all-sports", label: "All sports", icon: Layers, desc: "Showcase all" },
     ];
