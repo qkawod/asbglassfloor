@@ -13,7 +13,10 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
     return (
         <main className="bg-deepBlack min-h-screen text-white">
-            <ProductHero />
+            <ProductHero
+                title="ASB 스마트코트"
+                subtitle="다양한 스포츠를 하나의 공간에서 구현하는 멀티스포츠 코트"
+            />
             <MultiSportsAdvantages />
             <MultiSportsProjects />
         </main>

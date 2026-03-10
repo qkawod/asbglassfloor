@@ -169,11 +169,11 @@ export default function ReferencesPage() {
                 <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#111] to-transparent z-10 pointer-events-none" />
 
                 <div className="relative z-20 px-8 pb-16 max-w-6xl origin-bottom-left transform scale-[0.8] md:scale-100">
-                    <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter text-white/90 mb-6 leading-none uppercase">
-                        References
+                    <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter text-white/90 mb-6 leading-none">
+                        ASB 프로젝트
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-300 font-light tracking-wider">
-                        Explore how ASB GlassFloor is redefining sports and event surfaces globally.
+                        프로스포츠, 공공체육시설, 교육시설까지 다양한 프로젝트
                     </p>
 
                     {/* Signature LED Line */}

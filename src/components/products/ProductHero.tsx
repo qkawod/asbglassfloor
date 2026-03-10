@@ -8,12 +8,14 @@ import Image from "next/image";
 
 interface ProductHeroProps {
     title?: string;
+    subtitle?: string;
     videoSrc?: string;
     imageSrc?: string;
 }
 
 export default function ProductHero({
     title = "ASB 스마트코트",
+    subtitle = "다양한 스포츠를 하나의 공간에서 구현하는 멀티스포츠 코트",
     videoSrc = "/Handball in the Dark  on ASB GlassFloor.mp4",
     imageSrc
 }: ProductHeroProps) {
@@ -101,7 +103,7 @@ export default function ProductHero({
                 </h1>
 
                 <p ref={subtitleRef} className="text-xl md:text-2xl text-gray-300 font-light tracking-wider max-w-2xl mb-10">
-                    The most advanced sports floor in the world.
+                    {subtitle}
                 </p>
 
                 {/* Signature LED Line (Extended) */}

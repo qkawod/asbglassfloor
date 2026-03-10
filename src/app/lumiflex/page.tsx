@@ -14,6 +14,7 @@ export default function LumiFlexPage() {
         <main className="bg-white min-h-screen text-black">
             <ProductHero
                 title="ASB 풀LED 스마트코트"
+                subtitle="코트 전체가 디지털 화면이 되는 풀 LED 스포츠 플로어"
                 videoSrc="/IGNITE THE COURT The Future of Sports Venues with ASB GlassFloor.mp4"
             />
             <LumiFlexAdvantages />

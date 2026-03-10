@@ -85,10 +85,10 @@ export default function ASBHero() {
 
             <div ref={textRef} className="relative z-20 px-8 pb-16 max-w-6xl origin-bottom-left transform scale-[0.8]">
                 <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter text-white/80 mb-6 leading-none">
-                    WE BUILD THE FUTURE
+                    미래형 스포츠 공간을 설계하다.
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 font-light tracking-wider">
-                    Experience the Difference of ASB GlassFloor
+                    디지털 기술과 스포츠가 결합된 멀티 스포츠 플로어 시스템
                 </p>
                 <div className="relative h-[1.1px] w-72 bg-[var(--color-led-line)]/30 mt-8 rounded-full shadow-[0_0_15px_var(--color-led-line)] overflow-hidden">
                     <div ref={scannerRef} className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent" />
