@@ -18,14 +18,14 @@ const milestones = [
         description: "The first ASB GlassFloor is unveiled, marking a paradigm shift in sports flooring technology."
     },
     {
-        year: "2010",
+        year: "2012",
         title: "First LED Court",
         description: "Introduction of the ASB 스마트코트, the first glass floor with LED marking lines that can be switched on and off."
     },
     {
         year: "Today",
-        title: "ASB 스마트코트",
-        description: "현존하는 가장 진보된 스포츠 스마트코트 시스템"
+        title: "Global Innovation Leader",
+        description: "With installations in over 70 countries, ASB GlassFloor continues to set the standard for modern sports venues."
     }
 ];
 

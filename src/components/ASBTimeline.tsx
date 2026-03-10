@@ -11,8 +11,8 @@ const timelineData = [
     { year: '1965', title: '독일 ASB 설립', description: '', image: '/Dresden/asb_referenzen_dresden_02.jpg' },
     { year: '1976', title: 'ASB 스쿼시 시스템 개발', description: '', image: '/BMW/BMW Park_1.jpeg' },
     { year: '2007', title: '최초의 GlassCourt', description: '', image: '/University of oxford/Oxford_1.jpg' },
-    { year: '2010', title: 'ASB GlassFloor', description: '', image: '/OYM/OYM_swiss.jpg' },
-    { year: 'Today', title: 'ASB 스마트코트', description: '현존하는 가장 진보된 스포츠 스마트코트 시스템', image: '/NBA/NBA-AS24-LED-Court-Collage.png' },
+    { year: '2012', title: 'ASB GlassFloor', description: '', image: '/OYM/OYM_swiss.jpg' },
+    { year: 'Today', title: 'Unrivaled Technology', description: '현존하는 가장 진보된 스포츠 플로어링 시스템', image: '/NBA/NBA-AS24-LED-Court-Collage.png' },
 ];
 
 export default function ASBTimeline() {
