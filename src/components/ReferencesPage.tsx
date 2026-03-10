@@ -168,7 +168,7 @@ export default function ReferencesPage() {
                 {/* Bottom Gradient Fade */}
                 <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#111] to-transparent z-10 pointer-events-none" />
 
-                <div className="relative z-20 px-8 pb-16 max-w-6xl origin-bottom-left transform scale-[0.8] md:scale-100">
+                <div className="relative z-20 px-8 pb-16 max-w-6xl origin-bottom-left transform scale-[0.8]">
                     <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter text-white/90 mb-6 leading-none">
                         ASB 프로젝트
                     </h1>
