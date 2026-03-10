@@ -85,7 +85,7 @@ export default function ASBHero() {
 
             <div ref={textRef} className="relative z-20 px-8 pb-16 max-w-6xl origin-bottom-left transform scale-[0.8]">
                 <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter text-white/80 mb-6 leading-none">
-                    미래형 스포츠 공간을 설계하다.
+                    WE BUILD THE FUTURE
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 font-light tracking-wider">
                     디지털 기술과 스포츠가 결합된 멀티 스포츠 플로어 시스템

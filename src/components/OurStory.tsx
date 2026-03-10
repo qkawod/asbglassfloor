@@ -23,7 +23,7 @@ const historyData = [
     { year: '2006', event: '멀티스포츠 플로어 최초개발' },
     { year: '2007', event: '세계최초 글라스코트_AIDAdiva크루즈' },
     { year: '2010', event: 'ASB이동식코트 / 인터렉티브 ASB TopSquash' },
-    { year: '2012', event: '전세계 영업 및 물류 ASB GMBH 법인통합' },
+    { year: '2010', event: '전세계 영업 및 물류 ASB GMBH 법인통합' },
     { year: '2014', event: 'ASB PermanentGlassCourt' },
 ];
 
