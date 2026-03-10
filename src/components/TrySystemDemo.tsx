@@ -23,7 +23,7 @@ export default function TrySystemDemo() {
         { id: "basketball", label: "Basketball", icon: EmojiIcon("🏀"), desc: "Professional FIBA Layout" },
         { id: "badminton", label: "Badminton", icon: EmojiIcon("🏸"), desc: "BWF Standard Court" },
         { id: "futsal", label: "Futsal", icon: EmojiIcon("⚽"), desc: "Official Futsal Dimensions" },
-        { id: "handball", label: "Handball", icon: () => <img src="/handball.png" alt="Handball" className="h-[26px] w-auto object-contain grayscale opacity-80 mix-blend-screen" />, desc: "IHF Standard Court" },
+        { id: "handball", label: "Handball", icon: () => <div className="w-8 h-8 flex items-center justify-center -ml-1"><img src="/handball.png" alt="Handball" className="w-full h-full object-contain scale-[1.5] grayscale opacity-80 mix-blend-screen" /></div>, desc: "IHF Standard Court" },
         { id: "volleyball", label: "Volleyball", icon: EmojiIcon("🏐"), desc: "FIVB Standard Layout" },
         { id: "all-sports", label: "All sports", icon: Layers, desc: "Showcase of all possibilities" },
     ];
