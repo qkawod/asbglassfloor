@@ -225,7 +225,7 @@ export default function TechProjects() {
                         Engineered for the Future
                     </h2>
                     <p className="text-slate-600 text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
-                        스포츠와 기술, 그 완벽한 조화를 경험해 보세요. 압도적인 내구성과 성능의 ASB GlassFloor로,<br className="hidden md:block" /> 스마트 시대에 걸맞은 경기장의 새로운 패러다임을 제시합니다.
+                        스포츠와 테크놀로지, 그 완벽한 조화를 경험해 보세요. 압도적인 내구성과 성능의 ASB GlassFloor로,<br className="hidden md:block" /> 스마트 시대에 걸맞은 경기장의 새로운 패러다임을 제시합니다.
                     </p>
                     <Link
                         href="/contact"
