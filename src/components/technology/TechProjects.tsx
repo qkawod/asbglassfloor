@@ -23,8 +23,8 @@ interface Project {
 const projects: Project[] = [
     {
         id: "tech1",
-        title: "Glass Surface Engineering",
-        subtitle: "TECHNOLOGY",
+        title: "ASB Glass",
+        subtitle: "테크놀로지",
         description: "독자적인 에칭 공법에 특수 세라믹 도트를 더해, 유리의 한계를 넘어선 고기능성 표면을 설계했습니다. 이 첨단 공정은 국제 스포츠 기준에 부합하는 이상적인 마찰계수를 유지시켜 주며, 완벽한 그립감으로 선수의 안전과 최상의 경기력을 동시에 보장합니다.",
         image: ["/Engineering/surface.png", "/Engineering/surface_01.png"], // Slideshow images
         alignment: "left",
@@ -35,7 +35,7 @@ const projects: Project[] = [
     {
         id: "tech2",
         title: "Substructure Engineering",
-        subtitle: "TECHNOLOGY",
+        subtitle: "테크놀로지",
         description: "ASB GlassFloor의 하부 구조 시스템(Substructure)은 스포츠 경기력과 공간 활용성을 동시에 극대화하도록 설계되었습니다. 평상시에는 최상급의 탄성과 충격 흡수율을 제공하여 선수의 관절을 보호하고 최고의 플레이를 지원합니다. 하지만 단순한 스포츠 바닥재에 그치지 않고, 필요 시 구조적 보강을 통해 대규모 관중석이나 중장비가 배치되는 환경까지 완벽하게 대응합니다.",
         image: "/하부.jpeg",
         alignment: "left",
@@ -46,7 +46,7 @@ const projects: Project[] = [
     {
         id: "tech3",
         title: "Performance & Safety",
-        subtitle: "TECHNOLOGY",
+        subtitle: "테크놀로지",
         description: "ASB GlassFloor는 선수의 안전을 최우선으로 고려하여 최적의 탄성과 충격 흡수 기능을 설계했습니다. 이는 선수의 신체 피로도를 획기적으로 줄여줄 뿐만 아니라, 100%의 공 리바운드율을 완벽하게 구현하여 농구, 핸드볼 등 엄격한 기준이 요구되는 구기 종목에서도 최상의 퍼포먼스를 보장합니다.\n\n특히 ASB 풀LED 스마트코트는 단 2mm의 미세한 변형만으로 충격의 50%를 흡수하는 놀라운 성능을 발휘합니다. 이 독보적인 쿠셔닝 기술은 유리 자체의 탄성과 하부 구조에 내장된 이중 알루미늄 서스펜션의 정밀한 결합으로 완성됩니다.",
         image: "/MultiFloor Flextest.mp4",
         alignment: "left",
@@ -57,7 +57,7 @@ const projects: Project[] = [
     {
         id: "tech4",
         title: "Certified Performance",
-        subtitle: "TECHNOLOGY",
+        subtitle: "테크놀로지",
         description: "ASB GlassFloor는 엄격한 국제 스포츠 시설 기준을 완벽하게 준수합니다. 독일 공업 규격(DIN 18032-2) 및 유럽 통합 표준(EN 14904) 검증을 통해 충격 흡수성과 공 반발력(Ball Rebound) 부문에서 최상위 등급을 획득했습니다.\n\n더불어 FIBA(농구), FIVB(배구), IHF(핸드볼), WSF(스쿼시)는 물론 IWBF(휠체어 농구)의 공식 인증까지 획득했습니다. 이는 다양한 엘리트 스포츠 경기는 물론, 높은 내구성이 요구되는 휠체어 종목까지 완벽하게 소화하는 압도적인 퍼포먼스를 입증합니다.",
         image: "/bounce.mp4",
         alignment: "right",
