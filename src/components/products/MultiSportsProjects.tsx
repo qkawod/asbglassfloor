@@ -245,31 +245,28 @@ export default function MultiSportsProjects() {
                     }, el);
                     return () => ctx.revert();
                 }
-            }} className="py-64 relative bg-black text-white">
-                {/* Background Image */}
-                <Image
-                    src="/FIBA U19 Women’s World Cup/asb-glassfloor-source-fiba-media-41.jpg"
-                    alt="ASB 스마트코트 코트 전경"
-                    fill
-                    className="object-cover object-center"
-                    priority
+            }} className="relative w-full py-48 md:py-64 bg-black text-white overflow-hidden group">
+                {/* Background Image - Made to stretch as wide as possible */}
+                <div
+                    className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-60 transition-transform duration-1000 group-hover:scale-105"
+                    style={{ backgroundImage: `url('/FIBA U19 Women’s World Cup/asb-glassfloor-source-fiba-media-41.jpg')` }}
                 />
 
-                {/* Dark Overlay for Text Readability */}
-                <div className="absolute inset-0 bg-black/60" />
+                {/* Gradient Overlay for Text Readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/80" />
 
-                <div className="container relative z-10 mx-auto px-6 text-center max-w-4xl">
-                    <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-8 text-white drop-shadow-md">
+                <div className="relative container mx-auto px-6 text-center max-w-4xl z-10">
+                    <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 text-white drop-shadow-lg break-keep">
                         타협하지 않는 다목적 플로어 시스템
                     </h2>
-                    <p className="text-gray-200 text-lg leading-relaxed mb-10 max-w-3xl mx-auto break-keep drop-shadow">
+                    <p className="text-white text-lg md:text-2xl font-medium leading-relaxed mb-12 max-w-3xl mx-auto drop-shadow-md break-keep">
                         ASB 스마트코트는 단순한 실내 바닥재가 아닙니다. 모든 영역에서 퍼포먼스를 극대화하도록 설계된, 어떠한 타협도 없는 완성형 시스템입니다.
                         <br className="hidden md:block" /><br className="hidden md:block" />
                         특수 처리된 유리 표면과 알루미늄 하부 구조(Substructure)의 독창적인 결합은 실내 스포츠 환경에서 전례 없는 품질과 최적의 플레이 조건을 제공합니다.
                     </p>
                     <Link
                         href="/contact"
-                        className="inline-flex items-center justify-center px-10 py-4 bg-white text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-gray-200 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                        className="inline-flex items-center justify-center px-10 py-4 bg-white text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-gray-200 transition-colors duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
                     >
                         Contact Us
                     </Link>
