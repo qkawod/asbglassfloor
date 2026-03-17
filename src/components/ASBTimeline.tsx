@@ -8,8 +8,8 @@ import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
 const timelineData = [
-    { year: '1965', title: '독일 ASB 설립', description: '', image: '/Dresden/asb_referenzen_dresden_02.jpg' },
-    { year: '1976', title: 'ASB 스쿼시 시스템 개발', description: '', image: '/BMW/BMW Park_1.jpeg' },
+    { year: '1965', title: '독일 ASB 설립', description: '', image: '/ASB-History.jpeg' },
+    { year: '1976', title: 'ASB 스쿼시 시스템 개발', description: '', image: '/ASB-1024x1024.png' },
     { year: '2007', title: '최초의 GlassCourt', description: '', image: '/University of oxford/Oxford_1.jpg' },
     { year: '2012', title: 'ASB GlassFloor', description: '', image: '/OYM/OYM_swiss.jpg' },
     { year: 'Today', title: 'Unrivaled Technology', description: '현존하는 가장 진보된 스포츠 플로어링 시스템', image: '/NBA/NBA-AS24-LED-Court-Collage.png' },
@@ -93,7 +93,7 @@ export default function ASBTimeline() {
                             <div className="absolute left-6 md:left-1/2 w-4 h-4 bg-white border-4 border-[#FFE57F] rounded-full -translate-x-1/2 mt-3 z-10 box-shadow-[0_0_10px_rgba(255,229,127,0.5)]" />
 
                             <div className="hidden md:flex md:w-1/2 items-center justify-center p-8 relative z-0 group-hover:z-50">
-                                <div className="relative w-32 h-20 group-hover:scale-[5] transition-transform duration-500 ease-out rounded-lg overflow-hidden shadow-md group-hover:shadow-2xl opacity-60 group-hover:opacity-100 grayscale group-hover:grayscale-0 origin-center">
+                                <div className="relative w-32 h-20 group-hover:scale-[2.5] transition-transform duration-500 ease-out rounded-lg overflow-hidden shadow-md group-hover:shadow-2xl opacity-60 group-hover:opacity-100 grayscale group-hover:grayscale-0 origin-center">
                                     {item.image && (
                                         <Image
                                             src={item.image}

@@ -88,7 +88,7 @@ export default function ASBHero() {
                     WE BUILD THE FUTURE
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 font-light tracking-wider">
-                    스포츠 플로어의 새로운 기준, ASB GlassFloor
+                    스포츠 플로어의 새로운 기준, ASB GlassFloor 스마트코트
                 </p>
                 <div className="relative h-[1.1px] w-72 bg-[var(--color-led-line)]/30 mt-8 rounded-full shadow-[0_0_15px_var(--color-led-line)] overflow-hidden">
                     <div ref={scannerRef} className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent" />
