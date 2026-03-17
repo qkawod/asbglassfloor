@@ -13,7 +13,7 @@ const advantagesData = [
     },
     {
         title: "SAFER BY DESIGN (설계부터 남다른 안전성)",
-        description: "특허받은 세라믹 도트 표면 처리는 기존 목재 마루를 능가하는 최상의 그립감과 탄성을 제공합니다. 넘어지거나 슬라이딩 시 발생하는 피부 마찰 화상(Friction burn)을 방지하며, 유해 증기나 냄새가 전혀 배출되지 않는 안전한 소재입니다."
+        description: "특허받은 세라믹 도트 표면 처리는 기존 스포츠 플로어들을 능가하는 최상의 그립감과 탄성을 제공합니다. 넘어지거나 슬라이딩 시 발생하는 피부 마찰 화상(Friction burn)을 방지하며, 유해 증기나 냄새가 전혀 배출되지 않는 안전한 소재입니다."
     },
     {
         title: "UNLIMITED POSSIBILITIES (무한한 확장성)",
