@@ -41,7 +41,7 @@ export default function ASBStats() {
 
                 <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32">
                     <div className="text-center">
-                        <div className="text-8xl font-bold text-neonCyan mb-4 tabular-nums">{countries}+</div>
+                        <div className="text-8xl font-bold text-[#FFE57F] mb-4 tabular-nums">{countries}+</div>
                         <div className="text-xl text-gray-500 uppercase tracking-widest font-semibold">Countries</div>
                     </div>
 

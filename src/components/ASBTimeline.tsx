@@ -11,8 +11,8 @@ const timelineData = [
     { year: '1965', title: '독일 ASB 설립', description: '', image: '/ASB-History.jpeg' },
     { year: '1976', title: 'ASB 스쿼시 시스템 개발', description: '', image: '/ASB-1024x1024.png' },
     { year: '2007', title: '최초의 GlassCourt', description: '', image: '/University of oxford/Oxford_1.jpg' },
-    { year: '2012', title: 'ASB GlassFloor', description: '', image: '/OYM/OYM_swiss.jpg' },
-    { year: 'Today', title: 'ASB 스마트코트', description: '현존하는 가장 진보된 스포츠 스마트코트 시스템', image: '/NBA/NBA-AS24-LED-Court-Collage.png' },
+    { year: '2010', title: 'ASB GlassFloor', description: '', image: '/OYM/OYM_swiss.jpg' },
+    { year: 'Today', title: 'ASB 스마트코트', description: '현존하는 가장 진보된 스포츠 스마트코트 시스템', image: '/BMW/BMW_Park_2.jpeg' },
 ];
 
 export default function ASBTimeline() {
@@ -65,7 +65,7 @@ export default function ASBTimeline() {
     return (
         <section ref={sectionRef} className="pt-32 pb-64 bg-white text-black relative">
             <div className="max-w-5xl mx-auto px-6 relative">
-                <h2 className="text-4xl md:text-6xl font-medium text-black mb-24 tracking-tight text-center">Engineering Milestones</h2>
+                <h2 className="text-4xl md:text-6xl font-medium text-black mb-24 tracking-tight text-center">INNOVATION TIMELINE</h2>
 
                 {/* Vertical Line */}
                 <div className="absolute left-6 md:left-1/2 top-32 bottom-0 w-1 bg-black/10 -translate-x-1/2">
