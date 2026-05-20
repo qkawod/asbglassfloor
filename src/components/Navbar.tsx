@@ -33,6 +33,7 @@ export default function Navbar() {
         { name: "제품군", href: "/products" },
         { name: "테크놀로지", href: "/technology" },
         { name: "레퍼런스", href: "/references" },
+        { name: "인증", href: "/certification" },
         { name: "컨택트", href: "/contact" },
         {
             name: "체험Zone",
