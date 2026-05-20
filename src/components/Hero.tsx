@@ -60,7 +60,7 @@ export default function Hero() {
             loop
             muted
             playsInline
-            src="/메인영상_RevB.mp4"
+            src="/main-video-revB.mp4"
           />
         </div>
       </div>
