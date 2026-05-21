@@ -55,10 +55,10 @@ export default function ProductShowcase() {
 
                 <div className="absolute bottom-0 left-0 p-8 md:p-16 pb-4 md:pb-6 z-20 w-full pointer-events-none flex justify-center md:justify-start">
                     <div className="pointer-events-auto max-w-2xl">
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,1)] origin-left tracking-tighter uppercase leading-none">
+                        <h2 className="led-title text-3xl md:text-5xl font-bold mb-3 transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-105 origin-left tracking-tighter uppercase leading-none">
                             ASB <br /><span className="text-white">스마트코트</span>
                         </h2>
-                        <button className="flex items-center gap-3 text-white border border-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-bold">
+                        <button className="flex items-center gap-3 text-white border border-white/85 bg-white/[0.03] px-8 py-3 shadow-[0_0_18px_rgba(255,255,255,0.2),inset_0_0_12px_rgba(255,255,255,0.08)] backdrop-blur-[1px] hover:bg-white hover:text-black hover:shadow-[0_0_24px_rgba(255,255,255,0.42)] transition-all duration-300 uppercase tracking-widest text-sm font-bold">
                             Explore ASB 스마트코트 <ArrowRight size={18} />
                         </button>
                     </div>
@@ -83,10 +83,10 @@ export default function ProductShowcase() {
 
                 <div className="absolute bottom-0 left-0 p-8 md:p-16 pb-4 md:pb-6 z-20 w-full pointer-events-none flex justify-center md:justify-start">
                     <div className="pointer-events-auto max-w-2xl">
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,1)] origin-left tracking-tighter uppercase leading-none">
+                        <h2 className="led-title text-3xl md:text-5xl font-bold mb-3 transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-105 origin-left tracking-tighter uppercase leading-none">
                             ASB <br /><span className="text-white">풀LED 스마트코트</span>
                         </h2>
-                        <button className="flex items-center gap-3 text-white border border-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-bold">
+                        <button className="flex items-center gap-3 text-white border border-white/85 bg-white/[0.03] px-8 py-3 shadow-[0_0_18px_rgba(255,255,255,0.2),inset_0_0_12px_rgba(255,255,255,0.08)] backdrop-blur-[1px] hover:bg-white hover:text-black hover:shadow-[0_0_24px_rgba(255,255,255,0.42)] transition-all duration-300 uppercase tracking-widest text-sm font-bold">
                             Explore 풀LED 스마트코트 <ArrowRight size={18} />
                         </button>
                     </div>

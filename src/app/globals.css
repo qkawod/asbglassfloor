@@ -95,3 +95,48 @@ body {
   animation: shimmer 3s linear infinite;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
+
+@keyframes led-title-scan {
+  0% {
+    background-position: 180% 50%;
+  }
+
+  100% {
+    background-position: -80% 50%;
+  }
+}
+
+.led-title {
+  display: inline-block;
+  color: transparent;
+  background:
+    linear-gradient(105deg,
+      #ffffff 0%,
+      #ffffff 36%,
+      #dff5ff 46%,
+      #ffffff 52%,
+      #ffffff 100%);
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: led-title-scan 4.2s ease-in-out infinite;
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, 0.98),
+    0 0 8px rgba(255, 255, 255, 0.88),
+    0 0 18px rgba(109, 193, 255, 0.58),
+    0 0 34px rgba(0, 174, 239, 0.38),
+    0 3px 18px rgba(0, 0, 0, 0.28);
+}
+
+.led-title span {
+  color: inherit;
+}
+
+.group:hover .led-title {
+  text-shadow:
+    0 0 2px rgba(255, 255, 255, 1),
+    0 0 12px rgba(255, 255, 255, 0.95),
+    0 0 28px rgba(117, 211, 255, 0.74),
+    0 0 48px rgba(0, 174, 239, 0.5),
+    0 4px 22px rgba(0, 0, 0, 0.34);
+}
