@@ -77,14 +77,14 @@ export default function TrySystemDemo() {
                         </p>
                     </div>
 
-                    <div className="order-1 -mx-2 flex w-[calc(100%+1rem)] snap-x gap-2 overflow-x-auto px-2 pb-2 md:order-2 md:mx-0 md:w-full md:flex-col md:gap-3 md:overflow-visible md:px-0">
+                    <div className="order-1 -mx-2 flex w-[calc(100%+1rem)] snap-x gap-2 overflow-x-auto px-2 py-1 md:order-2 md:mx-0 md:w-full md:flex-col md:gap-3 md:overflow-visible md:px-0 md:py-0">
                         {sports.map((sport) => (
                             <button
                                 key={sport.id}
                                 onClick={() => setActiveSport(sport.id)}
                                 className={`group relative flex min-w-[148px] shrink-0 snap-start items-center gap-3 overflow-hidden rounded-2xl border p-3 transition-all duration-500 backdrop-blur-xl md:w-full md:min-w-0 md:gap-4 md:p-4 ${activeSport === sport.id
-                                    ? "bg-gradient-to-br from-white/20 to-white/5 border-white/60 text-white shadow-[inset_0_0_15px_rgba(255,255,255,0.2)] scale-[1.02] -translate-y-1"
-                                    : "bg-white/[0.03] border-white/10 text-slate-400 hover:bg-white/[0.08] hover:border-white/30 hover:text-white hover:-translate-y-1"
+                                    ? "bg-gradient-to-br from-white/20 to-white/5 border-white/60 text-white shadow-[inset_0_0_15px_rgba(255,255,255,0.2)] md:scale-[1.02] md:-translate-y-1"
+                                    : "bg-white/[0.03] border-white/10 text-slate-400 hover:bg-white/[0.08] hover:border-white/30 hover:text-white md:hover:-translate-y-1"
                                     }`}
                             >
                                 {/* Liquid Shine Effect */}

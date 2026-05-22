@@ -248,7 +248,7 @@ export default function Navbar() {
                         <button
                             type="button"
                             onClick={closeMobileMenu}
-                            className="inline-flex h-11 w-11 items-center justify-center border border-white/15 text-white transition-colors hover:border-white/45"
+                            className="inline-flex h-11 w-11 items-center justify-center border-0 bg-transparent text-white transition-colors hover:text-electricCyan focus:outline-none focus-visible:outline-none"
                             aria-label="모바일 메뉴 닫기"
                         >
                             <X size={24} />

@@ -82,14 +82,14 @@ export default function MultiSportsDemo() {
                         </p>
                     </div>
 
-                    <div className="order-1 -mx-2 flex w-[calc(100%+1rem)] snap-x gap-2 overflow-x-auto px-2 pb-2 md:order-2 md:mx-0 md:w-full md:flex-col md:overflow-visible md:px-0">
+                    <div className="order-1 -mx-2 flex w-[calc(100%+1rem)] snap-x gap-2 overflow-x-auto px-2 py-1 md:order-2 md:mx-0 md:w-full md:flex-col md:overflow-visible md:px-0 md:py-0">
                         {sports.map((sport) => (
                             <button
                                 key={sport.id}
                                 onClick={() => setActiveSport(sport.id)}
                                 className={`group relative flex min-w-[148px] shrink-0 snap-start items-center gap-3 overflow-hidden rounded-2xl border p-3 transition-all duration-500 md:w-full md:min-w-0 md:gap-4 ${activeSport === sport.id
-                                    ? "bg-slate-900 border-slate-800 text-white shadow-xl scale-[1.02] -translate-y-1"
-                                    : "bg-white border-slate-200 text-slate-500 hover:bg-slate-50 hover:border-slate-300 hover:shadow-md hover:text-slate-900 hover:-translate-y-1"
+                                    ? "bg-slate-900 border-slate-800 text-white shadow-xl md:scale-[1.02] md:-translate-y-1"
+                                    : "bg-white border-slate-200 text-slate-500 hover:bg-slate-50 hover:border-slate-300 hover:shadow-md hover:text-slate-900 md:hover:-translate-y-1"
                                     }`}
                             >
                                 {/* Motion Slide Background (Active) */}
