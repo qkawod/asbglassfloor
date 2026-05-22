@@ -1,9 +1,13 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { Award, BadgeCheck, FileText, ShieldCheck, X } from "lucide-react";
 import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 type Certificate = {
     title: string;
@@ -191,10 +195,67 @@ function CategoryIcon({ type }: { type: CertificateCategory["icon"] }) {
 
 export default function CertificationArchive() {
     const [activeCertificate, setActiveCertificate] = useState<Certificate | null>(null);
+    const overviewSectionRef = useRef<HTMLDivElement>(null);
+    const overviewItemsRef = useRef<(HTMLElement | null)[]>([]);
     const totalCertificates = useMemo(
         () => categories.reduce((count, category) => count + category.certificates.length, 0),
         []
     );
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            const mainTitle = overviewSectionRef.current?.querySelector(".cert-sticky-title");
+            if (mainTitle) {
+                gsap.from(mainTitle.children, {
+                    scrollTrigger: {
+                        trigger: mainTitle,
+                        start: "top 85%",
+                    },
+                    y: 100,
+                    opacity: 0,
+                    filter: "blur(10px)",
+                    duration: 1.2,
+                    stagger: 0.2,
+                    ease: "power4.out",
+                });
+            }
+
+            const scanner = overviewSectionRef.current?.querySelector(".cert-line-scanner");
+            if (scanner) {
+                gsap.fromTo(
+                    scanner,
+                    { x: "-100%" },
+                    {
+                        x: "100%",
+                        duration: 2,
+                        ease: "power2.inOut",
+                        repeat: -1,
+                    }
+                );
+            }
+
+            overviewItemsRef.current.forEach((item) => {
+                if (!item) return;
+
+                const targets = item.children.length > 0 ? item.children : item;
+
+                gsap.from(targets, {
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 85%",
+                    },
+                    y: 50,
+                    opacity: 0,
+                    filter: "blur(5px)",
+                    duration: 1,
+                    stagger: 0.15,
+                    ease: "power3.out",
+                });
+            });
+        }, overviewSectionRef);
+
+        return () => ctx.revert();
+    }, []);
 
     useEffect(() => {
         if (!activeCertificate) return;
@@ -214,7 +275,7 @@ export default function CertificationArchive() {
 
     return (
         <div className="bg-white text-slate-900">
-            <section className="relative overflow-hidden bg-black py-24 text-white md:py-32">
+            <section ref={overviewSectionRef} className="relative overflow-hidden bg-black py-24 text-white md:py-32">
                 <div
                     className="absolute inset-0 bg-cover bg-center opacity-20"
                     style={{ backgroundImage: "url('/glass-production-packaging-1024x666.jpeg')" }}
@@ -222,14 +283,8 @@ export default function CertificationArchive() {
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black" />
 
                 <div className="relative z-10 mx-auto grid max-w-7xl gap-14 px-6 md:grid-cols-12 md:px-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 24 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
-                        className="md:col-span-4"
-                    >
-                        <div className="sticky top-32">
+                    <div className="md:col-span-4">
+                        <div className="cert-sticky-title sticky top-32">
                             <p className="mb-5 text-xs font-bold uppercase tracking-[0.34em] text-electricCyan">
                                 인증 개요
                             </p>
@@ -239,19 +294,18 @@ export default function CertificationArchive() {
                                 공식 기준의 신뢰성
                             </h2>
                             <div className="relative mt-8 h-[1.6px] w-48 overflow-hidden rounded-full bg-[var(--color-led-line)]/30 shadow-[0_0_15px_var(--color-led-line)]">
-                                <div className="absolute inset-y-0 left-0 w-full animate-scan bg-gradient-to-r from-transparent via-white to-transparent" />
+                                <div className="cert-line-scanner absolute inset-y-0 left-0 w-full bg-gradient-to-r from-transparent via-white to-transparent" />
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 24 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7, delay: 0.1 }}
-                        className="space-y-10 md:col-span-8"
-                    >
-                        <p className="max-w-3xl text-lg leading-relaxed text-gray-300 md:text-xl">
+                    <div className="space-y-10 md:col-span-8">
+                        <p
+                            ref={(el) => {
+                                overviewItemsRef.current[0] = el;
+                            }}
+                            className="max-w-3xl text-lg leading-relaxed text-gray-300 md:text-xl"
+                        >
                             ASB GlassFloor는 국제 스포츠 연맹, 유럽 안전 기준, 독일 산업 규격,
                             특허 기술을 통해 성능과 안전성을 검증받은 스포츠 바닥 시스템입니다.
                         </p>
@@ -261,8 +315,14 @@ export default function CertificationArchive() {
                                 ["화재 안전", "유럽 화재반응등급 분류와 시험성적서를 통한 안전성 확인"],
                                 ["EN / DIN 기준", "스포츠 바닥재 성능, 미끄럼, 슬라이딩 마찰 기준 검증"],
                                 ["특허 기술", "GlassFloor 및 조명 스포츠 바닥 구조에 대한 핵심 특허 문서"],
-                            ].map(([title, description]) => (
-                                <div key={title} className="border-b border-white/10 pb-8 last:border-0">
+                            ].map(([title, description], index) => (
+                                <div
+                                    key={title}
+                                    ref={(el) => {
+                                        overviewItemsRef.current[index + 1] = el;
+                                    }}
+                                    className="border-b border-white/10 pb-8 last:border-0"
+                                >
                                     <h3 className="mb-3 text-xl font-bold tracking-wide text-white md:text-2xl">
                                         {title}
                                     </h3>
@@ -273,7 +333,12 @@ export default function CertificationArchive() {
                             ))}
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                        <div
+                            ref={(el) => {
+                                overviewItemsRef.current[5] = el;
+                            }}
+                            className="grid grid-cols-2 gap-4 sm:grid-cols-4"
+                        >
                             {[
                                 ["04", "분류"],
                                 [String(totalCertificates).padStart(2, "0"), "문서"],
@@ -286,7 +351,7 @@ export default function CertificationArchive() {
                                 </div>
                             ))}
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
