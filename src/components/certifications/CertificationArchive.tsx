@@ -324,9 +324,6 @@ export default function CertificationArchive() {
                                 <h3 className="text-lg font-semibold text-slate-900">{category.title}</h3>
                                 <p className="mt-2 text-sm font-medium text-slate-500">{category.subtitle}</p>
                                 <p className="mt-5 text-sm leading-relaxed text-slate-500">{category.summary}</p>
-                                <div className="mt-6 text-xs font-bold tracking-[0.22em] text-slate-400">
-                                    문서 {category.certificates.length}개
-                                </div>
                             </motion.a>
                         ))}
                     </div>
@@ -354,9 +351,6 @@ export default function CertificationArchive() {
                                         </h3>
                                         <p className="mt-2 text-sm font-medium text-neonCyan">{category.subtitle}</p>
                                     </div>
-                                    <p className="text-xs font-bold tracking-[0.22em] text-slate-400">
-                                        문서 {category.certificates.length}개
-                                    </p>
                                 </div>
 
                                 <div className="grid items-stretch gap-6 sm:grid-cols-2 xl:grid-cols-3">
