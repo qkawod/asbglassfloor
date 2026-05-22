@@ -1,13 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
+    const mobileMenuRef = useRef<HTMLDivElement>(null);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -28,10 +30,39 @@ export default function Navbar() {
         };
     }, []);
 
+    useEffect(() => {
+        document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+        mobileMenuRef.current?.scrollTo({ top: 0 });
+
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isMobileMenuOpen]);
+
+    useEffect(() => {
+        if (!isMobileMenuOpen) return;
+
+        const closeOnScrollIntent = () => {
+            setIsMobileMenuOpen(false);
+            setIsMobileProductsOpen(false);
+        };
+
+        window.addEventListener("scroll", closeOnScrollIntent, { passive: true });
+        window.addEventListener("wheel", closeOnScrollIntent, { passive: true });
+        window.addEventListener("touchmove", closeOnScrollIntent, { passive: true });
+
+        return () => {
+            window.removeEventListener("scroll", closeOnScrollIntent);
+            window.removeEventListener("wheel", closeOnScrollIntent);
+            window.removeEventListener("touchmove", closeOnScrollIntent);
+        };
+    }, [isMobileMenuOpen]);
+
     const navLinks = [
         { name: "ASB", href: "/asb" },
         { name: "제품군", href: "/products" },
         { name: "테크놀로지", href: "/technology" },
+        { name: "인증", href: "/certifications" },
         { name: "레퍼런스", href: "/references" },
         { name: "컨택트", href: "/contact" },
         {
@@ -72,6 +103,24 @@ export default function Navbar() {
         }
     ];
 
+    const productSubLinks = [
+        { name: "ASB 스마트코트", href: "/products" },
+        { name: "ASB 풀LED 스마트코트", href: "/lumiflex" },
+    ];
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+        setIsMobileProductsOpen(false);
+    };
+
+    const isActiveLink = (href: string) => {
+        if (href === "/products") {
+            return pathname === "/products" || pathname === "/lumiflex";
+        }
+
+        return pathname === href;
+    };
+
     return (
         <nav
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 h-32 flex items-center ${isScrolled || pathname === "/contact" ? "bg-black/50 backdrop-blur-md shadow-lg" : "bg-transparent"
@@ -93,7 +142,7 @@ export default function Navbar() {
 
                 {/* 2. Center: Desktop Navigation */}
                 <div className="hidden lg:flex flex-1 justify-center items-center gap-8 xl:gap-12 pl-20">
-                    {navLinks.map((link: any) => (
+                    {navLinks.map((link) => (
                         <div
                             key={link.id || link.name}
                             className="relative group"
@@ -174,6 +223,8 @@ export default function Navbar() {
                     <button
                         className="lg:hidden text-white hover:text-electricCyan transition-colors"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label={isMobileMenuOpen ? "모바일 메뉴 닫기" : "모바일 메뉴 열기"}
+                        aria-expanded={isMobileMenuOpen}
                     >
                         {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
@@ -181,32 +232,109 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Navigation Overlay */}
-            <div className={`fixed inset-0 bg-black/95 z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-500 lg:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            <div
+                ref={mobileMenuRef}
+                className={`fixed left-0 top-0 z-[60] h-[100dvh] w-screen overflow-hidden bg-black/96 transition-transform duration-500 lg:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
                 }`}>
-                {navLinks.map((link) => (
-                    <Link
-                        key={link.name}
-                        href={link.href}
-                        className="text-2xl font-bold text-white hover:text-neonYellow transition-colors tracking-widest"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        {link.name}
-                    </Link>
-                ))}
-
-                {/* Mobile Social Links */}
-                <div className="flex items-center gap-8 mt-8">
-                    {socialLinks.map((social) => (
-                        <a
-                            key={social.name}
-                            href={social.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white hover:text-neonYellow transition-colors transform scale-125"
+                <div className="flex h-full flex-col px-7 py-6">
+                    <div className="flex items-center justify-between">
+                        <Link href="/" className="relative h-8 w-52" onClick={closeMobileMenu}>
+                            <img
+                                src="/Logo/logo-white.png"
+                                alt="ASB GlassFloor"
+                                className="h-full w-full object-contain object-left"
+                            />
+                        </Link>
+                        <button
+                            type="button"
+                            onClick={closeMobileMenu}
+                            className="inline-flex h-11 w-11 items-center justify-center border border-white/15 text-white transition-colors hover:border-white/45"
+                            aria-label="모바일 메뉴 닫기"
                         >
-                            {social.icon}
-                        </a>
-                    ))}
+                            <X size={24} />
+                        </button>
+                    </div>
+
+                    <div className="mt-8 flex flex-1 flex-col justify-center gap-0">
+                        {navLinks.map((link) => {
+                            const isProducts = link.name === "제품군";
+                            const active = isActiveLink(link.href);
+
+                            if (isProducts) {
+                                return (
+                                    <div key={link.name} className="border-b border-white/10 py-2">
+                                        <button
+                                            type="button"
+                                            onClick={() => setIsMobileProductsOpen((open) => !open)}
+                                            className={`flex w-full items-center justify-between py-3 text-left text-xl font-bold tracking-widest transition-colors ${active ? "text-neonYellow" : "text-white"
+                                                }`}
+                                            aria-expanded={isMobileProductsOpen}
+                                        >
+                                            <span>{link.name}</span>
+                                            <ChevronDown
+                                                className={`h-6 w-6 transition-transform duration-300 ${isMobileProductsOpen ? "rotate-180" : ""
+                                                    }`}
+                                            />
+                                        </button>
+
+                                        <div
+                                            className={`grid transition-all duration-300 ${isMobileProductsOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                                                }`}
+                                        >
+                                            <div className="overflow-hidden">
+                                                <div className="pb-3 pl-4">
+                                                    {productSubLinks.map((subLink) => (
+                                                        <Link
+                                                            key={subLink.href}
+                                                            href={subLink.href}
+                                                            onClick={closeMobileMenu}
+                                                            className={`relative z-10 block border-l border-white/15 px-5 py-2.5 text-base font-semibold tracking-wide transition-colors ${pathname === subLink.href ? "text-neonYellow" : "text-white/72 hover:text-white"
+                                                                }`}
+                                                        >
+                                                            {subLink.name}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            }
+
+                            return (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className={`border-b border-white/10 py-4 text-xl font-bold tracking-widest transition-colors ${active ? "text-neonYellow" : "text-white hover:text-neonYellow"
+                                        }`}
+                                    onClick={closeMobileMenu}
+                                >
+                                    {link.name}
+                                </Link>
+                            );
+                        })}
+                    </div>
+
+                    {/* Mobile Social Links */}
+                    <div className="flex items-center justify-between border-t border-white/10 pt-5">
+                        <span className="text-xs font-bold uppercase tracking-[0.26em] text-white/36">
+                            Social
+                        </span>
+                        <div className="flex items-center gap-7">
+                            {socialLinks.map((social) => (
+                                <a
+                                    key={social.name}
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-white/74 transition-colors hover:text-neonYellow"
+                                    aria-label={social.name}
+                                >
+                                    {social.icon}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>

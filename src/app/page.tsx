@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CoreFeatures from "@/components/CoreFeatures";
 import ProductShowcase from "@/components/ProductShowcase";
@@ -14,7 +13,6 @@ import LumiFlexInfo from "@/components/LumiFlexInfo";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black selection:bg-electricCyan selection:text-white">
-      <Navbar />
       <Hero />
       <CoreFeatures />
       <ProductShowcase />

@@ -11,13 +11,17 @@ interface ProductHeroProps {
     subtitle?: string;
     videoSrc?: string;
     imageSrc?: string;
+    imageClassName?: string;
+    imageWrapperClassName?: string;
 }
 
 export default function ProductHero({
     title = "ASB 스마트코트",
     subtitle = "다양한 스포츠를 하나의 공간에서 구현하는 멀티스포츠 코트",
     videoSrc = "/Handball in the Dark  on ASB GlassFloor.mp4",
-    imageSrc
+    imageSrc,
+    imageClassName = "object-cover",
+    imageWrapperClassName = "h-screen w-screen md:h-[56.25vw] md:min-h-screen md:min-w-[177.77vh] md:w-[100vw]"
 }: ProductHeroProps) {
     const heroRef = useRef<HTMLDivElement>(null);
     const titleRef = useRef<HTMLHeadingElement>(null);
@@ -72,13 +76,13 @@ export default function ProductHero({
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                 {/* Abstract Dark Glass Background matching ReferencesPageRev */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#111] z-10" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[56.25vw] min-h-screen min-w-[177.77vh] opacity-80">
+                <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-80 ${imageWrapperClassName}`}>
                     {imageSrc ? (
                         <Image
                             src={imageSrc}
                             alt={title}
                             fill
-                            className="object-cover"
+                            className={imageClassName}
                             priority
                         />
                     ) : (
@@ -87,7 +91,7 @@ export default function ProductHero({
                             loop
                             muted
                             playsInline
-                            className="w-full h-full object-cover"
+                            className="h-full w-full object-contain md:object-cover"
                             src={videoSrc}
                         />
                     )}

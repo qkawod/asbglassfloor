@@ -52,10 +52,10 @@ export default function Hero() {
     >
       {/* Video Background (YouTube) */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vh] min-h-[100vh] md:h-[56.25vw] md:min-h-screen md:min-w-[177.77vh]">
+        <div className="absolute inset-0 md:top-1/2 md:left-1/2 md:inset-auto md:-translate-x-1/2 md:-translate-y-1/2 md:w-[100vw] md:h-[56.25vw] md:min-h-screen md:min-w-[177.77vh]">
           <video
             ref={videoRef}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain md:object-cover"
             autoPlay
             loop
             muted
