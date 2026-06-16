@@ -7,6 +7,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "ASB 풀LED 스마트코트 | ASB GlassFloor",
     description: "The future of sports venues. Full LED video floor for unlimited possibilities in sports, events, and entertainment with ASB 풀LED 스마트코트.",
+    keywords: [
+        "ASB 풀LED 스마트코트",
+        "ASB LumiFlex",
+        "루미플렉스",
+        "풀LED 스포츠 플로어",
+        "LED 농구 코트",
+        "LED 비디오 플로어",
+        "디지털 스포츠 바닥",
+        "인터랙티브 스포츠 플로어",
+        "스포츠 엔터테인먼트 코트",
+        "NBA LED court",
+        "ASB GlassFloor",
+    ],
 };
 
 export default function LumiFlexPage() {

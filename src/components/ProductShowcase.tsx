@@ -3,13 +3,12 @@
 import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function ProductShowcase() {
-    const router = useRouter();
     const [activeSide, setActiveSide] = useState<"left" | "right" | null>(null);
-    const leftRef = useRef<HTMLDivElement>(null);
-    const rightRef = useRef<HTMLDivElement>(null);
+    const leftRef = useRef<HTMLAnchorElement>(null);
+    const rightRef = useRef<HTMLAnchorElement>(null);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -38,10 +37,10 @@ export default function ProductShowcase() {
     return (
         <section className="relative h-[60vh] w-full flex overflow-hidden bg-white mt-80">
             {/* Left Side - MultiSports */}
-            <div
+            <Link
+                href="/products"
                 ref={leftRef}
                 className="relative h-full bg-white overflow-hidden cursor-pointer group"
-                onClick={() => router.push("/products")}
             >
                 {/* Background Image/Video Placeholder */}
                 <div className="absolute inset-0 bg-[url('/Dresden/multisports-bg.jpg')] bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-out transform-gpu group-hover:scale-125" />
@@ -63,13 +62,13 @@ export default function ProductShowcase() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </Link>
 
             {/* Right Side - LumiFlex */}
-            <div
+            <Link
+                href="/lumiflex"
                 ref={rightRef}
                 className="relative h-full bg-white overflow-hidden cursor-pointer group"
-                onClick={() => router.push("/lumiflex")}
             >
                 {/* Background Image/Video Placeholder */}
                 <div className="absolute inset-0 bg-[url('/lumiflex-bg.jpg')] bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-out transform-gpu group-hover:scale-125" />
@@ -91,7 +90,7 @@ export default function ProductShowcase() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </Link>
         </section>
     );
 }

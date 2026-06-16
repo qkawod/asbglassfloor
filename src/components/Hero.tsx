@@ -83,8 +83,18 @@ export default function Hero() {
         )}
       </button>
 
-      {/* Content - Empty for now */}
-      <div className="relative z-20 px-4">
+      <div className="relative z-20 w-full px-6 pt-24 text-left md:px-12">
+        <div className="max-w-4xl">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.32em] text-electricCyan md:text-base">
+            ASB GlassFloor Korea
+          </p>
+          <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-normal text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.65)] md:text-6xl lg:text-7xl">
+            ASB GlassFloor 공식 파트너 GLOBE
+          </h1>
+          <p className="mt-6 max-w-2xl text-base font-medium leading-relaxed text-white/85 drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)] md:text-xl">
+            글라스플로어, LED 스포츠 플로어, 스마트코트, 스마트체육관, 멀티스포츠 코트를 위한 독일 ASB GlassFloor 솔루션을 한국 시장에 제공합니다.
+          </p>
+        </div>
       </div>
 
       {/* Scroll Indicator */}

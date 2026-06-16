@@ -7,6 +7,18 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Technology | ASB GlassFloor",
     description: "Discover the advanced technology behind ASB GlassFloor. The perfect synergy of glass, aluminum, and LED.",
+    keywords: [
+        "ASB GlassFloor 기술",
+        "스포츠 바닥재 기술",
+        "강화 유리 스포츠 플로어",
+        "세라믹 도트 표면",
+        "LED 스포츠 플로어 구조",
+        "충격 흡수 스포츠 바닥",
+        "친환경 스포츠 바닥재",
+        "DIN 18032",
+        "EN 14904",
+        "FIBA 인증 스포츠 플로어",
+    ],
 };
 
 export default function TechnologyPage() {
