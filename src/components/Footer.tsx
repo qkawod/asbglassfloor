@@ -1,6 +1,5 @@
 
 import Link from 'next/link';
-import { Youtube, Instagram, MessageCircle } from 'lucide-react'; // Using Lucide icons for simplicity if available, or I'll use SVGs to be safe since I didn't check package.json for lucide-react but it is commonly used. Actually, Navbar used SVGs inline. I should copy inline SVGs for consistency and safety.
 
 export default function Footer() {
     return (
@@ -21,8 +20,8 @@ export default function Footer() {
                     <Link href="/" className="text-xs md:text-sm font-bold tracking-widest text-white/70 hover:text-white transition-colors uppercase">
                         Home
                     </Link>
-                    <Link href="/products" className="text-xs md:text-sm font-bold tracking-widest text-white/70 hover:text-white transition-colors uppercase">
-                        Products
+                    <Link href="/smartcourt" className="text-xs md:text-sm font-bold tracking-widest text-white/70 hover:text-white transition-colors uppercase">
+                        스마트코트
                     </Link>
                     <Link href="/technology" className="text-xs md:text-sm font-bold tracking-widest text-white/70 hover:text-white transition-colors uppercase">
                         Technology

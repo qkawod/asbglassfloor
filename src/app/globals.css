@@ -140,3 +140,115 @@ body {
     0 0 48px rgba(0, 174, 239, 0.5),
     0 4px 22px rgba(0, 0, 0, 0.34);
 }
+
+@keyframes smart-court-line-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(-22%) scaleY(0.28);
+  }
+
+  34% {
+    opacity: 0.55;
+  }
+
+  72% {
+    opacity: 0.32;
+    transform: translateY(16%) scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(34%) scaleY(1.08);
+  }
+}
+
+.smart-court-transition-line {
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  transform-origin: bottom;
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0, 240, 255, 0.08) 18%,
+      rgba(0, 240, 255, 0.5) 54%,
+      rgba(255, 255, 255, 0.28) 100%);
+  box-shadow:
+    0 0 10px rgba(0, 240, 255, 0.22),
+    0 0 28px rgba(0, 240, 255, 0.12);
+  animation: smart-court-line-rise 5.8s ease-in-out infinite;
+}
+
+@keyframes led-flow {
+  0% {
+    background-position: 180% 50%;
+  }
+
+  100% {
+    background-position: -80% 50%;
+  }
+}
+
+.led-flow-text {
+  display: inline-block;
+  color: transparent;
+  background:
+    linear-gradient(105deg,
+      #d8d86a 0%,
+      #d8d86a 20%,
+      #f0ec9a 34%,
+      #ffffff 46%,
+      #fffbd2 54%,
+      #f0ec9a 66%,
+      #d8d86a 82%,
+      #d8d86a 100%);
+  background-size: 420% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow:
+    0 0 7px rgba(240, 236, 120, 0.72),
+    0 0 20px rgba(240, 236, 120, 0.32),
+    0 0 36px rgba(240, 236, 120, 0.14);
+  filter: drop-shadow(0 0 7px rgba(240, 236, 120, 0.2));
+  animation: led-flow 7.2s ease-in-out infinite;
+}
+
+.led-flow-line {
+  position: relative;
+  min-width: 18rem;
+  overflow: hidden;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(216, 216, 106, 0.16) 14%,
+      rgba(216, 216, 106, 0.34) 50%,
+      rgba(216, 216, 106, 0.16) 86%,
+      transparent 100%);
+  box-shadow:
+    0 0 8px rgba(240, 236, 120, 0.18),
+    0 0 22px rgba(240, 236, 120, 0.08);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 16%, black 84%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 16%, black 84%, transparent);
+}
+
+@keyframes led-line-sweep {
+  0% {
+    transform: translateX(-130%);
+  }
+
+  100% {
+    transform: translateX(130%);
+  }
+}
+
+.led-flow-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.08) 36%,
+      rgba(255, 255, 255, 0.92) 50%,
+      rgba(255, 251, 210, 0.42) 62%,
+      transparent 100%);
+  filter: blur(0.2px);
+  animation: led-line-sweep 7.2s ease-in-out infinite;
+}

@@ -395,14 +395,14 @@ export default function ReferenceDetailPage({ params }: PageProps) {
 
 
 
-                <div ref={heroTextRef} className="absolute bottom-0 left-0 w-full p-8 md:p-16 max-w-5xl z-20">
-                    <span className="inline-block px-3 py-1 mb-4 text-sm font-bold uppercase tracking-widest text-neonCyan border border-neonCyan/30 rounded-full bg-black/50 backdrop-blur-sm opacity-0">
+                <div ref={heroTextRef} className="absolute bottom-0 left-0 z-20 w-full max-w-5xl p-6 md:p-16">
+                    <span className="mb-4 inline-block rounded-full border border-neonCyan/30 bg-black/50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-neonCyan opacity-0 backdrop-blur-sm md:text-sm">
                         {project.category}
                     </span>
-                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-4 leading-none opacity-0">
+                    <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tighter opacity-0 sm:text-5xl md:text-7xl">
                         {project.title}
                     </h1>
-                    <div className="flex flex-wrap gap-8 text-lg md:text-xl text-gray-300 font-light opacity-0">
+                    <div className="flex flex-wrap gap-4 text-base font-light text-gray-300 opacity-0 md:gap-8 md:text-xl">
                         <span className="flex items-center gap-2">
                             📍 {project.location}
                         </span>
@@ -413,12 +413,12 @@ export default function ReferenceDetailPage({ params }: PageProps) {
 
                     <div
                         onClick={scrollToContent}
-                        className="cursor-pointer inline-flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300 group mt-10 opacity-0"
+                        className="group mt-10 inline-flex cursor-pointer items-center gap-2 text-gray-400 opacity-0 transition-colors duration-300 hover:text-white md:gap-3"
                     >
-                        <div className="p-3 rounded-full border border-white/20 group-hover:border-white transition-colors">
-                            <ArrowDown className="w-6 h-6 animate-bounce" />
+                        <div className="rounded-full border border-white/20 p-2 transition-colors group-hover:border-white md:p-3">
+                            <ArrowDown className="h-4 w-4 animate-bounce md:h-6 md:w-6" />
                         </div>
-                        <span className="text-sm uppercase tracking-[0.3em]">Discover</span>
+                        <span className="text-xs uppercase tracking-[0.26em] md:text-sm md:tracking-[0.3em]">Discover</span>
                     </div>
 
                 </div>
@@ -439,7 +439,7 @@ export default function ReferenceDetailPage({ params }: PageProps) {
             <section className="py-24 px-6 md:px-20 container mx-auto max-w-6xl flex flex-col items-center">
 
                 {/* Main Video */}
-                <div className="w-[120%] -ml-[10%] aspect-video mb-16 relative rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-black">
+                <div className="relative mb-16 aspect-video w-full overflow-hidden rounded-lg border border-white/10 bg-black shadow-2xl md:-ml-[10%] md:w-[120%]">
                     {(project.contentVideo || project.video) ? (
                         <video
                             src={project.contentVideo || project.video}
@@ -476,7 +476,7 @@ export default function ReferenceDetailPage({ params }: PageProps) {
                 </div>
 
                 {/* Divider Line (LED Style) */}
-                <div className="relative h-[0.9px] w-72 mb-16 bg-[var(--color-led-line)]/30 rounded-full shadow-[0_0_15px_var(--color-led-line)] overflow-hidden">
+                <div className="relative mb-16 h-[0.9px] w-[min(18rem,calc(100vw-3rem))] overflow-hidden rounded-full bg-[var(--color-led-line)]/30 shadow-[0_0_15px_var(--color-led-line)]">
                     <div ref={scannerRef} className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent" />
                 </div>
 
@@ -492,15 +492,15 @@ export default function ReferenceDetailPage({ params }: PageProps) {
 
                 {/* Gallery Section */}
                 {project.gallery && project.gallery.length > 0 && (
-                    <div className="w-[120%] -ml-[10%] mb-16 mt-48 relative">
+                    <div className="relative mb-16 mt-24 w-full md:mt-48 md:-ml-[10%] md:w-[120%]">
                         <GalleryCarousel images={project.gallery} />
                     </div>
                 )}
 
                 {/* About the Project Section */}
                 {project.aboutProject && (
-                    <div className="w-[120%] -ml-[10%] mt-24">
-                        <div className="flex flex-col md:flex-row gap-32 md:gap-64">
+                    <div className="mt-20 w-full md:mt-24 md:-ml-[10%] md:w-[120%]">
+                        <div className="flex flex-col gap-12 md:flex-row md:gap-64">
                             {/* Left Column: Title */}
                             <div className="flex-shrink-0">
                                 <h2 className="text-4xl md:text-5xl font-light text-white mb-8">About the Project</h2>
@@ -508,7 +508,7 @@ export default function ReferenceDetailPage({ params }: PageProps) {
                             </div>
 
                             {/* Right Column: Text & Button */}
-                            <div className="flex-grow space-y-8 text-gray-100 leading-relaxed text-lg">
+                            <div className="flex-grow space-y-8 text-base leading-relaxed text-gray-100 md:text-lg">
                                 {project.aboutProject.map((paragraph: string, idx: number) => (
                                     <p key={idx}>
                                         {paragraph}
@@ -516,7 +516,7 @@ export default function ReferenceDetailPage({ params }: PageProps) {
                                 ))}
 
                                 <div className="pt-8">
-                                    <Link href="/contact" className="bg-white text-black px-10 py-4 rounded-full font-bold text-sm tracking-[0.2em] hover:bg-gray-200 transition-colors">
+                                    <Link href="/contact" className="inline-flex bg-white px-6 py-4 text-sm font-bold tracking-[0.16em] text-black transition-colors hover:bg-gray-200 md:px-10 md:tracking-[0.2em]">
                                         MAKE AN INQUIRY
                                     </Link>
                                 </div>

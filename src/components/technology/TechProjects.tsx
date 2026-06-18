@@ -175,7 +175,7 @@ function ProjectCard({ project }: { project: Project }) {
 
             {/* Text Section */}
             <div className="project-text w-full lg:w-2/5 space-y-6 lg:px-8">
-                <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-slate-900 mb-2 whitespace-nowrap">
+                <h2 className="mb-2 text-3xl font-medium tracking-tight text-slate-900 md:text-5xl lg:whitespace-nowrap">
                     {project.title}
                 </h2>
 

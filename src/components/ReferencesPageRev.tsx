@@ -182,12 +182,12 @@ export default function ReferencesPageRev() {
 
                     <div
                         onClick={scrollToContent}
-                        className="cursor-pointer inline-flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300 group mt-12"
+                        className="group mt-12 inline-flex cursor-pointer items-center gap-2 text-gray-400 transition-colors duration-300 hover:text-white md:gap-3"
                     >
-                        <div className="p-3 rounded-full border border-white/20 group-hover:border-white transition-colors">
-                            <ArrowDown className="w-6 h-6 animate-bounce" />
+                        <div className="rounded-full border border-white/20 p-2 transition-colors group-hover:border-white md:p-3">
+                            <ArrowDown className="h-4 w-4 animate-bounce md:h-6 md:w-6" />
                         </div>
-                        <span className="text-sm uppercase tracking-[0.3em]">Discover</span>
+                        <span className="text-[10px] uppercase tracking-[0.2em] md:text-sm md:tracking-[0.3em]">Discover</span>
                     </div>
                 </div>
             </section>

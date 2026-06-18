@@ -66,14 +66,14 @@ export default function LumiFlexInfo() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative w-full bg-white flex flex-col items-center pt-80 pb-40">
-            <div className="w-full max-w-[1920px] mx-auto px-8 md:px-20 flex flex-col md:flex-row gap-12 items-stretch h-[750px]">
+        <section ref={sectionRef} className="relative flex w-full flex-col items-center bg-white pb-24 pt-28 md:pb-40 md:pt-80">
+            <div className="mx-auto flex h-auto w-full max-w-[1920px] flex-col items-stretch gap-10 px-6 md:h-[750px] md:flex-row md:gap-12 md:px-20">
 
                 {/* Left: Text Content */}
                 <div ref={textRef} className="w-full md:w-1/3 flex flex-col gap-6 justify-start">
                     <div className="mb-4">
                         <h2 className="text-3xl font-medium text-black mb-6">ASB 풀LED 스마트코트</h2>
-                        <div className="space-y-6 text-gray-600 leading-relaxed text-lg text-justify break-keep">
+                        <div className="space-y-5 text-base leading-relaxed text-gray-600 break-keep md:space-y-6 md:text-justify md:text-lg">
                             <p>
                                 ASB 풀LED 스마트코트는 평범했던 공간을 압도적인 시각적 경험이 펼쳐지는 다목적 무대로 변화시킵니다. 경기장, 각종 이벤트 홀, 그리고 프리미엄 스포츠 시설을 위한 가장 이상적인 솔루션입니다.
                             </p>
@@ -91,7 +91,7 @@ export default function LumiFlexInfo() {
                 </div>
 
                 {/* Right: Image Container (Placeholder) */}
-                <div ref={imageWrapperRef} className="relative w-full md:w-2/3 h-full bg-[#111] rounded-xl border border-white/10 shadow-2xl overflow-hidden group">
+                <div ref={imageWrapperRef} className="group relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-white/10 bg-[#111] shadow-2xl md:h-full md:w-2/3 md:aspect-auto">
                     {/* Floor Texture */}
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20" />
 
