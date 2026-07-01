@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  title: "ASB GlassFloor Korea | LED 스포츠 플로어·스마트코트 공식 파트너 GLOBE",
+  title: "ASB GlassFloor Korea | GLOBE",
   description:
-    "GLOBE는 독일 ASB GlassFloor 한국 공식 파트너로 글라스플로어, LED 스포츠 플로어, 스마트코트, 스마트체육관, 멀티스포츠 코트 솔루션을 제공합니다.",
+    "GLOBE는 ASB GlassFloor 한국 공식 파트너로 LED 스포츠 플로어와 스마트코트 솔루션을 제공합니다.",
   keywords: [
     "ASB GlassFloor Korea",
     "ASB GlassFloor",

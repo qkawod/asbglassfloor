@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  title: "ASB GlassFloor 공식 파트너 | 글라스플로어 전문 기업 GLOBE",
-  description: "GLOBE는 독일 ASB GlassFloor 공식 파트너로 농구장, 스마트체육센터, 멀티스포츠 글라스플로어 시스템을 제공합니다. 국제농구연맹(FIBA), NBA 등 글로벌 인증을 받은 스포츠플로어 솔루션을 한국에 공급합니다.",
+  title: "ASB GlassFloor Korea | GLOBE",
+  description: "GLOBE는 ASB GlassFloor 한국 공식 파트너로 LED 스포츠 플로어와 스마트코트 솔루션을 제공합니다.",
   keywords: [
     "ASB GlassFloor",
     "ASB GlassFloor Korea",
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
     "글로브코퍼레이션",
   ],
   openGraph: {
-    title: "ASB GlassFloor 공식 파트너 | 글라스플로어 전문 기업 GLOBE",
-    description: "GLOBE는 독일 ASB GlassFloor 공식 파트너로 농구장, 스마트체육센터, 멀티스포츠 글라스플로어 시스템을 제공합니다. 국제농구연맹(FIBA), NBA 등 글로벌 인증을 받은 스포츠플로어 솔루션을 한국에 공급합니다.",
+    title: "ASB GlassFloor Korea | GLOBE",
+    description: "GLOBE는 ASB GlassFloor 한국 공식 파트너로 LED 스포츠 플로어와 스마트코트 솔루션을 제공합니다.",
     url: "https://www.globecorp.co.kr",
     siteName: "ASB GlassFloor Korea",
     locale: "ko_KR",
