@@ -49,7 +49,7 @@ export default function MultiSportsDemo() {
                     <div className="absolute inset-0 flex items-center justify-center">
                         {/* Default/Fallback Image - Transparent to show BG */}
                         <div className={`absolute inset-0 transition-opacity duration-500 ${activeSport === "no-line" ? "opacity-100" : "opacity-0"}`}>
-                            <img src="/sports-demo/no-line.png" alt="No Line" className="h-full w-full object-contain" />
+                            <img src="/sports-demo/no-line.png" alt="No Line" className="h-full w-full object-cover" />
                         </div>
 
                         {/* Dynamic Images */}
@@ -59,7 +59,7 @@ export default function MultiSportsDemo() {
                                     key={sport.id}
                                     src={`/sports-demo/${sport.id}.png`}
                                     alt={sport.id}
-                                    className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${activeSport === sport.id ? "opacity-100" : "opacity-0"}`}
+                                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${activeSport === sport.id ? "opacity-100" : "opacity-0"}`}
                                 />
                             )
                         ))}

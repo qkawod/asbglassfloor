@@ -71,7 +71,7 @@ export default function ProductShowcase() {
 
             {/* Right Side - LumiFlex */}
             <Link
-                href="/smartcourt#full-led-smartcourt"
+                href="/lumiflex"
                 ref={rightRef}
                 className="group relative h-1/2 min-h-[360px] overflow-hidden bg-white cursor-pointer md:h-full"
             >

@@ -21,7 +21,7 @@ export default function Footer() {
                         Home
                     </Link>
                     <Link href="/smartcourt" className="text-xs md:text-sm font-bold tracking-widest text-white/70 hover:text-white transition-colors uppercase">
-                        스마트코트
+                        SmartCourt
                     </Link>
                     <Link href="/technology" className="text-xs md:text-sm font-bold tracking-widest text-white/70 hover:text-white transition-colors uppercase">
                         Technology
@@ -34,19 +34,8 @@ export default function Footer() {
                     </Link>
                 </nav>
 
-                {/* 3. Contact Info (Horizontal, No Icons) */}
-                <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-4 md:gap-12 mb-6 text-xs md:text-sm text-white/50 font-light tracking-wide">
-                    <span>Tel : 031-717-1180</span>
-                    <span className="hidden md:block w-px h-3 bg-white/20"></span>
-                    <span>Fax : 031-717-1181</span>
-                    <span className="hidden md:block w-px h-3 bg-white/20"></span>
-                    <span>globe@globecorp.co.kr</span>
-                    <span className="hidden md:block w-px h-3 bg-white/20"></span>
-                    <span>경기도 성남시 분당구 판교역로 152, 1103</span>
-                </div>
-
-                {/* 4. Social Icons */}
-                <div className="flex items-center gap-6 mb-4">
+                {/* 3. Social Icons */}
+                <div className="flex items-center gap-6 mb-6">
                     <a
                         href="https://www.youtube.com/@ASBGlassFloor"
                         target="_blank"
@@ -80,6 +69,17 @@ export default function Footer() {
                             <path d="M16.273 12.845L7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z" />
                         </svg>
                     </a>
+                </div>
+
+                {/* 4. Contact Info (Horizontal, No Icons) */}
+                <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-4 md:gap-12 mb-6 text-xs md:text-sm text-white/50 font-light tracking-wide">
+                    <span>Tel : 031-717-1180</span>
+                    <span className="hidden md:block w-px h-3 bg-white/20"></span>
+                    <span>Fax : 031-717-1181</span>
+                    <span className="hidden md:block w-px h-3 bg-white/20"></span>
+                    <span>globe@globecorp.co.kr</span>
+                    <span className="hidden md:block w-px h-3 bg-white/20"></span>
+                    <span>경기도 성남시 분당구 판교역로 152, 1103</span>
                 </div>
 
                 {/* 5. Copyright */}

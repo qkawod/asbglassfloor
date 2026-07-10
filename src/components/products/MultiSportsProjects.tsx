@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
+import MultiSportsDemo from "@/components/MultiSportsDemo";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -273,12 +274,8 @@ export default function MultiSportsProjects() {
                 </div>
             </section>
 
-            {/* Remaining Projects Section (OYM) */}
-            <section className="py-20 bg-[#F5F7FA] text-slate-900 overflow-hidden">
-                <div className="w-full max-w-[1800px] mx-auto px-6 md:px-20">
-                    <ProjectCard project={projects[1]} index={1} />
-                </div>
-            </section>
+            {/* Interactive Line Change System */}
+            <MultiSportsDemo />
 
             {/* Certification Section (Intermission 2) */}
             <section className="py-64 bg-white text-slate-900">
@@ -326,10 +323,10 @@ export default function MultiSportsProjects() {
                 </div>
             </section>
 
-            {/* Remaining Projects Section (BMW Park +) */}
+            {/* Remaining Projects Section */}
             <section className="pt-20 pb-32 bg-[#F5F7FA] text-slate-900 overflow-hidden">
                 <div className="w-full max-w-[1800px] mx-auto px-6 md:px-20 space-y-32">
-                    {projects.slice(2).map((project, i) => (
+                    {[projects[2], projects[1], projects[0]].map((project, i) => (
                         <ProjectCard key={project.id} project={project} index={i + 2} />
                     ))}
                 </div>

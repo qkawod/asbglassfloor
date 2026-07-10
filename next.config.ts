@@ -10,11 +10,6 @@ const nextConfig: NextConfig = {
         destination: "/smartcourt",
         permanent: true,
       },
-      {
-        source: "/lumiflex",
-        destination: "/smartcourt#full-led-smartcourt",
-        permanent: true,
-      },
     ];
   },
 };

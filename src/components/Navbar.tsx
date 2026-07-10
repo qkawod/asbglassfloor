@@ -58,7 +58,14 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "ASB", href: "/asb" },
-        { name: "스마트코트", href: "/smartcourt" },
+        {
+            name: "스마트코트",
+            href: "/smartcourt",
+            children: [
+                { name: "ASB스마트코트", href: "/smartcourt" },
+                { name: "ASB풀LED스마트코트", href: "/lumiflex" },
+            ],
+        },
         { name: "테크놀로지", href: "/technology" },
         { name: "인증", href: "/certifications" },
         { name: "레퍼런스", href: "/references" },
@@ -154,6 +161,31 @@ export default function Navbar() {
                             >
                                 {link.name}
                             </Link>
+                            {link.children && (
+                                <div className="pointer-events-none absolute left-1/2 top-full min-w-[230px] -translate-x-1/2 translate-y-[-10px] pt-5 opacity-0 transition-all duration-300 ease-out group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+                                    <div className="flex flex-col items-center gap-3">
+                                        {link.children.map((child, index) => (
+                                            <Link
+                                                key={child.href}
+                                                href={child.href}
+                                                className="translate-y-2 opacity-0 block px-2 py-1 text-center text-sm font-black tracking-[0.18em] text-white transition-all duration-300 ease-out hover:text-white group-hover:translate-y-0 group-hover:opacity-100"
+                                                style={{
+                                                    textShadow: "0 1px 2px rgba(0,0,0,0.95), 0 0 8px rgba(0,0,0,0.9), 0 0 18px rgba(0,0,0,0.75)",
+                                                    transitionDelay: `${index * 55}ms`,
+                                                }}
+                                                onMouseEnter={(e) => {
+                                                    e.currentTarget.style.textShadow = "0 0 10px #FFFFE0, 0 0 20px #FFFF00, 0 0 40px #FFD700, 0 0 60px #FFD700";
+                                                }}
+                                                onMouseLeave={(e) => {
+                                                    e.currentTarget.style.textShadow = "0 1px 2px rgba(0,0,0,0.95), 0 0 8px rgba(0,0,0,0.9), 0 0 18px rgba(0,0,0,0.75)";
+                                                }}
+                                            >
+                                                {child.name}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
@@ -217,15 +249,30 @@ export default function Navbar() {
                             const active = isActiveLink(link.href);
 
                             return (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className={`border-b border-white/10 py-4 text-xl font-bold tracking-widest transition-colors ${active ? "text-neonYellow" : "text-white hover:text-neonYellow"
-                                        }`}
-                                    onClick={closeMobileMenu}
-                                >
-                                    {link.name}
-                                </Link>
+                                <div key={link.name} className="border-b border-white/10">
+                                    <Link
+                                        href={link.href}
+                                        className={`block py-4 text-xl font-bold tracking-widest transition-colors ${active ? "text-neonYellow" : "text-white hover:text-neonYellow"
+                                            }`}
+                                        onClick={closeMobileMenu}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                    {link.children && (
+                                        <div className="pb-4 pl-5">
+                                            {link.children.map((child) => (
+                                                <Link
+                                                    key={child.href}
+                                                    href={child.href}
+                                                    className="block py-2 text-sm font-bold tracking-widest text-white/58 transition-colors hover:text-neonYellow"
+                                                    onClick={closeMobileMenu}
+                                                >
+                                                    {child.name}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
                             );
                         })}
                     </div>

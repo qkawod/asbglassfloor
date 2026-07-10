@@ -37,16 +37,16 @@ export default function TrySystemDemo() {
 
     return (
         <section className="relative flex w-full flex-col items-center bg-black px-0 py-16 md:py-20">
-            <div className="mx-auto flex h-auto w-full max-w-[1920px] flex-col items-stretch gap-6 px-6 md:min-h-[750px] md:flex-row md:gap-12 md:px-20">
+            <div className="mx-auto flex h-auto w-full max-w-[1920px] flex-col items-stretch gap-6 px-6 md:min-h-[700px] md:flex-row md:gap-12 md:px-20">
 
                 {/* Left: Interactive Court */}
-                <div className="group relative aspect-[3/2] w-full overflow-hidden rounded-xl border border-white/10 bg-[#111] shadow-2xl md:h-full md:min-h-[500px] md:w-2/3 md:aspect-auto">
+                <div className="group relative aspect-[3/2] w-full overflow-hidden rounded-xl border border-white/10 bg-[#111] shadow-2xl md:min-h-[500px] md:w-2/3 md:aspect-auto">
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20" />
                     <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none z-10" />
 
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className={`absolute inset-0 transition-opacity duration-500 ${activeSport === "no-line" ? "opacity-100" : "opacity-0"}`}>
-                            <img src="/sports-demo/no-line.png" alt="No Line" className="h-full w-full object-contain" />
+                            <img src="/sports-demo/no-line.png" alt="No Line" className="h-full w-full object-cover" />
                         </div>
                         {sports.map((sport) => (
                             sport.id !== "no-line" && (
@@ -54,7 +54,7 @@ export default function TrySystemDemo() {
                                     key={sport.id}
                                     src={`/sports-demo/${sport.id}.png`}
                                     alt={sport.id}
-                                    className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${activeSport === sport.id ? "opacity-100" : "opacity-0"}`}
+                                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${activeSport === sport.id ? "opacity-100" : "opacity-0"}`}
                                 />
                             )
                         ))}
