@@ -60,6 +60,51 @@ const projects = [
     }
 ];
 
+const conceptScenes = [
+    {
+        number: "01",
+        eyebrow: "CAMPUS SMART GYMNASIUM",
+        title: "캠퍼스형 스마트 체육관",
+        description: "교육시설과 스포츠·커뮤니티 공간을 하나로 연결한 스마트코트 제안입니다.",
+        image: "/smartcourt-concepts/campus-smart-gymnasium.jpg",
+        width: 1488,
+        height: 1060,
+        details: [
+            "학교복합시설, 공간재구조화, 학교스포츠클럽 운영에 대응하는",
+            "미래형 체육공간으로,",
+            "수업·방과후·지역연계를 유연하게 수용합니다.",
+        ],
+    },
+    {
+        number: "02",
+        eyebrow: "INTEGRATED SPORTS COMMUNITY",
+        title: "복합 스포츠 커뮤니티",
+        description: "스마트코트와 휴게공간, 스쿼시 코트를 유기적으로 구성한 복합 스포츠 공간입니다.",
+        image: "/smartcourt-concepts/integrated-sports-community.jpeg",
+        width: 1024,
+        height: 575,
+        details: [
+            "운동과 휴식, 소통이 자연스럽게 연결되는 구성으로",
+            "입주민 만족도와 커뮤니티 가치를 높이는",
+            "고급형 복합 스포츠 커뮤니티 공간입니다.",
+        ],
+    },
+    {
+        number: "03",
+        eyebrow: "PREMIUM MULTISPORT COURT",
+        title: "프리미엄 실내 멀티코트",
+        description: "LED 라인 시스템으로 다양한 종목을 선명하게 전환하는 프리미엄 스마트코트입니다.",
+        image: "/smartcourt-concepts/premium-multisport-court.jpg",
+        width: 1678,
+        height: 941,
+        details: [
+            "하나의 공간에서 다양한 종목과 프로그램을 운영할 수 있도록",
+            "LED 라인 전환 시스템을 적용한",
+            "고효율 공공 체육시설 솔루션입니다.",
+        ],
+    },
+];
+
 interface Project {
     id: string;
     slug: string | null;
@@ -218,15 +263,183 @@ function ProjectCard({ project, index }: { project: Project, index: number }) {
     );
 }
 
+function SmartCourtConceptGallery() {
+    const sectionRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        const ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".concept-heading > *",
+                { y: 36, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.9,
+                    stagger: 0.12,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: ".concept-heading",
+                        start: "top 82%",
+                        toggleActions: "play none none reverse",
+                    },
+                },
+            );
+
+            gsap.utils.toArray<HTMLElement>(".concept-scene").forEach((scene, index) => {
+                const x = index === 1 ? -48 : index === 2 ? 48 : 0;
+                const y = index === 0 ? 56 : 28;
+                const caption = scene.querySelector(".concept-caption");
+                const line = scene.querySelector(".concept-line");
+
+                gsap.fromTo(
+                    scene.querySelector(".concept-frame"),
+                    { x, y, opacity: 0, scale: 0.97 },
+                    {
+                        x: 0,
+                        y: 0,
+                        opacity: 1,
+                        scale: 1,
+                        duration: 1.05,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: scene,
+                            start: "top 82%",
+                            toggleActions: "play none none reverse",
+                        },
+                    },
+                );
+
+                gsap.fromTo(
+                    caption,
+                    { y: 26, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: 0.16,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: scene,
+                            start: "top 78%",
+                            toggleActions: "play none none reverse",
+                        },
+                    },
+                );
+
+                gsap.fromTo(
+                    line,
+                    { scaleX: 0 },
+                    {
+                        scaleX: 1,
+                        duration: 0.75,
+                        delay: 0.3,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: scene,
+                            start: "top 78%",
+                            toggleActions: "play none none reverse",
+                        },
+                    },
+                );
+            });
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    return (
+        <section
+            ref={sectionRef}
+            aria-labelledby="smartcourt-concept-title"
+            className="overflow-hidden bg-[#070A0F] py-24 text-white md:py-28"
+        >
+            <div className="mx-auto w-full max-w-[1680px] px-5 md:px-12 xl:px-20">
+                <div className="concept-heading mx-auto mb-16 max-w-7xl text-center md:mb-20">
+                    <span className="text-xs font-bold tracking-[0.34em] text-[#4D9FFF]">
+                        SMARTCOURT SPACE CONCEPT
+                    </span>
+                    <h2
+                        id="smartcourt-concept-title"
+                        className="mt-7 text-3xl font-medium leading-[1.2] tracking-tight text-white md:whitespace-nowrap md:text-[clamp(28px,4vw,56px)]"
+                    >
+                        하나의 공간, 더 많은 가능성
+                    </h2>
+                    <p className="mx-auto mt-6 text-base leading-[1.8] text-white/65 md:whitespace-nowrap md:text-[10px] lg:text-xs xl:text-sm 2xl:text-base">
+                        교육시설부터 복합 스포츠센터, 프리미엄 커뮤니티 시설까지 공간의 규모와 운영 목적에 최적화된 ASB 스마트코트 적용 모델을 제안합니다.
+                    </p>
+                    <p className="mt-5 text-xs tracking-[0.08em] text-white/35">
+                        AI 기반 공간 적용 콘셉트 조감도
+                    </p>
+                </div>
+
+                <div className="concept-gallery grid gap-16 lg:grid-cols-3 lg:gap-6 xl:gap-8">
+                    {conceptScenes.map((scene, index) => (
+                        <figure
+                            key={scene.number}
+                            className={`concept-scene concept-card ${index === 0 ? "concept-card-left" : index === 2 ? "concept-card-right" : "concept-card-center"}`}
+                        >
+                            <div className="concept-frame relative aspect-video overflow-hidden rounded-[10px] bg-black shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
+                                <Image
+                                    src={scene.image}
+                                    alt={`${scene.title} 조감도`}
+                                    width={scene.width}
+                                    height={scene.height}
+                                    unoptimized
+                                    sizes="(min-width: 1680px) 490px, (min-width: 1024px) 31vw, (min-width: 768px) calc(100vw - 6rem), calc(100vw - 2.5rem)"
+                                    className="h-full w-full object-cover object-center"
+                                />
+                                <div className="pointer-events-none absolute inset-0 bg-black/10" />
+                                <div className="concept-extra-shade pointer-events-none absolute inset-0 hidden bg-gradient-to-t from-black via-black/65 to-transparent lg:block" />
+                                <div className="concept-extra-copy pointer-events-none absolute inset-x-6 bottom-6 z-10 hidden lg:block">
+                                    <span className="mb-3 block text-[10px] font-bold tracking-[0.2em] text-[#4D9FFF]">
+                                        CONCEPT NOTE
+                                    </span>
+                                    {scene.details.map((detail) => (
+                                        <p key={detail} className="mt-1 text-[13px] leading-relaxed text-white/90 first:mt-0 xl:text-sm">
+                                            {detail}
+                                        </p>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <figcaption className="concept-caption mt-6 border-b border-white/10 pb-9">
+                                <div className="flex items-center justify-between gap-4">
+                                    <span className="text-sm font-medium tracking-[0.25em] text-[#4D9FFF]">
+                                        {scene.number}
+                                    </span>
+                                    <span className="text-right text-[10px] font-bold tracking-[0.18em] text-white/35">
+                                        {scene.eyebrow}
+                                    </span>
+                                </div>
+                                <h3 className="mt-5 text-2xl font-medium tracking-tight text-white xl:text-3xl">
+                                    {scene.title}
+                                </h3>
+                                <p className="mt-4 text-sm leading-relaxed text-white/55 xl:text-base">
+                                    {scene.description}
+                                </p>
+                                <div className="mt-5 border-t border-white/10 pt-4 lg:hidden">
+                                    {scene.details.map((detail) => (
+                                        <p key={detail} className="mt-2 text-sm leading-relaxed text-white/45 first:mt-0">
+                                            {detail}
+                                        </p>
+                                    ))}
+                                </div>
+                                <span className="concept-line mt-7 block h-px w-20 origin-left bg-[#4D9FFF]" />
+                            </figcaption>
+                        </figure>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
 export default function MultiSportsProjects() {
     return (
         <div>
-            {/* First Project Section */}
-            <section className="pt-32 pb-20 bg-[#F5F7FA] text-slate-900 overflow-hidden">
-                <div className="w-full max-w-[1800px] mx-auto px-6 md:px-20">
-                    <ProjectCard project={projects[0]} index={0} />
-                </div>
-            </section>
+            <SmartCourtConceptGallery />
 
             {/* CTA/Intermission Section */}
             <section ref={(el) => {

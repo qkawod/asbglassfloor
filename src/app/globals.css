@@ -252,3 +252,73 @@ body {
   filter: blur(0.2px);
   animation: led-line-sweep 7.2s ease-in-out infinite;
 }
+
+.concept-card {
+  position: relative;
+  z-index: 1;
+}
+
+.concept-extra-shade,
+.concept-extra-copy {
+  opacity: 0;
+  transition:
+    opacity 480ms ease,
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.concept-extra-copy {
+  transform: translateY(14px);
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+  .concept-card {
+    transform-origin: center top;
+    transition:
+      transform 650ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 650ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 450ms ease;
+    will-change: transform;
+  }
+
+  .concept-card:hover {
+    z-index: 20;
+    filter: drop-shadow(0 34px 42px rgba(0, 0, 0, 0.5));
+  }
+
+  .concept-card:hover .concept-extra-shade,
+  .concept-card:hover .concept-extra-copy {
+    opacity: 1;
+  }
+
+  .concept-card:hover .concept-extra-copy {
+    transform: translateY(0);
+  }
+
+  .concept-card-left:hover {
+    transform: translateX(12%) scale(1.6);
+  }
+
+  .concept-card-center:hover {
+    transform: scale(1.6);
+  }
+
+  .concept-card-right:hover {
+    transform: translateX(-12%) scale(1.6);
+  }
+
+  .concept-gallery:has(.concept-card:hover) .concept-card:not(:hover) {
+    opacity: 0.42;
+    transform: scale(0.97);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .concept-card {
+    transition: none;
+  }
+
+  .concept-extra-shade,
+  .concept-extra-copy {
+    transition: none;
+  }
+}
