@@ -64,7 +64,7 @@ const conceptScenes = [
     {
         number: "01",
         eyebrow: "CAMPUS SMART GYMNASIUM",
-        title: "캠퍼스형 스마트 체육관",
+        title: "스마트형 다목적체육관",
         description: "교육시설과 스포츠·커뮤니티 공간을 하나로 연결한 스마트코트 제안입니다.",
         image: "/smartcourt-concepts/campus-smart-gymnasium.jpg",
         width: 1488,
