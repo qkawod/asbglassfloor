@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Ban, Layers } from "lucide-react";
+import { Ban, Building2, Layers } from "lucide-react";
 import type { ComponentType } from "react";
 
 type Sport =
@@ -11,6 +11,7 @@ type Sport =
     | "futsal"
     | "handball"
     | "volleyball"
+    | "general-gym"
     | "all-sports";
 
 export default function MultiSportsDemo() {
@@ -25,13 +26,14 @@ export default function MultiSportsDemo() {
     };
 
     const sports: { id: Sport; label: string; icon: ComponentType<{ size?: number }>; desc: string }[] = [
-        { id: "no-line", label: "No line", icon: Ban, desc: "Clean surface for non-sport events" },
-        { id: "basketball", label: "Basketball", icon: EmojiIcon("🏀"), desc: "Professional FIBA Layout" },
-        { id: "badminton", label: "Badminton", icon: EmojiIcon("🏸"), desc: "BWF Standard Court" },
-        { id: "futsal", label: "Futsal", icon: EmojiIcon("⚽"), desc: "Official Futsal Dimensions" },
-        { id: "handball", label: "Handball", icon: () => <img src="/handball.png" alt="Handball" className="w-6 h-6 object-contain grayscale opacity-80 mix-blend-multiply dark:mix-blend-screen" />, desc: "IHF Standard Court" },
-        { id: "volleyball", label: "Volleyball", icon: EmojiIcon("🏐"), desc: "FIVB Standard Layout" },
-        { id: "all-sports", label: "All sports", icon: Layers, desc: "Showcase of all possibilities" },
+        { id: "general-gym", label: "일반체육관", icon: Building2, desc: "Conventional multi-line gymnasium" },
+        { id: "no-line", label: "이벤트 모드", icon: Ban, desc: "Clean surface for non-sport events" },
+        { id: "basketball", label: "농구", icon: EmojiIcon("🏀"), desc: "Professional FIBA Layout" },
+        { id: "badminton", label: "배드민턴", icon: EmojiIcon("🏸"), desc: "BWF Standard Court" },
+        { id: "futsal", label: "풋살", icon: EmojiIcon("⚽"), desc: "Official Futsal Dimensions" },
+        { id: "handball", label: "핸드볼", icon: () => <img src="/handball.png" alt="Handball" className="w-6 h-6 object-contain grayscale opacity-80 mix-blend-multiply dark:mix-blend-screen" />, desc: "IHF Standard Court" },
+        { id: "volleyball", label: "배구", icon: EmojiIcon("🏐"), desc: "FIVB Standard Layout" },
+        { id: "all-sports", label: "전체 종목", icon: Layers, desc: "Showcase of all possibilities" },
     ];
 
     return (

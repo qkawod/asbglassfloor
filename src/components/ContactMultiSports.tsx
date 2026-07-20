@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Layers, Ban, CircleDot } from "lucide-react";
+import { Ban, Building2, Layers } from "lucide-react";
 
 type Sport =
     | "no-line"
@@ -10,6 +10,7 @@ type Sport =
     | "futsal"
     | "handball"
     | "volleyball"
+    | "general-gym"
     | "all-sports";
 
 export default function ContactMultiSports() {
@@ -18,13 +19,14 @@ export default function ContactMultiSports() {
     const EmojiIcon = (emoji: string) => () => <span className="text-xl leading-none grayscale opacity-80">{emoji}</span>;
 
     const sports: { id: Sport; label: string; icon: any; desc: string }[] = [
-        { id: "no-line", label: "No line", icon: Ban, desc: "Clean surface" },
-        { id: "basketball", label: "Basketball", icon: EmojiIcon("🏀"), desc: "FIBA Layout" },
-        { id: "badminton", label: "Badminton", icon: EmojiIcon("🏸"), desc: "BWF Court" },
-        { id: "futsal", label: "Futsal", icon: EmojiIcon("⚽"), desc: "Official Dimensions" },
-        { id: "handball", label: "Handball", icon: () => <img src="/handball.png" alt="Handball" className="w-5 h-5 flex-shrink-0 object-contain grayscale opacity-80 mix-blend-screen" />, desc: "IHF Court" },
-        { id: "volleyball", label: "Volleyball", icon: EmojiIcon("🏐"), desc: "FIVB Layout" },
-        { id: "all-sports", label: "All sports", icon: Layers, desc: "Showcase all" },
+        { id: "general-gym", label: "일반체육관", icon: Building2, desc: "Multi-line Gym" },
+        { id: "no-line", label: "이벤트 모드", icon: Ban, desc: "Clean surface" },
+        { id: "basketball", label: "농구", icon: EmojiIcon("🏀"), desc: "FIBA Layout" },
+        { id: "badminton", label: "배드민턴", icon: EmojiIcon("🏸"), desc: "BWF Court" },
+        { id: "futsal", label: "풋살", icon: EmojiIcon("⚽"), desc: "Official Dimensions" },
+        { id: "handball", label: "핸드볼", icon: () => <img src="/handball.png" alt="Handball" className="w-5 h-5 flex-shrink-0 object-contain grayscale opacity-80 mix-blend-screen" />, desc: "IHF Court" },
+        { id: "volleyball", label: "배구", icon: EmojiIcon("🏐"), desc: "FIVB Layout" },
+        { id: "all-sports", label: "전체 종목", icon: Layers, desc: "Showcase all" },
     ];
 
     return (
@@ -60,7 +62,7 @@ export default function ContactMultiSports() {
                     </div>
 
                     {/* Scrollable Horizontal List for Controls */}
-                    <div className="-mx-1 flex snap-x gap-2 overflow-x-auto px-1 py-4 md:mx-0 md:grid md:grid-cols-7 md:overflow-visible md:px-0">
+                    <div className="-mx-1 flex snap-x gap-2 overflow-x-auto px-1 py-4 md:mx-0 md:grid md:grid-cols-8 md:overflow-visible md:px-0">
                         {sports.map((sport) => (
                             <button
                                 key={sport.id}
