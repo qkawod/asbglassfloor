@@ -78,8 +78,8 @@ const conceptScenes = [
     {
         number: "02",
         eyebrow: "INTEGRATED SPORTS COMMUNITY",
-        title: "복합 스포츠 커뮤니티",
-        description: "스마트코트와 휴게공간, 스쿼시 코트를 유기적으로 구성한 복합 스포츠 공간입니다.",
+        title: "프리미엄 스포츠 커뮤니티센터",
+        description: "스포츠와 일상이 연결되는 복합 커뮤니티 공간 입니다.",
         image: "/smartcourt-concepts/integrated-sports-community.jpeg",
         width: 1686,
         height: 933,
