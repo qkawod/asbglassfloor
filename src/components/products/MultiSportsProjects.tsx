@@ -64,8 +64,8 @@ const conceptScenes = [
     {
         number: "01",
         eyebrow: "CAMPUS SMART GYMNASIUM",
-        title: "스마트형 다목적체육관",
-        description: "교육시설과 스포츠·커뮤니티 공간을 하나로 연결한 스마트코트 제안입니다.",
+        title: "학교복합시설 스마트체육관",
+        description: "교육시설과 지역 생활체육을 하나로 연결한 미래형 스마트코트 입니다.",
         image: "/smartcourt-concepts/campus-smart-gymnasium.jpg",
         width: 1488,
         height: 1060,
@@ -92,11 +92,11 @@ const conceptScenes = [
     {
         number: "03",
         eyebrow: "PREMIUM MULTISPORT COURT",
-        title: "프리미엄 실내 멀티코트",
-        description: "LED 라인 시스템으로 다양한 종목을 선명하게 전환하는 프리미엄 스마트코트입니다.",
+        title: "스마트형 다목적체육관",
+        description: "LED 라인 시스템으로 다양한 종목을 선명하게 전환하는 스마트형 다목적체육관 입니다.",
         image: "/smartcourt-concepts/premium-multisport-court.jpg",
-        width: 1672,
-        height: 941,
+        width: 1224,
+        height: 689,
         details: [
             "하나의 공간에서 다양한 종목과 프로그램을 운영할 수 있도록",
             "LED 라인 전환 시스템을 적용한",
@@ -391,13 +391,13 @@ function SmartCourtConceptGallery() {
                                     className="h-full w-full object-cover object-center"
                                 />
                                 <div className="pointer-events-none absolute inset-0 bg-black/10" />
-                                <div className="concept-extra-shade pointer-events-none absolute inset-0 hidden bg-gradient-to-t from-black via-black/65 to-transparent lg:block" />
-                                <div className="concept-extra-copy pointer-events-none absolute inset-x-6 bottom-6 z-10 hidden lg:block">
+                                <div className="concept-extra-shade pointer-events-none absolute inset-0 hidden lg:block" />
+                                <div className="concept-extra-copy pointer-events-none absolute bottom-6 left-6 z-10 hidden w-max max-w-[calc(100%-3rem)] lg:block">
                                     <span className="mb-3 block text-[10px] font-bold tracking-[0.2em] text-[#4D9FFF]">
                                         CONCEPT NOTE
                                     </span>
                                     {scene.details.map((detail) => (
-                                        <p key={detail} className="mt-1 text-[13px] leading-relaxed text-white/90 first:mt-0 xl:text-sm">
+                                        <p key={detail} className="mt-1 text-[8px] leading-relaxed text-white first:mt-0 xl:text-[8.4px]">
                                             {detail}
                                         </p>
                                     ))}
@@ -416,7 +416,7 @@ function SmartCourtConceptGallery() {
                                 <h3 className="mt-5 text-2xl font-medium tracking-tight text-white xl:text-3xl">
                                     {scene.title}
                                 </h3>
-                                <p className="mt-4 text-sm leading-relaxed text-white/55 xl:text-base">
+                                <p className="mt-4 text-sm leading-relaxed text-white/55 lg:min-h-[3.25rem] xl:text-base">
                                     {scene.description}
                                 </p>
                                 <div className="mt-5 border-t border-white/10 pt-4 lg:hidden">

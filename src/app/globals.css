@@ -270,6 +270,32 @@ body {
   transform: translateY(14px);
 }
 
+.concept-extra-shade {
+  --concept-shade-core: 0.67;
+  --concept-shade-mid: 0.57;
+  --concept-shade-edge: 0.24;
+  --concept-shade-base: 0.32;
+  --concept-shade-fade: 0.14;
+  background:
+    radial-gradient(ellipse 82% 76% at 18% 100%,
+      rgba(0, 0, 0, var(--concept-shade-core)) 0%,
+      rgba(0, 0, 0, var(--concept-shade-mid)) 43%,
+      rgba(0, 0, 0, var(--concept-shade-edge)) 72%,
+      transparent 100%),
+    linear-gradient(to top,
+      rgba(0, 0, 0, var(--concept-shade-base)) 0%,
+      rgba(0, 0, 0, var(--concept-shade-fade)) 42%,
+      transparent 72%);
+}
+
+.concept-card-right .concept-extra-shade {
+  --concept-shade-core: 0.58;
+  --concept-shade-mid: 0.49;
+  --concept-shade-edge: 0.2;
+  --concept-shade-base: 0.28;
+  --concept-shade-fade: 0.12;
+}
+
 @media (min-width: 1024px) and (hover: hover) {
   .concept-card {
     transform-origin: center top;
