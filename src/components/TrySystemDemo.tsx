@@ -73,7 +73,7 @@ export default function TrySystemDemo() {
                             <span className="font-medium">체험ZONE</span>
                         </h2>
                         <p className="text-slate-400 mb-8 leading-relaxed break-keep">
-                            단 한 번의 터치로 다양한 스포츠 종목을 자유롭게 전환해 보세요. ASB는 세계에서 가장 진보된 글라스 플로어 시스템으로 체육관의 기준을 새롭게 정의합니다.
+                            단 한 번의 터치로 다양한 스포츠 종목을 자유롭게 전환해 보세요.
                         </p>
                     </div>
 

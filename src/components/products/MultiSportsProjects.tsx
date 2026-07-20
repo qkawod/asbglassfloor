@@ -81,8 +81,8 @@ const conceptScenes = [
         title: "복합 스포츠 커뮤니티",
         description: "스마트코트와 휴게공간, 스쿼시 코트를 유기적으로 구성한 복합 스포츠 공간입니다.",
         image: "/smartcourt-concepts/integrated-sports-community.jpeg",
-        width: 1024,
-        height: 575,
+        width: 1686,
+        height: 933,
         details: [
             "운동과 휴식, 소통이 자연스럽게 연결되는 구성으로",
             "입주민 만족도와 커뮤니티 가치를 높이는",
@@ -95,7 +95,7 @@ const conceptScenes = [
         title: "프리미엄 실내 멀티코트",
         description: "LED 라인 시스템으로 다양한 종목을 선명하게 전환하는 프리미엄 스마트코트입니다.",
         image: "/smartcourt-concepts/premium-multisport-court.jpg",
-        width: 1678,
+        width: 1672,
         height: 941,
         details: [
             "하나의 공간에서 다양한 종목과 프로그램을 운영할 수 있도록",

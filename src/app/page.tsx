@@ -42,6 +42,21 @@ export const metadata: Metadata = {
     siteName: "ASB GlassFloor Korea",
     locale: "ko_KR",
     type: "website",
+    images: [
+      {
+        url: "/asb-og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ASB GlassFloor 풀LED 스포츠 코트",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ASB GlassFloor Korea | GLOBE",
+    description:
+      "글라스플로어, LED 스포츠 플로어, 스마트코트, 스마트체육관, 멀티스포츠 코트를 위한 ASB GlassFloor 한국 공식 파트너.",
+    images: ["/asb-og-image.jpg"],
   },
 };
 

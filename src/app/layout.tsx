@@ -70,6 +70,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "ASB GlassFloor Korea | GLOBE",
+    description: "GLOBE는 ASB GlassFloor 한국 공식 파트너로 LED 스포츠 플로어와 스마트코트 솔루션을 제공합니다.",
+    images: ["/asb-og-image.jpg"],
+  },
   other: {
     'naver-site-verification': '2a86449b9e69a610e63c771a81d2211ed126c18d',
   },
